@@ -31,7 +31,7 @@
       header {
         background: var(--card);
         border-bottom: 1px solid var(--border);
-        padding: clamp(3rem, 6vw, 4.5rem) 0;
+        padding: clamp(2rem, 5vw, 3.5rem) 0;
       }
 
       .container {
@@ -45,7 +45,7 @@
         gap: 0.5rem;
         background: var(--accent-soft);
         color: var(--accent);
-        padding: 0.4rem 0.85rem;
+        padding: 0.35rem 0.75rem;
         border-radius: 999px;
         font-size: 0.85rem;
         font-weight: 600;
@@ -54,24 +54,27 @@
       }
 
       h1 {
-        margin: 1.75rem 0 0.5rem;
-        font-size: clamp(2.5rem, 7vw, 3.5rem);
+        margin: 1.5rem 0 0.5rem;
+        font-size: clamp(2.75rem, 7vw, 3.75rem);
         line-height: 1.05;
       }
 
-      .line {
-        font-size: clamp(1.15rem, 3vw, 1.45rem);
+      .subtitle {
         color: var(--muted);
+        font-size: clamp(1.05rem, 2.8vw, 1.35rem);
+        max-width: 52ch;
         margin: 0;
       }
 
-      .line:last-of-type {
-        color: var(--accent);
+      .emphasis {
+        margin-top: clamp(0.75rem, 2vw, 1.25rem);
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
         font-weight: 600;
+        color: var(--accent);
       }
 
       main {
-        padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(4rem, 8vw, 5.5rem);
+        padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(4rem, 7vw, 5.5rem);
       }
 
       .card {
@@ -80,20 +83,23 @@
         border-radius: 18px;
         padding: clamp(1.75rem, 4vw, 2.5rem);
         box-shadow: 0 12px 40px -24px rgba(30, 95, 116, 0.35);
-        text-align: center;
+      }
+
+      .card p {
+        margin: 0 0 1.15rem;
       }
 
       .links {
-        display: inline-flex;
+        display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
-        margin-top: 1.5rem;
       }
 
       .links a {
         display: inline-flex;
         align-items: center;
-        padding: 0.55rem 1rem;
+        gap: 0.4rem;
+        padding: 0.55rem 0.95rem;
         border-radius: 999px;
         background: var(--accent-soft);
         color: var(--accent);
@@ -108,7 +114,7 @@
       }
 
       footer {
-        padding: clamp(2.5rem, 6vw, 3.5rem) 0;
+        padding: clamp(2.5rem, 5vw, 3.5rem) 0;
         text-align: center;
         color: var(--muted);
         font-size: 0.9rem;
@@ -120,8 +126,8 @@
       <div class="container">
         <span class="tagline">HeightPlanPro</span>
         <h1>HeightPlanPro</h1>
-        <p class="line">Weil Sicherheit keine Option ist</p>
-        <p class="line">– sondern Standard.</p>
+        <p class="subtitle">Weil Sicherheit keine Option ist</p>
+        <p class="emphasis">– sondern Standard.</p>
       </div>
     </header>
 
@@ -129,8 +135,10 @@
       <div class="container">
         <section class="card">
           <p>
-            Willkommen bei HeightPlanPro. Wir stellen sicher, dass die Sicherheit
-            bei Höhenarbeiten zur Selbstverständlichkeit wird.
+            HeightPlanPro unterstützt Teams dabei, Höhenarbeiten sicher zu planen,
+            Risiken transparent zu machen und Compliance zur Selbstverständlichkeit
+            werden zu lassen. Diese Seite dient als Ausgangspunkt für alle
+            Informationen rund um das Projekt.
           </p>
           <div class="links">
             <a href="/impressum/">Impressum</a>
