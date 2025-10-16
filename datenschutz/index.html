@@ -1,107 +1,227 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datenschutzerklärung – HeightPlanPro</title>
-  <style>
-:root{
-  --primary: #f3f5f9;
-  --secondary: #000000;
-  --accent: #1f2a3c;
-  --bg: #1e293b;
-  --surface: #ffffff;
-  --text: #1f2a3c;
-}
-*{box-sizing:border-box}
-html{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
-body{margin:0;background:var(--bg);color:var(--text);}
-.wrapper{max-width:880px;margin:0 auto;padding:32px 20px;}
-header{display:flex;align-items:center;gap:12px;margin:8px 0 4px}
-.brand{font-weight:700;letter-spacing:.2px}
-.badge{display:inline-block;background:rgba(0,0,0,.04);color:var(--primary);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:8px;border:1px solid rgba(0,0,0,.05)}
-h1{color:var(--primary);font-size:clamp(28px,3vw,36px);line-height:1.1;margin:12px 0 10px}
-h2{color:#0f172a;font-size:18px;margin:28px 0 8px}
-p,li{font-size:16px;line-height:1.7}
-a{color:var(--primary);text-decoration:none}
-a:hover{text-decoration:underline}
-hr{border:0;border-top:1px solid #e5e7eb;margin:22px 0}
-.card{background:var(--surface);border:1px solid #e5e7eb;border-radius:16px;padding:18px 18px}
-.meta{color:#6b7280;font-size:14px}
-footer{margin:38px 0 8px;font-size:14px;color:#6b7280}
-.nav a{margin-right:10px}
-.note{padding:10px 12px;border:1px dashed #d1d5db;border-radius:12px;background: #fafafa}
-</style>
-</head>
-<body>
-  <div class="wrapper">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datenschutzerklärung | HeightPlanPro</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --accent: #1e5f74;
+        --accent-soft: #e4f1f4;
+        --text: #1a1a1a;
+        --muted: #5f6c7b;
+        --background: #f7f9fc;
+        --card: #ffffff;
+        --border: #d7e0eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: var(--card);
+        border-bottom: 1px solid var(--border);
+        padding: clamp(2rem, 5vw, 3.5rem) 0;
+      }
+
+      .container {
+        width: min(960px, 92vw);
+        margin: 0 auto;
+      }
+
+      .tagline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--accent-soft);
+        color: var(--accent);
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 1.5rem 0 0.5rem;
+        font-size: clamp(2.25rem, 6vw, 3.25rem);
+        line-height: 1.1;
+      }
+
+      .intro {
+        color: var(--muted);
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+        max-width: 52ch;
+      }
+
+      main {
+        padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(4rem, 7vw, 5.5rem);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: clamp(1.75rem, 4vw, 2.5rem);
+        box-shadow: 0 12px 40px -24px rgba(30, 95, 116, 0.35);
+        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .card h2 {
+        margin-top: 0;
+        font-size: clamp(1.35rem, 3vw, 1.6rem);
+      }
+
+      .card p,
+      .card ul,
+      .card li {
+        margin: 0 0 0.75rem;
+      }
+
+      .card ul {
+        padding-left: 1.25rem;
+      }
+
+      .hint {
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-      <div>
-        <div class="brand">HeightPlanPro <span class="badge">Datenschutz</span></div>
-        <div class="nav"><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></div>
-      </div>
-    </header>
-    <hr>
-
-    <main class="content">
-      <h1>Datenschutzerklärung</h1>
-
-      <div class="card">
-        <p><strong>Verantwortlicher</strong></p>
-        <p>
-          Nico Schulz<br>
-          <!-- Straße, Hausnummer --> Musterstraße 1<br>
-          <!-- PLZ, Ort --> 12345 Musterstadt<br>
-          Deutschland<br>
-          E-Mail: <a href="mailto:kontakt@heightplanpro.de">kontakt@heightplanpro.de</a>
+      <div class="container">
+        <span class="tagline">HeightPlanPro</span>
+        <h1>Datenschutzerklärung</h1>
+        <p class="intro">
+          Platzhaltertext für eine kurze Einleitung. Gib hier an, welche Inhalte diese
+          Datenschutzerklärung umfasst und wann sie zuletzt aktualisiert wurde.
         </p>
       </div>
+    </header>
 
-      <h2>Allgemeine Hinweise</h2>
-      <p>Diese Website stellt ausschließlich statische Informationsseiten (Impressum und Datenschutzerklärung) bereit. Es werden keine Cookies gesetzt und keine Tracking-Dienste eingesetzt.</p>
+    <main>
+      <div class="container">
+        <section class="card">
+          <h2>1. Verantwortliche Stelle</h2>
+          <p>
+            <strong>[Name oder Unternehmen einfügen]</strong><br />
+            [Straße und Hausnummer einfügen]<br />
+            [Postleitzahl und Ort einfügen]<br />
+            E-Mail: <a href="mailto:info@example.de">info@example.de</a>
+          </p>
+          <p>
+            Ergänze bei Bedarf die Kontaktdaten eines Datenschutzbeauftragten oder
+            einer anderen Ansprechperson für Datenschutzfragen.
+          </p>
+        </section>
 
-      <h2>Hosting (GitHub Pages)</h2>
-      <p>Die Seiten werden über GitHub Pages ausgeliefert. Beim Aufruf werden technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, User‑Agent) verarbeitet, um die Auslieferung und Sicherheit der Seite zu gewährleisten. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung der Website).</p>
+        <section class="card">
+          <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+          <p>
+            Beschreibe hier, welche Daten erhoben werden (z. B. Server-Logs,
+            Kontaktformulardaten, Newsletter-Anmeldungen) und zu welchen Zwecken.
+            Füge bei Bedarf Unterabschnitte für verschiedene Verarbeitungen ein.
+          </p>
+        </section>
 
-      <h2>Server-Logfiles</h2>
-      <p>Beim Zugriff können Server-Logs anfallen, die u. a. die IP-Adresse, Datum und Uhrzeit des Abrufs, die übertragene Datenmenge, die Meldung über den erfolgreichen Abruf, Browsertyp und Browserversion sowie das Betriebssystem enthalten. Die Logfiles werden zur technischen Fehleranalyse und zur Gewährleistung der Sicherheit verarbeitet und anschließend gelöscht, sobald sie für die Zwecke nicht mehr erforderlich sind.</p>
+        <section class="card">
+          <h2>3. Rechtsgrundlagen</h2>
+          <p>
+            Lege dar, auf welche gesetzlichen Grundlagen (Art. 6 Abs. 1 DSGVO etc.)
+            sich die jeweiligen Verarbeitungen stützen. Ergänze mehrere Punkte, wenn
+            unterschiedliche Rechtsgrundlagen gelten.
+          </p>
+        </section>
 
-      <h2>Kontaktaufnahme</h2>
-      <p>Wenn Sie uns per E‑Mail kontaktieren, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+        <section class="card">
+          <h2>4. Speicherdauer und Löschung</h2>
+          <p>
+            Erläutere, wie lange die Daten gespeichert werden und welche Kriterien
+            für die Festlegung der Dauer herangezogen werden. Füge Informationen zum
+            Umgang mit gesetzlichen Aufbewahrungsfristen hinzu.
+          </p>
+        </section>
 
-      <h2>Speicherdauer</h2>
-      <p>Sofern in dieser Erklärung nicht anders angegeben, werden personenbezogene Daten gelöscht, sobald der Zweck der Verarbeitung entfällt und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <section class="card">
+          <h2>5. Weitergabe an Dritte und Auftragsverarbeitung</h2>
+          <p>
+            Halte fest, wann Daten an externe Dienstleister oder Partner übermittelt
+            werden. Ergänze Details zu eingesetzten Hosting-Diensten, Analysetools
+            oder Cloud-Anbietern und beschreibe abgeschlossene Verträge zur
+            Auftragsverarbeitung.
+          </p>
+        </section>
 
-      <h2>Weitergabe von Daten</h2>
-      <p>Eine Weitergabe Ihrer personenbezogenen Daten an Dritte findet nicht statt, es sei denn, dies ist zur Erfüllung gesetzlicher Pflichten erforderlich.</p>
+        <section class="card">
+          <h2>6. Rechte der betroffenen Personen</h2>
+          <ul>
+            <li>Auskunft über verarbeitete personenbezogene Daten</li>
+            <li>Berichtigung unrichtiger oder unvollständiger Daten</li>
+            <li>Löschung („Recht auf Vergessenwerden“)</li>
+            <li>Einschränkung der Verarbeitung</li>
+            <li>Widerspruch gegen Datenverarbeitung</li>
+            <li>Datenübertragbarkeit</li>
+            <li>Beschwerderecht bei einer Aufsichtsbehörde</li>
+          </ul>
+        </section>
 
-      <h2>Rechtsgrundlagen</h2>
-      <p>Je nach Kontext stützen wir die Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Vorvertrag), Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, z. B. sichere Bereitstellung der Website).</p>
+        <section class="card">
+          <h2>7. Cookies und Tracking-Technologien</h2>
+          <p>
+            Dokumentiere, ob und welche Cookies, Tracking-Pixel oder ähnliche
+            Technologien eingesetzt werden. Beschreibe den Zweck, die Speicherdauer
+            sowie gegebenenfalls Opt-out-Möglichkeiten.
+          </p>
+        </section>
 
-      <h2>Ihre Rechte</h2>
-      <ul>
-        <li>Auskunft (Art. 15 DSGVO)</li>
-        <li>Berichtigung (Art. 16 DSGVO)</li>
-        <li>Löschung (Art. 17 DSGVO)</li>
-        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-        <li>Widerspruch (Art. 21 DSGVO)</li>
-      </ul>
+        <section class="card">
+          <h2>8. Datensicherheit</h2>
+          <p>
+            Erkläre, welche technischen und organisatorischen Maßnahmen du ergriffen
+            hast, um personenbezogene Daten zu schützen (z. B. Verschlüsselung,
+            Zugriffsbeschränkungen, Backup-Konzepte).
+          </p>
+        </section>
 
-      <h2>Beschwerderecht</h2>
-      <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten rechtswidrig erfolgt.</p>
+        <section class="card">
+          <h2>9. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+          <p>
+            Ergänze eine Passage dazu, wie und wann die Datenschutzerklärung
+            aktualisiert wird. Beispiel: „Diese Datenschutzerklärung hat den Stand
+            [Datum einfügen] und kann sich ändern, wenn neue Funktionen hinzukommen.".
+          </p>
+        </section>
 
-      <h2>Änderungen dieser Erklärung</h2>
-      <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.</p>
-
-      <div class="note meta">Stand: 16.10.2025</div>
+        <p class="hint">
+          Hinweis: Ersetze alle Platzhalter durch deine eigenen Informationen und
+          füge zusätzliche Abschnitte ein, falls du weitere Dienste oder Prozesse
+          beschreiben musst.
+        </p>
+      </div>
     </main>
 
     <footer>
-      <hr>
-      <div>© 2025 Nico Schulz · HeightPlanPro</div>
-      <div class="meta">Statische Seite · keine Cookies · keine Tracker</div>
+      <div class="container">© [Jahr einfügen] HeightPlanPro. Alle Rechte vorbehalten.</div>
     </footer>
-  </div>
-</body>
+  </body>
 </html>
