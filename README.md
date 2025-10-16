@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <style>
-      :root {
-        color-scheme: light;
-        --accent: #1e5f74;
-        --accent-soft: #e4f1f4;
-        --text: #1a1a1a;
-        --muted: #5f6c7b;
-        --background: #f7f9fc;
-        --card: #ffffff;
-        --border: #d7e0eb;
-      }
+
 
       * {
         box-sizing: border-box;
