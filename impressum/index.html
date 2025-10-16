@@ -1,77 +1,193 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Impressum – HeightPlanPro</title>
-  <style>
-:root{
-  --primary: #0ea5e9;
-  --secondary: #1f2937;
-  --accent: #22c55e;
-  --bg: #ffffff;
-  --surface: #f3f4f6;
-  --text: #111827;
-}
-*{box-sizing:border-box}
-html{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
-body{margin:0;background:var(--bg);color:var(--text);}
-.wrapper{max-width:880px;margin:0 auto;padding:32px 20px;}
-header{display:flex;align-items:center;gap:12px;margin:8px 0 4px}
-.brand{font-weight:700;letter-spacing:.2px}
-.badge{display:inline-block;background:rgba(0,0,0,.04);color:var(--primary);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:8px;border:1px solid rgba(0,0,0,.05)}
-h1{color:var(--primary);font-size:clamp(28px,3vw,36px);line-height:1.1;margin:12px 0 10px}
-h2{color:#0f172a;font-size:18px;margin:28px 0 8px}
-p,li{font-size:16px;line-height:1.7}
-a{color:var(--primary);text-decoration:none}
-a:hover{text-decoration:underline}
-hr{border:0;border-top:1px solid #e5e7eb;margin:22px 0}
-.card{background:var(--surface);border:1px solid #e5e7eb;border-radius:16px;padding:18px 18px}
-.meta{color:#6b7280;font-size:14px}
-footer{margin:38px 0 8px;font-size:14px;color:#6b7280}
-.nav a{margin-right:10px}
-</style>
-</head>
-<body>
-  <div class="wrapper">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Impressum | HeightPlanPro</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --accent: #1e5f74;
+        --accent-soft: #e4f1f4;
+        --text: #1a1a1a;
+        --muted: #5f6c7b;
+        --background: #f7f9fc;
+        --card: #ffffff;
+        --border: #d7e0eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: var(--card);
+        border-bottom: 1px solid var(--border);
+        padding: clamp(2rem, 5vw, 3.5rem) 0;
+      }
+
+      .container {
+        width: min(960px, 92vw);
+        margin: 0 auto;
+      }
+
+      .tagline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--accent-soft);
+        color: var(--accent);
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 1.5rem 0 0.5rem;
+        font-size: clamp(2.25rem, 6vw, 3.25rem);
+        line-height: 1.1;
+      }
+
+      .intro {
+        color: var(--muted);
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+        max-width: 52ch;
+      }
+
+      main {
+        padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(4rem, 7vw, 5.5rem);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: clamp(1.75rem, 4vw, 2.5rem);
+        box-shadow: 0 12px 40px -24px rgba(30, 95, 116, 0.35);
+        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .card h2 {
+        margin-top: 0;
+        font-size: clamp(1.35rem, 3vw, 1.6rem);
+      }
+
+      .card p,
+      .card ul,
+      .card li {
+        margin: 0 0 0.75rem;
+      }
+
+      .card ul {
+        padding-left: 1.25rem;
+      }
+
+      .hint {
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-      <div>
-        <div class="brand">HeightPlanPro <span class="badge">Impressum</span></div>
-        <div class="nav"><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></div>
+      <div class="container">
+        <span class="tagline">HeightPlanPro</span>
+        <h1>Impressum</h1>
+        <p class="intro">
+          Platzhaltertext für eine kurze Einleitung. Beschreibe hier in ein bis zwei
+          Sätzen, wer für die Inhalte verantwortlich ist und wann die Angaben zuletzt
+          geprüft wurden.
+        </p>
       </div>
     </header>
-    <hr>
-    <main class="content">
-      <h1>Impressum</h1>
-      <div class="card">
-        <p><strong>Angaben gem. § 5 TMG</strong></p>
-        <p>
-          Nico Schulz<br>
-          <!-- Straße, Hausnummer --> Musterstraße 1<br>
-          <!-- PLZ, Ort --> 12345 Musterstadt<br>
-          Deutschland
-        </p>
-        <p>
-          E-Mail: <a href="mailto:kontakt@heightplanpro.de">kontakt@heightplanpro.de</a><br>
-          Telefon: <span class="meta">optional</span>
+
+    <main>
+      <div class="container">
+        <section class="card">
+          <h2>Verantwortlich für die Inhalte</h2>
+          <p>
+            <strong>[Name oder Unternehmen einfügen]</strong><br />
+            [Straße und Hausnummer einfügen]<br />
+            [Postleitzahl und Ort einfügen]<br />
+            [Land einfügen]
+          </p>
+          <p>
+            Telefon: [Telefonnummer einfügen]<br />
+            E-Mail: <a href="mailto:info@example.de">info@example.de</a>
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Register- und Steuerinformationen</h2>
+          <p>
+            Ergänze hier relevante Angaben zu Handelsregister, Registernummern,
+            zuständigen Aufsichtsbehörden sowie Umsatzsteuer-Identifikationsnummern.
+            Falls bestimmte Angaben nicht zutreffen, kannst du dies durch einen
+            entsprechenden Hinweis kenntlich machen.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Berufsrechtliche Angaben</h2>
+          <p>
+            Nutze diesen Abschnitt, um Pflichten für reglementierte Berufe
+            aufzulisten. Beispiele: Kammerzugehörigkeit, Berufsbezeichnung,
+            staatliche Zulassung, Verweise auf berufsrechtliche Regelungen.
+            Entferne den Abschnitt, falls er für dich nicht relevant ist.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Haftungsausschluss</h2>
+          <p>
+            Hinterlege hier deinen Haftungsausschluss für Inhalte und Links. Du
+            kannst die gängigen Formulierungen einsetzen, etwa zur Haftung für
+            eigene Inhalte, externe Links oder Urheberrechte.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Online-Streitbeilegung</h2>
+          <p>
+            Weise auf die Plattform der EU-Kommission zur Online-Streitbeilegung
+            hin, falls erforderlich. Beispiel: „Die Europäische Kommission stellt
+            eine Plattform zur Online-Streitbeilegung (OS) bereit: <a
+              href="https://ec.europa.eu/consumers/odr"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://ec.europa.eu/consumers/odr</a
+            >.“
+          </p>
+        </section>
+
+        <p class="hint">
+          Hinweis: Ersetze sämtliche Platzhalter durch deine finalen Informationen.
+          Ergänze zusätzliche Abschnitte, wenn du weitere Angaben benötigst.
         </p>
       </div>
-      <h2>Umsatzsteuer-ID</h2>
-      <p>USt-IdNr.: <span class="meta">falls vorhanden</span></p>
-      <h2>Berufsrechtliche Angaben</h2>
-      <p class="meta">Falls einschlägig (z. B. Kammerzugehörigkeit, Berufsbezeichnung, Aufsichtsbehörde).</p>
-      <h2>Haftung für Inhalte</h2>
-      <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-      <h2>Haftung für Links</h2>
-      <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
-      <h2>Urheberrecht</h2>
-      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
     </main>
+
     <footer>
-      <hr>
-      <div>© 2025 Nico Schulz · HeightPlanPro</div>
-      <div class="meta">Statische Seite · keine Cookies · keine Tracker</div>
+      <div class="container">© [Jahr einfügen] HeightPlanPro. Alle Rechte vorbehalten.</div>
     </footer>
-  </div>
-</body>
+  </body>
 </html>
