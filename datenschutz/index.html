@@ -1,17 +1,107 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutzerklärung – HeightPlanPro</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6; }
-    h1 { color: #0077cc; }
-  </style>
+:root{
+  --primary: #f3f5f9;
+  --secondary: #000000;
+  --accent: #1f2a3c;
+  --bg: #1e293b;
+  --surface: #ffffff;
+  --text: #1f2a3c;
+}
+*{box-sizing:border-box}
+html{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+body{margin:0;background:var(--bg);color:var(--text);}
+.wrapper{max-width:880px;margin:0 auto;padding:32px 20px;}
+header{display:flex;align-items:center;gap:12px;margin:8px 0 4px}
+.brand{font-weight:700;letter-spacing:.2px}
+.badge{display:inline-block;background:rgba(0,0,0,.04);color:var(--primary);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:8px;border:1px solid rgba(0,0,0,.05)}
+h1{color:var(--primary);font-size:clamp(28px,3vw,36px);line-height:1.1;margin:12px 0 10px}
+h2{color:#0f172a;font-size:18px;margin:28px 0 8px}
+p,li{font-size:16px;line-height:1.7}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+hr{border:0;border-top:1px solid #e5e7eb;margin:22px 0}
+.card{background:var(--surface);border:1px solid #e5e7eb;border-radius:16px;padding:18px 18px}
+.meta{color:#6b7280;font-size:14px}
+footer{margin:38px 0 8px;font-size:14px;color:#6b7280}
+.nav a{margin-right:10px}
+.note{padding:10px 12px;border:1px dashed #d1d5db;border-radius:12px;background: #fafafa}
+</style>
 </head>
 <body>
-  <h1>Datenschutzerklärung</h1>
-  <p>Verantwortlich im Sinne der DSGVO:</p>
-  <p>Nico Schulz<br>Musterstraße 1<br>...</p>
-  <p>...</p>
+  <div class="wrapper">
+    <header>
+      <div>
+        <div class="brand">HeightPlanPro <span class="badge">Datenschutz</span></div>
+        <div class="nav"><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></div>
+      </div>
+    </header>
+    <hr>
+
+    <main class="content">
+      <h1>Datenschutzerklärung</h1>
+
+      <div class="card">
+        <p><strong>Verantwortlicher</strong></p>
+        <p>
+          Nico Schulz<br>
+          <!-- Straße, Hausnummer --> Musterstraße 1<br>
+          <!-- PLZ, Ort --> 12345 Musterstadt<br>
+          Deutschland<br>
+          E-Mail: <a href="mailto:kontakt@heightplanpro.de">kontakt@heightplanpro.de</a>
+        </p>
+      </div>
+
+      <h2>Allgemeine Hinweise</h2>
+      <p>Diese Website stellt ausschließlich statische Informationsseiten (Impressum und Datenschutzerklärung) bereit. Es werden keine Cookies gesetzt und keine Tracking-Dienste eingesetzt.</p>
+
+      <h2>Hosting (GitHub Pages)</h2>
+      <p>Die Seiten werden über GitHub Pages ausgeliefert. Beim Aufruf werden technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, User‑Agent) verarbeitet, um die Auslieferung und Sicherheit der Seite zu gewährleisten. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung der Website).</p>
+
+      <h2>Server-Logfiles</h2>
+      <p>Beim Zugriff können Server-Logs anfallen, die u. a. die IP-Adresse, Datum und Uhrzeit des Abrufs, die übertragene Datenmenge, die Meldung über den erfolgreichen Abruf, Browsertyp und Browserversion sowie das Betriebssystem enthalten. Die Logfiles werden zur technischen Fehleranalyse und zur Gewährleistung der Sicherheit verarbeitet und anschließend gelöscht, sobald sie für die Zwecke nicht mehr erforderlich sind.</p>
+
+      <h2>Kontaktaufnahme</h2>
+      <p>Wenn Sie uns per E‑Mail kontaktieren, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+
+      <h2>Speicherdauer</h2>
+      <p>Sofern in dieser Erklärung nicht anders angegeben, werden personenbezogene Daten gelöscht, sobald der Zweck der Verarbeitung entfällt und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+      <h2>Weitergabe von Daten</h2>
+      <p>Eine Weitergabe Ihrer personenbezogenen Daten an Dritte findet nicht statt, es sei denn, dies ist zur Erfüllung gesetzlicher Pflichten erforderlich.</p>
+
+      <h2>Rechtsgrundlagen</h2>
+      <p>Je nach Kontext stützen wir die Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Vorvertrag), Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, z. B. sichere Bereitstellung der Website).</p>
+
+      <h2>Ihre Rechte</h2>
+      <ul>
+        <li>Auskunft (Art. 15 DSGVO)</li>
+        <li>Berichtigung (Art. 16 DSGVO)</li>
+        <li>Löschung (Art. 17 DSGVO)</li>
+        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerspruch (Art. 21 DSGVO)</li>
+      </ul>
+
+      <h2>Beschwerderecht</h2>
+      <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten rechtswidrig erfolgt.</p>
+
+      <h2>Änderungen dieser Erklärung</h2>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.</p>
+
+      <div class="note meta">Stand: 16.10.2025</div>
+    </main>
+
+    <footer>
+      <hr>
+      <div>© 2025 Nico Schulz · HeightPlanPro</div>
+      <div class="meta">Statische Seite · keine Cookies · keine Tracker</div>
+    </footer>
+  </div>
 </body>
 </html>
