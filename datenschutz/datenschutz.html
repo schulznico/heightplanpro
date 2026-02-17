@@ -1,107 +1,440 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datenschutzerklärung – HeightPlanPro</title>
-  <style>
-:root{
-  --primary: #f3f5f9;
-  --secondary: #000000;
-  --accent: #1f2a3c;
-  --bg: #1e293b;
-  --surface: #ffffff;
-  --text: #1f2a3c;
-}
-*{box-sizing:border-box}
-html{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
-body{margin:0;background:var(--bg);color:var(--text);}
-.wrapper{max-width:880px;margin:0 auto;padding:32px 20px;}
-header{display:flex;align-items:center;gap:12px;margin:8px 0 4px}
-.brand{font-weight:700;letter-spacing:.2px}
-.badge{display:inline-block;background:rgba(0,0,0,.04);color:var(--primary);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:8px;border:1px solid rgba(0,0,0,.05)}
-h1{color:var(--primary);font-size:clamp(28px,3vw,36px);line-height:1.1;margin:12px 0 10px}
-h2{color:#0f172a;font-size:18px;margin:28px 0 8px}
-p,li{font-size:16px;line-height:1.7}
-a{color:var(--primary);text-decoration:none}
-a:hover{text-decoration:underline}
-hr{border:0;border-top:1px solid #e5e7eb;margin:22px 0}
-.card{background:var(--surface);border:1px solid #e5e7eb;border-radius:16px;padding:18px 18px}
-.meta{color:#6b7280;font-size:14px}
-footer{margin:38px 0 8px;font-size:14px;color:#6b7280}
-.nav a{margin-right:10px}
-.note{padding:10px 12px;border:1px dashed #d1d5db;border-radius:12px;background: #fafafa}
-</style>
-</head>
-<body>
-  <div class="wrapper">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datenschutzerklärung | HeightPlanPro</title>
+    <meta
+      name="description"
+      content="Datenschutzerklärung der App HeightPlanPro mit Angaben zu Datenverarbeitung, Rechtsgrundlagen und Betroffenenrechten."
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap");
+
+      :root {
+        color-scheme: light;
+        --ink: #15232d;
+        --muted: #4c6070;
+        --primary: #0f6678;
+        --primary-soft: #dceef2;
+        --accent: #c97f34;
+        --bg-a: #edf4f8;
+        --bg-b: #fbf6ee;
+        --surface: rgba(255, 255, 255, 0.9);
+        --line: rgba(20, 44, 58, 0.12);
+        --radius: 20px;
+        --shadow: 0 20px 45px -28px rgba(18, 39, 52, 0.42);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Public Sans", "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(80rem 80rem at -10% -20%, #d5eaf0 0%, transparent 55%),
+          radial-gradient(70rem 70rem at 110% -20%, #f8e6ce 0%, transparent 50%),
+          linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
+        min-height: 100dvh;
+        line-height: 1.65;
+      }
+
+      .container {
+        width: min(980px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: clamp(2.5rem, 5vw, 4rem) 0 1.5rem;
+      }
+
+      .brand-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.7rem 1rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.42rem 0.9rem;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .nav {
+        display: inline-flex;
+        gap: 0.45rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: #224556;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.3rem 0.65rem;
+        font-size: 0.86rem;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .nav a[aria-current="page"] {
+        color: var(--primary);
+        border-color: rgba(15, 102, 120, 0.28);
+        background: var(--primary-soft);
+      }
+
+      h1 {
+        font-family: "Sora", "Public Sans", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.3rem);
+        line-height: 1.1;
+        margin: 1rem 0 0.65rem;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        max-width: 68ch;
+      }
+
+      .meta {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .meta span {
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.65);
+        font-size: 0.88rem;
+        color: #264353;
+      }
+
+      main {
+        padding: 1.2rem 0 clamp(2.8rem, 5vw, 4rem);
+      }
+
+      .stack {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: clamp(1.2rem, 2.8vw, 1.8rem);
+        backdrop-filter: blur(6px);
+        animation: fade-up 0.5s ease both;
+      }
+
+      .card h2 {
+        margin: 0 0 0.7rem;
+        font-family: "Sora", "Public Sans", sans-serif;
+        font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+      }
+
+      p,
+      li {
+        margin: 0;
+      }
+
+      .card p + p {
+        margin-top: 0.75rem;
+      }
+
+      ul {
+        margin: 0.65rem 0 0;
+        padding-left: 1.2rem;
+      }
+
+      li + li {
+        margin-top: 0.35rem;
+      }
+
+      address {
+        margin: 0;
+        font-style: normal;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.14em;
+      }
+
+      a:hover {
+        color: #084b59;
+      }
+
+      .small {
+        margin-top: 0.85rem;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      footer {
+        padding: 0 0 2rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <header>
-      <div>
-        <div class="brand">HeightPlanPro <span class="badge">Datenschutz</span></div>
-        <div class="nav"><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></div>
+      <div class="container">
+        <div class="brand-row">
+          <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
+          <nav class="nav" aria-label="Rechtliches">
+            <a href="/impressum/">Impressum</a>
+            <a href="/datenschutz/" aria-current="page">Datenschutz</a>
+          </nav>
+        </div>
+        <h1>Datenschutzerklärung</h1>
+        <p class="lead">
+          Datenschutzerklärung für die App „HeightPlanPro“ mit Informationen zu Art,
+          Zweck und Umfang der Verarbeitung personenbezogener Daten.
+        </p>
+        <div class="meta">
+          <span>Stand des Textes: Dezember 2025</span>
+          <span>Verantwortlicher: Nico Schulz</span>
+        </div>
       </div>
     </header>
-    <hr>
 
-    <main class="content">
-      <h1>Datenschutzerklärung</h1>
+    <main>
+      <div class="container stack">
+        <section class="card">
+          <h2>Verantwortliche Stelle</h2>
+          <p>Die verantwortliche Stelle für die in dieser Datenschutzerklärung beschriebene Datenverarbeitung ist:</p>
+          <address class="small">
+            Nico Schulz<br />
+            Eilenburger Str. 13<br />
+            01309 Dresden<br />
+            Deutschland<br />
+            E-Mail: <a href="mailto:info@heightplanpro.de">info@heightplanpro.de</a><br />
+            Telefon: <a href="tel:+4916096091823">0160 96091823</a>
+          </address>
+        </section>
 
-      <div class="card">
-        <p><strong>Verantwortlicher</strong></p>
-        <p>
-          Nico Schulz<br>
-          <!-- Straße, Hausnummer --> Musterstraße 1<br>
-          <!-- PLZ, Ort --> 12345 Musterstadt<br>
-          Deutschland<br>
-          E-Mail: <a href="mailto:kontakt@heightplanpro.de">kontakt@heightplanpro.de</a>
-        </p>
+        <section class="card">
+          <h2>Anwendungsbereich</h2>
+          <p>
+            Diese Datenschutzerklärung gilt für die App „HeightPlanPro“ für mobile Betriebssysteme
+            und -geräte (im Folgenden „App“).
+          </p>
+          <p>
+            Beim Download über einen App-Store können durch den jeweiligen App-Store-Betreiber
+            personenbezogene Daten verarbeitet werden (z. B. E-Mail-Adresse, Nutzername,
+            Kundennummer des App-Store-Accounts, Gerätekennziffer, Downloadzeitpunkt,
+            Zahlungsinformationen). Auf diese Verarbeitung haben wir keinen Einfluss.
+          </p>
+          <p>
+            Die App verarbeitet personenbezogene Daten grundsätzlich ausschließlich lokal auf dem
+            Endgerät des Nutzers. Eine serverseitige Verarbeitung durch uns findet nicht statt.
+          </p>
+          <p>
+            Wir behalten uns vor, diese Datenschutzbestimmungen unter Einhaltung der gesetzlichen
+            Vorgaben anzupassen.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Zweck und Rechtsgrundlagen der Verarbeitung</h2>
+          <p>
+            Die App kann ohne Registrierung genutzt werden. Alle durch die Nutzung erzeugten
+            oder eingegebenen Daten werden ausschließlich lokal auf dem Endgerät gespeichert.
+            Eine Übermittlung dieser Daten an uns findet nicht statt.
+          </p>
+          <p>
+            Wenn Sie aktiv mit uns Kontakt aufnehmen oder Daten freiwillig übermitteln
+            (z. B. Fehlerprotokoll), erfolgt die Verarbeitung auf Grundlage von
+            Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO.
+          </p>
+          <p>
+            Soweit Funktionen der App Systemzugriffsrechte erfordern (z. B. Dateien oder lokales Netzwerk),
+            erfolgt die Erteilung auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Verarbeitete Datenkategorien</h2>
+          <p>Folgende Daten können in der App lokal auf dem Endgerät verarbeitet werden:</p>
+          <ul>
+            <li>Namen, Firmenbezeichnungen, Kontaktdaten, Adressen</li>
+            <li>Logos und sonstige hochgeladene Medien</li>
+            <li>Projektspezifische Inhalte und Notizen</li>
+            <li>Erzeugte Dokumente (z. B. PDF-Dateien)</li>
+            <li>Digitale Unterschriften</li>
+            <li>Gefährdungsbeurteilungen und Einsatzplanungsdaten</li>
+            <li>Auswertungen (z. B. Gefährdungskataloge, Einschätzungen)</li>
+          </ul>
+          <p class="small">Eine Speicherung oder Verarbeitung dieser Daten durch uns erfolgt nicht.</p>
+          <p class="small">
+            Technische Daten (Bugfix-Log): Bei aktivierter Fehlerprotokoll-Funktion können lokal
+            Geräteinformationen, Betriebssystemversion, technische App-Statusdaten und Fehlermeldungen
+            gespeichert werden. Eine Übermittlung erfolgt nur, wenn Sie den Log aktiv versenden.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Abruf von Kartendaten (MapTiler)</h2>
+          <p>
+            Für die Darstellung von Karten zur manuellen Auswahl von GPS-Koordinaten nutzt die App
+            den Dienst MapTiler (MapTiler AG, Baslerstraße 60, 8048 Zürich, Schweiz).
+          </p>
+          <p>
+            Beim Abruf von Kartendaten werden technische Informationen (insbesondere IP-Adresse,
+            Zeitpunkt der Anfrage, App-/Geräte-Metadaten) an MapTiler übermittelt.
+            Standortdaten des Nutzers werden nicht erhoben; die Koordinaten werden manuell gewählt.
+          </p>
+          <p>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+            Für die Schweiz besteht ein Angemessenheitsbeschluss nach Art. 45 DSGVO.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Zugriffsrechte der App</h2>
+          <p>
+            Die App benötigt bestimmte Zugriffsrechte, um Funktionen bereitstellen zu können.
+            Die Nutzung erfolgt ausschließlich funktionsbezogen; eine Übermittlung an uns findet nicht statt.
+          </p>
+          <ul>
+            <li>Dateien und Dokumente: z. B. Einbindung eines Firmenlogos in PDF-Exporte</li>
+            <li>Lokales Netzwerk (iOS): z. B. Ausgabe über Netzwerkdrucker oder NAS</li>
+            <li>Kartendaten: manuelle Koordinatenauswahl über MapTiler</li>
+          </ul>
+          <p class="small">
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO sowie, soweit erforderlich,
+            Art. 6 Abs. 1 lit. a DSGVO. Berechtigungen können in den Systemeinstellungen
+            jederzeit geändert oder widerrufen werden.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>In-App-Käufe</h2>
+          <p>
+            Innerhalb der App können kostenpflichtige Funktionen über den jeweiligen App-Store
+            erworben werden. Es gelten die Datenschutzbestimmungen der jeweiligen Anbieter.
+          </p>
+          <ul>
+            <li>
+              Apple App Store:
+              <a href="https://www.apple.com/de/ios/app-store/" target="_blank" rel="noopener noreferrer">www.apple.com/de/ios/app-store</a>,
+              Datenschutz:
+              <a href="https://www.apple.com/legal/privacy/de-ww/" target="_blank" rel="noopener noreferrer">www.apple.com/legal/privacy/de-ww</a>
+            </li>
+            <li>
+              Google Play:
+              <a href="https://play.google.com/store/apps?hl=de" target="_blank" rel="noopener noreferrer">play.google.com/store/apps</a>,
+              Datenschutz:
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Kontaktaufnahme</h2>
+          <p>
+            Wenn Sie uns kontaktieren (z. B. per E-Mail oder Telefon), verarbeiten wir Ihre Anfrage
+            und die daraus hervorgehenden personenbezogenen Daten zur Bearbeitung Ihres Anliegens.
+          </p>
+          <p>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (sofern vertragsbezogen) oder
+            Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen).
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Empfänger personenbezogener Daten</h2>
+          <p>
+            Empfänger technischer Daten kann MapTiler sein, soweit dies für den Abruf von Kartenkacheln
+            erforderlich ist (insbesondere IP-Adresse beim Laden von Kartendaten).
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Verschlüsselung</h2>
+          <p>
+            Diese App nutzt Verschlüsselung zum Schutz vertraulicher Inhalte und zur Sicherung
+            übertragener Daten gegen unbefugtes Mitlesen.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Speicherdauer</h2>
+          <p>
+            Durch die Nutzung der App erzeugte oder eingegebene Daten werden ausschließlich lokal
+            auf Ihrem Endgerät gespeichert und nicht an uns übermittelt.
+          </p>
+          <p>
+            Von Ihnen an uns übermittelte personenbezogene Daten (z. B. per E-Mail oder Bugfix-Log)
+            speichern wir nur so lange, wie dies zur Bearbeitung Ihres Anliegens erforderlich ist.
+            Gesetzliche Aufbewahrungspflichten bleiben unberührt.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Automatisierte Entscheidungsfindung</h2>
+          <p>Es findet keine automatisierte Entscheidungsfindung statt.</p>
+        </section>
+
+        <section class="card">
+          <h2>Ihre Rechte</h2>
+          <ul>
+            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
+            <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+            <li>Recht auf Beschwerde bei einer Datenschutzbehörde (Art. 77 DSGVO)</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Stand</h2>
+          <p>Stand dieser Datenschutzerklärung: Dezember 2025.</p>
+        </section>
       </div>
-
-      <h2>Allgemeine Hinweise</h2>
-      <p>Diese Website stellt ausschließlich statische Informationsseiten (Impressum und Datenschutzerklärung) bereit. Es werden keine Cookies gesetzt und keine Tracking-Dienste eingesetzt.</p>
-
-      <h2>Hosting (GitHub Pages)</h2>
-      <p>Die Seiten werden über GitHub Pages ausgeliefert. Beim Aufruf werden technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, User‑Agent) verarbeitet, um die Auslieferung und Sicherheit der Seite zu gewährleisten. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung der Website).</p>
-
-      <h2>Server-Logfiles</h2>
-      <p>Beim Zugriff können Server-Logs anfallen, die u. a. die IP-Adresse, Datum und Uhrzeit des Abrufs, die übertragene Datenmenge, die Meldung über den erfolgreichen Abruf, Browsertyp und Browserversion sowie das Betriebssystem enthalten. Die Logfiles werden zur technischen Fehleranalyse und zur Gewährleistung der Sicherheit verarbeitet und anschließend gelöscht, sobald sie für die Zwecke nicht mehr erforderlich sind.</p>
-
-      <h2>Kontaktaufnahme</h2>
-      <p>Wenn Sie uns per E‑Mail kontaktieren, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
-
-      <h2>Speicherdauer</h2>
-      <p>Sofern in dieser Erklärung nicht anders angegeben, werden personenbezogene Daten gelöscht, sobald der Zweck der Verarbeitung entfällt und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-
-      <h2>Weitergabe von Daten</h2>
-      <p>Eine Weitergabe Ihrer personenbezogenen Daten an Dritte findet nicht statt, es sei denn, dies ist zur Erfüllung gesetzlicher Pflichten erforderlich.</p>
-
-      <h2>Rechtsgrundlagen</h2>
-      <p>Je nach Kontext stützen wir die Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Vorvertrag), Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, z. B. sichere Bereitstellung der Website).</p>
-
-      <h2>Ihre Rechte</h2>
-      <ul>
-        <li>Auskunft (Art. 15 DSGVO)</li>
-        <li>Berichtigung (Art. 16 DSGVO)</li>
-        <li>Löschung (Art. 17 DSGVO)</li>
-        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-        <li>Widerspruch (Art. 21 DSGVO)</li>
-      </ul>
-
-      <h2>Beschwerderecht</h2>
-      <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten rechtswidrig erfolgt.</p>
-
-      <h2>Änderungen dieser Erklärung</h2>
-      <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.</p>
-
-      <div class="note meta">Stand: 16.10.2025</div>
     </main>
 
     <footer>
-      <hr>
-      <div>© 2025 Nico Schulz · HeightPlanPro</div>
-      <div class="meta">Statische Seite · keine Cookies · keine Tracker</div>
+      © 2026 HeightPlanPro
     </footer>
-  </div>
-</body>
+  </body>
 </html>
