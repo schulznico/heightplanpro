@@ -1,13 +1,10 @@
+<!-- datenschutz.html -->
 <!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Datenschutzerklärung | HeightPlanPro</title>
-    <meta
-      name="description"
-      content="Datenschutzerklärung der App HeightPlanPro mit Angaben zu Datenverarbeitung, Rechtsgrundlagen und Betroffenenrechten."
-    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap");
 
@@ -17,7 +14,6 @@
         --muted: #4c6070;
         --primary: #0f6678;
         --primary-soft: #dceef2;
-        --accent: #c97f34;
         --bg-a: #edf4f8;
         --bg-b: #fbf6ee;
         --surface: rgba(255, 255, 255, 0.9);
@@ -51,13 +47,6 @@
         padding: clamp(2.5rem, 5vw, 4rem) 0 1.5rem;
       }
 
-      .brand-row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.7rem 1rem;
-      }
-
       .brand {
         display: inline-flex;
         align-items: center;
@@ -72,55 +61,11 @@
         text-transform: uppercase;
       }
 
-      .nav {
-        display: inline-flex;
-        gap: 0.45rem;
-        flex-wrap: wrap;
-      }
-
-      .nav a {
-        text-decoration: none;
-        color: #224556;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 0.3rem 0.65rem;
-        font-size: 0.86rem;
-        background: rgba(255, 255, 255, 0.6);
-      }
-
-      .nav a[aria-current="page"] {
-        color: var(--primary);
-        border-color: rgba(15, 102, 120, 0.28);
-        background: var(--primary-soft);
-      }
-
       h1 {
         font-family: "Sora", "Public Sans", sans-serif;
         font-size: clamp(2rem, 5vw, 3.3rem);
         line-height: 1.1;
         margin: 1rem 0 0.65rem;
-      }
-
-      .lead {
-        margin: 0;
-        color: var(--muted);
-        max-width: 68ch;
-      }
-
-      .meta {
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-      }
-
-      .meta span {
-        padding: 0.35rem 0.65rem;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.65);
-        font-size: 0.88rem;
-        color: #264353;
       }
 
       main {
@@ -138,8 +83,6 @@
         border-radius: var(--radius);
         box-shadow: var(--shadow);
         padding: clamp(1.2rem, 2.8vw, 1.8rem);
-        backdrop-filter: blur(6px);
-        animation: fade-up 0.5s ease both;
       }
 
       .card h2 {
@@ -148,66 +91,18 @@
         font-size: clamp(1.08rem, 2.4vw, 1.35rem);
       }
 
-      p,
-      li {
+      p {
         margin: 0;
+        white-space: pre-wrap;
       }
 
       .card p + p {
         margin-top: 0.75rem;
       }
 
-      ul {
-        margin: 0.65rem 0 0;
-        padding-left: 1.2rem;
-      }
-
-      li + li {
-        margin-top: 0.35rem;
-      }
-
-      address {
-        margin: 0;
-        font-style: normal;
-      }
-
-      a {
-        color: var(--primary);
-        text-decoration-thickness: 0.08em;
-        text-underline-offset: 0.14em;
-      }
-
-      a:hover {
-        color: #084b59;
-      }
-
-      .small {
-        margin-top: 0.85rem;
-        color: var(--muted);
-        font-size: 0.94rem;
-      }
-
-      footer {
-        padding: 0 0 2rem;
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      @keyframes fade-up {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
       @media (prefers-reduced-motion: reduce) {
-        .card {
-          animation: none;
+        * {
+          animation: none !important;
         }
       }
     </style>
@@ -215,196 +110,119 @@
   <body>
     <header>
       <div class="container">
-        <div class="brand-row">
-          <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
-          <nav class="nav" aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/" aria-current="page">Datenschutz</a>
-          </nav>
-        </div>
-        <h1>Datenschutzerklärung</h1>
-        <p class="lead">
-          Datenschutzerklärung für die App „HeightPlanPro“ mit Informationen zu Art,
-          Zweck und Umfang der Verarbeitung personenbezogener Daten.
-        </p>
-        <div class="meta">
-          <span>Stand des Textes: Dezember 2025</span>
-          <span>Verantwortlicher: Nico Schulz</span>
-        </div>
+        <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
+        <h1>Datenschutzhinweis</h1>
       </div>
     </header>
 
     <main>
       <div class="container stack">
         <section class="card">
+          <h2>Datenschutzerklärung für die App „HeightPlanPro“</h2>
+        </section>
+
+        <section class="card">
+          <h2>Anwendungsbereich der Datenschutzerklärung</h2>
+          <p>Diese Datenschutzerklärung gilt für die in der Überschrift genannte App für mobile Betriebssysteme und -geräte (im Folgenden „App“). In dieser Erklärung werden Art, Zweck und Umfang der Datenerhebung im Rahmen der App-Nutzung erläutert.</p>
+          <p>Bitte beachten Sie, dass Sie sich beim Download unserer App in einen AppStore beim jeweiligen AppStore-Betreiber registrieren bzw. identifizieren müssen (z.B. über eine Apple-ID). Beim Download können verschiedene personenbezogene Daten, wie E-Mail-Adresse, Nutzername, die Kundennummer Ihres AppStore-Accounts, Ihre individuelle Gerätekennziffer, der Zeitpunkt des Downloads und ggf. Zahlungsinformationen vom Betreiber des AppStores verarbeitet werden. Hierbei gelten die Datenschutzrichtlinien und Nutzungsbedingungen der AppStore-Betreiber, die unter Umständen von den Datenschutzgesetzen der Europäischen Union abweichen können. Auf diese Bedingungen haben wir keinen Einfluss.</p>
+          <p>Die App verarbeitet personenbezogene Daten ausschließlich lokal auf dem Endgerät des Nutzers. Eine serverseitige Datenverarbeitung durch uns findet nicht statt</p>
+          <p>Wir behalten uns das Recht vor, diese Datenschutzbestimmungen unter Einhaltung der gesetzlichen Vorgaben jederzeit zu ändern.</p>
+        </section>
+
+        <section class="card">
           <h2>Verantwortliche Stelle</h2>
-          <p>Die verantwortliche Stelle für die in dieser Datenschutzerklärung beschriebene Datenverarbeitung ist:</p>
-          <address class="small">
-            Nico Schulz<br />
-            Eilenburger Str. 13<br />
-            01309 Dresden<br />
-            Deutschland<br />
-            E-Mail: <a href="mailto:info@heightplanpro.de">info@heightplanpro.de</a><br />
-            Telefon: <a href="tel:+4916096091823">0160 96091823</a>
-          </address>
+          <p>Die Verantwortliche Stelle für die in dieser Datenschutzerklärung beschriebene Datenverarbeitung ist:
+
+Nico Schulz
+Eilenburger Str. 13
+01309 Dresden
+
+E-Mail-Adresse: info@heightplanpro.de
+Telefonnummer: 0160 96091823</p>
         </section>
 
         <section class="card">
-          <h2>Anwendungsbereich</h2>
-          <p>
-            Diese Datenschutzerklärung gilt für die App „HeightPlanPro“ für mobile Betriebssysteme
-            und -geräte (im Folgenden „App“).
-          </p>
-          <p>
-            Beim Download über einen App-Store können durch den jeweiligen App-Store-Betreiber
-            personenbezogene Daten verarbeitet werden (z. B. E-Mail-Adresse, Nutzername,
-            Kundennummer des App-Store-Accounts, Gerätekennziffer, Downloadzeitpunkt,
-            Zahlungsinformationen). Auf diese Verarbeitung haben wir keinen Einfluss.
-          </p>
-          <p>
-            Die App verarbeitet personenbezogene Daten grundsätzlich ausschließlich lokal auf dem
-            Endgerät des Nutzers. Eine serverseitige Verarbeitung durch uns findet nicht statt.
-          </p>
-          <p>
-            Wir behalten uns vor, diese Datenschutzbestimmungen unter Einhaltung der gesetzlichen
-            Vorgaben anzupassen.
-          </p>
-        </section>
-
-        <section class="card">
-          <h2>Zweck und Rechtsgrundlagen der Verarbeitung</h2>
-          <p>
-            Die App kann ohne Registrierung genutzt werden. Alle durch die Nutzung erzeugten
-            oder eingegebenen Daten werden ausschließlich lokal auf dem Endgerät gespeichert.
-            Eine Übermittlung dieser Daten an uns findet nicht statt.
-          </p>
-          <p>
-            Wenn Sie aktiv mit uns Kontakt aufnehmen oder Daten freiwillig übermitteln
-            (z. B. Fehlerprotokoll), erfolgt die Verarbeitung auf Grundlage von
-            Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO.
-          </p>
-          <p>
-            Soweit Funktionen der App Systemzugriffsrechte erfordern (z. B. Dateien oder lokales Netzwerk),
-            erfolgt die Erteilung auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
-          </p>
+          <h2>Zweck und Rechtsgrundlage der Datenverarbeitung</h2>
+          <p>Die App kann ohne Registrierung genutzt werden.  Alle durch die Nutzung erzeugten oder eingegebenen Daten werden ausschließlich lokal auf dem Endgerät des Nutzers gespeichert. Eine Übermittlung dieser Daten an uns findet nicht statt.</p>
+          <p>Wir verarbeiten personenbezogene Daten nur, wenn Sie aktiv mit uns in Kontakt treten oder uns Daten (z. B. ein Fehlerprotokoll) freiwillig übermitteln. In diesen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Kommunikation bzw. Durchführung des Nutzungsverhältnisses) sowie unseres berechtigten Interesses an der Bearbeitung von Anfragen und der Fehleranalyse (Art. 6 Abs. 1 lit. f DSGVO).</p>
+          <p>Soweit bestimmte Funktionen der App Systemzugriffsrechte erfordern (z. B. Zugriff auf Dateien oder das lokale Netzwerk), erfolgt die Erteilung dieser Rechte auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Die über diese Rechte verarbeiteten Daten verbleiben jedoch vollständig auf Ihrem Endgerät und werden nicht an uns übermittelt.</p>
         </section>
 
         <section class="card">
           <h2>Verarbeitete Datenkategorien</h2>
-          <p>Folgende Daten können in der App lokal auf dem Endgerät verarbeitet werden:</p>
-          <ul>
-            <li>Namen, Firmenbezeichnungen, Kontaktdaten, Adressen</li>
-            <li>Logos und sonstige hochgeladene Medien</li>
-            <li>Projektspezifische Inhalte und Notizen</li>
-            <li>Erzeugte Dokumente (z. B. PDF-Dateien)</li>
-            <li>Digitale Unterschriften</li>
-            <li>Gefährdungsbeurteilungen und Einsatzplanungsdaten</li>
-            <li>Auswertungen (z. B. Gefährdungskataloge, Einschätzungen)</li>
-          </ul>
-          <p class="small">Eine Speicherung oder Verarbeitung dieser Daten durch uns erfolgt nicht.</p>
-          <p class="small">
-            Technische Daten (Bugfix-Log): Bei aktivierter Fehlerprotokoll-Funktion können lokal
-            Geräteinformationen, Betriebssystemversion, technische App-Statusdaten und Fehlermeldungen
-            gespeichert werden. Eine Übermittlung erfolgt nur, wenn Sie den Log aktiv versenden.
-          </p>
+          <p>Daten, die ausschließlich lokal auf dem Endgerät verarbeitet werden:</p>
+          <p>Die App ermöglicht es dem Nutzer, eigene Inhalte einzugeben, zu speichern und zu verarbeiten. Diese Daten werden ausschließlich lokal auf dem Endgerät gespeichert und zu keinem Zeitpunkt an uns übermittelt.</p>
+          <p>Zu diesen lokal verarbeiteten Daten können insbesondere gehören:
+Namen, Firmenbezeichnungen, Kontaktdaten, Adressen
+Logos und sonstige vom Nutzer hochgeladene Medien
+projektspezifische Inhalte und Notizen
+durch die App erzeugte Dokumente (z. B. PDFs)
+digitale Unterschriften
+Gefährdungsbeurteilungen, Einsatzplanungsdaten
+Auswertungen (z. B. Gefährdungskataloge, Einschätzungen)
+
+Eine Speicherung oder Verarbeitung dieser Daten durch uns erfolgt nicht.</p>
+          <p>Technische Daten (Bugfix-Log):
+
+Die App enthält ein Fehlerprotokoll („Bugfix-Log“), das über ein internes Menü aktiviert werden kann. Dieser Log dient ausschließlich der Fehlersuche und wird nur lokal auf dem Gerät gespeichert. Er kann folgende technische Informationen enthalten:
+Geräteinformationen
+Betriebssystemversion
+technische App-Statusdaten
+Fehlermeldungen
+
+Eine Übermittlung an uns erfolgt ausschließlich, wenn der Nutzer den Log selbst aktiv versendet (z. B. per E-Mail-Kontakt). Rechtsgrundlage für die Verarbeitung des übersandten Logs ist Art. 6 Abs. 1 lit. b DSGVO sowie unser berechtigtes Interesse an der Fehleranalyse (Art. 6 Abs. 1 lit. f DSGVO).</p>
         </section>
 
         <section class="card">
           <h2>Abruf von Kartendaten (MapTiler)</h2>
-          <p>
-            Für die Darstellung von Karten zur manuellen Auswahl von GPS-Koordinaten nutzt die App
-            den Dienst MapTiler (MapTiler AG, Baslerstraße 60, 8048 Zürich, Schweiz).
-          </p>
-          <p>
-            Beim Abruf von Kartendaten werden technische Informationen (insbesondere IP-Adresse,
-            Zeitpunkt der Anfrage, App-/Geräte-Metadaten) an MapTiler übermittelt.
-            Standortdaten des Nutzers werden nicht erhoben; die Koordinaten werden manuell gewählt.
-          </p>
-          <p>
-            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
-            Für die Schweiz besteht ein Angemessenheitsbeschluss nach Art. 45 DSGVO.
-          </p>
+          <p>Für die Darstellung von Karten zur manuellen Auswahl von GPS-Koordinaten nutzt die App den Dienst MapTiler der MapTiler AG, Baslerstraße 60, 8048 Zürich, Schweiz.
+
+Beim Abruf der Kartendaten werden technische Informationen (insbesondere die IP-Adresse, Zeitpunkt der Anfrage, App-/Geräte-Metadaten) an MapTiler übermittelt.
+Es werden keine Standortdaten des Nutzers verarbeitet; die Auswahl der Koordinaten erfolgt ausschließlich manuell.
+
+Die Verarbeitung ist technisch erforderlich, um die Kartenfunktion bereitzustellen. Rechtsgrundlage ist unser berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO.
+Für die Schweiz besteht ein Angemessenheitsbeschluss nach Art. 45 DSGVO.</p>
         </section>
 
         <section class="card">
           <h2>Zugriffsrechte der App</h2>
-          <p>
-            Die App benötigt bestimmte Zugriffsrechte, um Funktionen bereitstellen zu können.
-            Die Nutzung erfolgt ausschließlich funktionsbezogen; eine Übermittlung an uns findet nicht statt.
-          </p>
-          <ul>
-            <li>Dateien und Dokumente: z. B. Einbindung eines Firmenlogos in PDF-Exporte</li>
-            <li>Lokales Netzwerk (iOS): z. B. Ausgabe über Netzwerkdrucker oder NAS</li>
-            <li>Kartendaten: manuelle Koordinatenauswahl über MapTiler</li>
-          </ul>
-          <p class="small">
-            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO sowie, soweit erforderlich,
-            Art. 6 Abs. 1 lit. a DSGVO. Berechtigungen können in den Systemeinstellungen
-            jederzeit geändert oder widerrufen werden.
-          </p>
+          <p>Die App benötigt bestimmte Zugriffsrechte, um ihre Funktionen bereitstellen zu können. Diese Zugriffe erfolgen ausschließlich im Umfang der jeweiligen Funktion. Eine Übermittlung der über diese Zugriffe verarbeiteten Daten an uns findet nicht statt.</p>
+          <p>Dateien und Dokumente: Die App kann auf vom Nutzer ausgewählte Dateien auf dem Gerät zugreifen. Das ist erforderlich, um ein Firmenlogo in Dokumenten (z. B. PDF-Export) einzubinden. Die Verarbeitung erfolgt ausschließlich lokal auf dem Gerät.
+Zugriff auf lokale Netzwerke (iOS): Das ist erforderlich, um Dokumente über netzwerkfähige Geräte (z. B. Netzwerkdrucker, NAS) auszugeben. Die Verarbeitung erfolgt ausschließlich im lokalen Netzwerk.
+Kartendaten: Für die Auswahl von GPS-Koordinaten lädt die App KartenDaten des Anbieters MapTiler. Es werden dabei keine Standortdaten des Nutzers erhoben. Die Koordinaten werden ausschließlich manuell vom Nutzer ausgewählt.</p>
+          <p>Die gewährten Zugriffsberechtigungen werden ausschließlich zur Bereitstellung der jeweiligen App-Funktion verwendet. Eine Übermittlung der dabei verarbeiteten Daten an uns oder sonstige Dritte erfolgt nicht. Ausnahmen bestehen nur insoweit, wie externe Dienste für bestimmte Funktionen technisch erforderlich sind (z. B. Abruf von Kartendaten).
+
+Rechtsgrundlage für die Nutzung dieser Zugriffsrechte ist Art. 6 Abs. 1 lit. b DSGVO sowie – soweit erforderlich – Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können die Zugriffsberechtigungen der App jederzeit über die Systemeinstellungen Ihres Geräts ändern oder widerrufen. In diesem Fall können bestimmte Funktionen der App möglicherweise nicht mehr vollumfänglich genutzt werden.</p>
         </section>
 
         <section class="card">
-          <h2>In-App-Käufe</h2>
-          <p>
-            Innerhalb der App können kostenpflichtige Funktionen über den jeweiligen App-Store
-            erworben werden. Es gelten die Datenschutzbestimmungen der jeweiligen Anbieter.
-          </p>
-          <ul>
-            <li>
-              Apple App Store:
-              <a href="https://www.apple.com/de/ios/app-store/" target="_blank" rel="noopener noreferrer">www.apple.com/de/ios/app-store</a>,
-              Datenschutz:
-              <a href="https://www.apple.com/legal/privacy/de-ww/" target="_blank" rel="noopener noreferrer">www.apple.com/legal/privacy/de-ww</a>
-            </li>
-            <li>
-              Google Play:
-              <a href="https://play.google.com/store/apps?hl=de" target="_blank" rel="noopener noreferrer">play.google.com/store/apps</a>,
-              Datenschutz:
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
-            </li>
-          </ul>
+          <h2>InApp-Käufe</h2>
+          <p>Innerhalb der App haben Sie die Möglichkeit, weitere Dienstleistungen, wie z.B. kostenpflichtige Abonnements, zu kaufen (InApp-Käufe). Der Kauf findet über den AppStore statt, über den Sie die App erhalten haben. Details entnehmen Sie den jeweiligen Datenschutzerklärungen des AppStores. Im Falle von InApp-Käufen werden Sie an den Anbieter Ihres AppStores weitergeleitet. Hierbei kann es sich um folgende App-Stores handeln:
+
+Apple App Store: Apple Inc., Infinite Loop, Cupertino, CA 95014, USA,  https://www.apple.com/de/ios/app-store/. Die Datenschutzerklärung finden Sie unter:  https://www.apple.com/legal/privacy/de-ww/.
+Google Play: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, https://play.google.com/store/apps?hl=de. Das Mutterunternehmen ist die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA, sodass eine Weitergabe Ihrer Daten in die USA nicht ausgeschlossen werden kann. Die Datenschutzerklärung finden Sie unter:  https://policies.google.com/privacy.</p>
         </section>
 
         <section class="card">
           <h2>Kontaktaufnahme</h2>
-          <p>
-            Wenn Sie uns kontaktieren (z. B. per E-Mail oder Telefon), verarbeiten wir Ihre Anfrage
-            und die daraus hervorgehenden personenbezogenen Daten zur Bearbeitung Ihres Anliegens.
-          </p>
-          <p>
-            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (sofern vertragsbezogen) oder
-            Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen).
-          </p>
+          <p>Wenn Sie uns kontaktieren (z. B. via Kontaktformular, per E-Mail, Telefon, Telefax oder über einen sonstigen Kanal), wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (z.B. Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO), da wir ein berechtigtes Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen haben. Die von Ihnen an uns per Kontaktanfrage übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.</p>
         </section>
 
         <section class="card">
-          <h2>Empfänger personenbezogener Daten</h2>
-          <p>
-            Empfänger technischer Daten kann MapTiler sein, soweit dies für den Abruf von Kartenkacheln
-            erforderlich ist (insbesondere IP-Adresse beim Laden von Kartendaten).
-          </p>
+          <h2>Empfänger von personenbezogenen Daten</h2>
+          <p>Ihre personenbezogenen Daten werden an folgende Empfänger übermittelt: 
+MapTiler: Beim Laden von Kartendaten wird die MapTiler AG Empfänger technischer Daten (insbesondere IP-Adresse), die zum Abruf der Kartenkacheln erforderlich sind. Die Übermittlung technischer Daten an die MapTiler AG erfolgt in die Schweiz. Für die Schweiz besteht ein Angemessenheitsbeschluss der Europäischen Kommission gemäß Art. 45 DSGVO.</p>
         </section>
 
         <section class="card">
           <h2>Verschlüsselung</h2>
-          <p>
-            Diese App nutzt Verschlüsselung zum Schutz vertraulicher Inhalte und zur Sicherung
-            übertragener Daten gegen unbefugtes Mitlesen.
-          </p>
+          <p>Diese App nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung vertraulicher Inhalte, eine Verschlüsselung. Durch diese Verschlüsselung wird verhindert, dass die Daten, die Sie übermitteln, von unbefugten Dritten mitgelesen werden können.</p>
         </section>
 
         <section class="card">
           <h2>Speicherdauer</h2>
-          <p>
-            Durch die Nutzung der App erzeugte oder eingegebene Daten werden ausschließlich lokal
-            auf Ihrem Endgerät gespeichert und nicht an uns übermittelt.
-          </p>
-          <p>
-            Von Ihnen an uns übermittelte personenbezogene Daten (z. B. per E-Mail oder Bugfix-Log)
-            speichern wir nur so lange, wie dies zur Bearbeitung Ihres Anliegens erforderlich ist.
-            Gesetzliche Aufbewahrungspflichten bleiben unberührt.
-          </p>
+          <p>Durch die Nutzung der App erzeugte oder eingegebene Daten werden ausschließlich lokal auf Ihrem Endgerät gespeichert und nicht an uns übermittelt.</p>
+          <p>Von Ihnen an uns übermittelte personenbezogene Daten (z. B. per E-Mail oder durch Übersendung eines Fehlerprotokolls) speichern wir nur solange, wie dies zur Bearbeitung Ihres Anliegens erforderlich ist. Gesetzliche Aufbewahrungspflichten bleiben unberührt.</p>
         </section>
 
         <section class="card">
@@ -414,27 +232,30 @@
 
         <section class="card">
           <h2>Ihre Rechte</h2>
-          <ul>
-            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-            <li>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
-            <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
-            <li>Recht auf Beschwerde bei einer Datenschutzbehörde (Art. 77 DSGVO)</li>
-          </ul>
+          <p>Ihnen stehen im Rahmen der Vorgaben der DSGVO folgende Datenschutzrecht zu: 
+
+Recht auf Auskunft (Art. 15 DSGVO): Sie haben das Recht Auskunft über bei uns Ihre gespeicherten personenbezogenen Daten zu verlangen. 
+
+Recht auf Berichtigung (Art. 16 DSGVO): Sie haben das Recht, die Berichtigung Sie betreffender unrichtiger personenbezogener Daten zu verlangen. Unter Berücksichtigung des Verarbeitungszwecks haben Sie ferner das Recht, die Vervollständigung unvollständiger personenbezogener Daten zu verlangen. 
+
+Recht auf Löschung (Art. 17 DSGVO): Sie haben das Recht, die Löschung Ihrer personenbezogener Daten zu verlangen. 
+
+Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO): Sie haben das Recht, die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten zu verlangen. 
+
+Recht auf Datenübertragbarkeit (Art. 20 DSGVO): Sie haben das Recht, personenbezogene Daten, die wir automatisiert, auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags verarbeiten an sich oder an einen anderen Verantwortlichen in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist. 
+
+Recht auf Widerruf Ihrer Einwilligungen (Art. 7 Abs. 3 DSGVO): Wenn Sie eine Einwilligung in die Verarbeitung Ihrer Daten erteilt haben, haben Sie das Recht, diese jederzeit mit Wirkung für die Zukunft zu widerrufen.
+
+Recht auf Beschwerde (Art. 77 DSGVO): Wenn Sie der Auffassung sind, dass wir bei der Verarbeitung Ihrer personenbezogenen Daten datenschutzrechtliche Vorschriften nicht beachten, haben Sie das Recht eine Beschwerde bei einer Datenschutzbehörde hiergegen einzulegen. 
+
+In Fällen, in denen die Datenverarbeitung auf Art. 6 Abs. 1 S. 1 lit. e oder f DSGVO erfolgt, haben Sie das Recht, der Datenverarbeitung aus Gründen, die sich aus Ihrer besonderen Situation ergeben, zu widersprechen (Recht auf Widerspruch nach Art. 21 DSGVO). </p>
         </section>
 
         <section class="card">
           <h2>Stand</h2>
-          <p>Stand dieser Datenschutzerklärung: Dezember 2025.</p>
+          <p>Stand: Dezember 2025</p>
         </section>
       </div>
     </main>
-
-    <footer>
-      © 2026 HeightPlanPro
-    </footer>
   </body>
 </html>
