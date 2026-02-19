@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Release History | HeightPlanPro</title>
+  <meta name="description" content="Release History und Changelog von HeightPlanPro." />
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 920px; margin: 56px auto; padding: 0 18px; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    header { margin-bottom: 28px; }
+    nav a { margin-right: 14px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1 { line-height: 1.2; margin: 0 0 10px; }
+    .muted { opacity: .75; }
+    .intro { margin-bottom: 18px; }
+    .controls { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin: 18px 0 10px; }
+    input[type="search"] { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(127,127,127,.45); background: transparent; min-width: 240px; }
+    select { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(127,127,127,.45); background: transparent; }
+    .release { border-top: 1px solid rgba(127,127,127,.35); padding: 18px 0; }
+    .release:first-of-type { border-top: 0; padding-top: 0; }
+    .meta { display:flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+    .version { font-weight: 800; letter-spacing: .2px; }
+    .badge { font-size: 12px; padding: 2px 8px; border: 1px solid rgba(127,127,127,.45); border-radius: 999px; }
+    .badge.good { border-style: solid; }
+    .badge.warn { border-style: dashed; }
+    h3 { margin: 14px 0 6px; font-size: 14px; text-transform: uppercase; letter-spacing: .08em; opacity: .8; }
+    ul { margin: 8px 0 0 18px; }
+    li { margin: 4px 0; }
+    footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid rgba(127,127,127,.35); font-size: 14px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/">HeightPlanPro</a>
+      <a href="/release-history/">Release History</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Release History</h1>
+    <p class="muted intro">
+      Alle nennenswerten nutzerrelevanten Änderungen werden hier dokumentiert.
+      Interne Refactorings/CI/Build-Wartung ohne Nutzerwirkung werden bewusst nicht aufgeführt.
+    </p>
+
+    <div class="controls">
+      <input id="q" type="search" placeholder="Suchen (z.B. 'PDF', 'PLZ', 'GPS', 'iOS')…" autocomplete="off" />
+      <select id="channel">
+        <option value="all">Alle</option>
+        <option value="stable">Stable</option>
+        <option value="beta">Beta</option>
+        <option value="unreleased">Unreleased</option>
+      </select>
+    </div>
+
+    <section id="releases" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> HeightPlanPro.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Daten: neueste zuerst
+    const releaseData = [
+      {
+        version: "Unreleased",
+        date: "",
+        channel: "Unreleased",
+        sections: []
+      },
+
+      {
+        version: "1.6.0+40",
+        date: "2026-02-18",
+        channel: "Beta",
+        sections: [
+          { title: "Changed", notes: [
+            "Follow-up-Build für iOS-TestFlight-Upload und Archivierungsstabilität.",
+            "Keine neuen sichtbaren Funktionen in der Oberfläche."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.0+39",
+        date: "2026-02-18",
+        channel: "Beta",
+        sections: [
+          { title: "Changed", notes: [
+            "Stabilitäts- und Kompatibilitätsrelease für iOS/macOS.",
+            "Keine neuen sichtbaren Funktionen in der Oberfläche.",
+            "Postleitzahlen-Daten und Ortszuordnung für mehrere Länder wurden weiter verbessert (präzisere Treffer bei gleichnamigen Orten).",
+            "Die Länderauswahl für PLZ-/Stammdaten enthält wieder Ungarn (HU)."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.0+38",
+        date: "2026-02-15",
+        channel: "Beta",
+        sections: [
+          { title: "Added", notes: [
+            "Zusätzliche PLZ-Daten für Belgien, Dänemark, Frankreich, Italien, Liechtenstein, Luxemburg und die Niederlande.",
+            "PDF-Export zeigt bei Unterschriften jetzt Datum und Uhrzeit der Signatur."
+          ]},
+          { title: "Changed", notes: [
+            "Standardmäßig aktivierte PLZ-Länder beim Erststart: Deutschland, Österreich und Schweiz.",
+            "Telefonnummern-Parsing und -Validierung nutzen konsistent den ausgewählten Länderkontext.",
+            "Firmenlogo-Auswahl erfolgt über Dateiauswahl statt Foto-Mediathek."
+          ]},
+          { title: "Fixed", notes: [
+            "Kein Layout-Overflow mehr im Bildschirm für PLZ-Länderauswahl auf kleinen Displays.",
+            "Schweizer Nummernvalidierung fällt während der Eingabe nicht mehr auf +49 zurück.",
+            "Tätigkeitsauswahl bleibt stabil scrollbar und springt nicht mehr ungewollt auf „eigene“ zurück.",
+            "Betriebsinterne Notrufnummer bleibt bei Teil-/Korrektureingaben editierbar und vollständig löschbar."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.0+37",
+        date: "2026-02-05",
+        channel: "Beta",
+        sections: [
+          { title: "Added", notes: [
+            "Neue Aktion „Bibliothek reparieren“ in den Einstellungen, um fehlerhafte oder verwaiste Bibliothekseinträge zu bereinigen."
+          ]},
+          { title: "Changed", notes: [
+            "Gefährdungs- und Maßnahmenkatalog sichtbar überarbeitet und erweitert."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.0+36",
+        date: "2026-02-05",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "„Als neues Projekt speichern“ übernimmt aktuelle Änderungen jetzt zuverlässig in das neu gespeicherte Projekt."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.0+35",
+        date: "2026-02-04",
+        channel: "Beta",
+        sections: [
+          { title: "Added", notes: [
+            "Neue Qualifikationsoptionen IVBV Level 3 (Aufsichtsführende) und IVBV (Unterwiesene)."
+          ]},
+          { title: "Changed", notes: [
+            "PDF-Wasserzeichen wirkt dezenter und skaliert seitenfüllender.",
+            "PDF-Aktionsbereiche in der Übersicht wurden vereinfacht und vereinheitlicht.",
+            "Bedienelemente in Bibliothek und Stammdaten wurden kontrastreicher gestaltet."
+          ]},
+          { title: "Fixed", notes: [
+            "PDF-Vorschau zeigt beim Neuladen/Umschalten keinen doppelten Ladezustand mehr.",
+            "Umschalten Hoch-/Querformat in der PDF-Vorschau reagiert wieder zuverlässig.",
+            "Der diagonale „TESTVERSION“-Overlay wurde aus den PDFs entfernt.",
+            "GPS-Kartenpicker bricht festhängende Adressauflösungen sauber mit Hinweis ab."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.0+34",
+        date: "2026-02-03",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "„Neues Projekt“ setzt Formularzustände jetzt vollständig und stabil zurück.",
+            "Speichern/Laden nach Projekt-Reset arbeitet zuverlässiger ohne veraltete Zustände.",
+            "Kontakt-PDF rendert Umlaute/Unicode stabiler."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.8+33",
+        date: "2026-02-01",
+        channel: "Stable",
+        sections: [
+          { title: "Changed", notes: [
+            "Keine neuen sichtbaren Funktionen; Stabilitäts- und Kompatibilitätsupdate."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.8",
+        date: "2026-01-04",
+        channel: "Stable",
+        sections: [
+          { title: "Changed", notes: [
+            "Keine neuen sichtbaren Funktionen; Qualitäts- und Stabilitätsupdate."
+          ]}
+        ]
+      },
+
+      {
+        version: "1.5.6",
+        date: "2025-11-02",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Maßnahmenlisten zeigen passende Info-Tooltips direkt neben den Maßnahmen."
+          ]},
+          { title: "Changed", notes: [
+            "Gefährdungseintrag klarer benannt: „Kantenüberstieg ohne zweite, unabhängige Sicherung“."
+          ]},
+          { title: "Fixed", notes: [
+            "Einstellungen-Menü stürzt beim Öffnen des Gefahren-Hinweis-Toggles nicht mehr ab.",
+            "Tooltips in Gefährdungs- und Maßnahmenlisten laden wieder zuverlässig.",
+            "Zurück-Navigation in der Einsatzplanung springt konsistent zum vorherigen Kapitel.",
+            "Oberkategorien in der Risikobewertung blenden aus, sobald keine aktiven Gefährdungen mehr vorhanden sind."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.5",
+        date: "2025-10-23",
+        channel: "Stable",
+        sections: [
+          { title: "Changed", notes: [
+            "PLZ-Einstellungen lassen Speichern nur noch mit mindestens einem aktivierten Land zu.",
+            "Kartenansicht im GPS-Picker hält Norden oben, zeigt Übernahmehinweis und bietet Schnellrücksprung."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.4",
+        date: "2025-10-20",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Kartenansicht mit Kompass und „Zur Auswahl springen“-Funktion.",
+            "Vollständiges Daten-Backup als ZIP über neuen Menüeintrag."
+          ]},
+          { title: "Changed", notes: [
+            "PDF-Export zeigt Sonderzeichen/Umlaute plattformübergreifend robuster.",
+            "PostalCodeField reagiert stabiler auf Fokuswechsel."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.3",
+        date: "2025-10-19",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "GPS-Koordinaten können direkt auf einer OSM-Karte gewählt werden.",
+            "Stammdaten-Bibliothek zeigt gespeicherte Firmen/Auftraggeber mit Suche.",
+            "Benutzerbibliothek für Gefährdungen/Maßnahmen mit Suche, Kontextmenü und Schnellübernahme."
+          ]},
+          { title: "Changed", notes: [
+            "Arbeitsauftrag gruppiert horizontale SZP-Verfahren unterhalb der Hauptoption.",
+            "GPS-Koordinaten werden bei Adress-/PLZ-Änderung automatisch zurückgesetzt."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.2",
+        date: "2025-10-18",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Eigenes Infoblatt-PDF mit Vorschau, Export und Teilen.",
+            "Notfall-Highlights im Infoblatt mit prominenter 112, optionaler interner Nummer und QR-Code.",
+            "Postleitzahl-Länderauswahl inkl. robusterer internationaler Telefonformatierung.",
+            "Neues PostalCodeField mit Vorschlägen, Auto-Fill und Mehrfachauswahl.",
+            "Lizenzbildschirm um GeoNames-Hinweis ergänzt."
+          ]},
+          { title: "Changed", notes: [
+            "Infoblatt auf kompakte DIN-A4-Darstellung optimiert.",
+            "PDF-Exporte erzeugen spürbar kleinere Dateien.",
+            "Formulare für Notfall-/Rettungskonzepte validieren konsistenter."
+          ]},
+          { title: "Fixed", notes: [
+            "Legacy-Adressen übernehmen den Länder-Code nicht mehr fälschlich als Straßenwert.",
+            "Kontakt-PDF-Export funktioniert wieder zuverlässig bei content://-Pfaden.",
+            "Fokus- und Tippverhalten in Formularen reagiert präziser."
+          ]}
+        ]
+      },
+      {
+        version: "1.5.1",
+        date: "2025-10-11",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Lokaler Entwurfsspeicher: Formularstände bleiben auch nach vollständigem App-Neustart erhalten.",
+            "Offline-Kontaktbereich mit Formular, Mail-Launcher, PDF-Export und Speicher-/Löschfunktionen."
+          ]},
+          { title: "Changed", notes: [
+            "Splash-Screen wartet auf Wiederherstellung des Arbeitsstands.",
+            "Kontakt-PDFs lassen sich direkt exportieren, inkl. Fallback bei fehlendem Dateidialog."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.6",
+        date: "2025-10-08",
+        channel: "Stable",
+        sections: [
+          { title: "Changed", notes: [
+            "Warnlogik für Maßnahmen vereinheitlicht und im PDF konsistent übernommen.",
+            "Risikobadges und Warnhinweise im PDF kompakter dargestellt.",
+            "Risikominimierung im PDF arbeitet mit Durchschnittswerten; Δ wird klarer dargestellt.",
+            "Sammelaktionen in „Gefährdungen bewerten“ und „Maßnahmen nach T-O-P“ erfordern 5-Sekunden-Hold."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.5",
+        date: "2025-10-03",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Mehrere aufsichtsführende Höhenarbeiter inkl. Signaturen und tabellarischem PDF-Export.",
+            "Option, Firmenlogo als Wasserzeichen im PDF zu verwenden."
+          ]},
+          { title: "Changed", notes: [
+            "Bereich „Unterwiesene Personen“ umfassend überarbeitet (Karten, Qualifikationen, Auto-Klappen).",
+            "Kapitelnavigation, Formulare und Zusammenfassungen übersichtlicher gestaltet.",
+            "Eigene Gefährdungen/Maßnahmen mit Filterleiste und direkten Bearbeitungsaktionen."
+          ]},
+          { title: "Fixed", notes: [
+            "Entfernte eigene Maßnahmen verschwinden jetzt auch zuverlässig aus Auswahl- und Nach-Risiko-Listen."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.4",
+        date: "2025-09-26",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Bibliotheksverwaltung für eigene Gefährdungen und Maßnahmen mit Tabs und Schnellübernahme.",
+            "Filterleisten für Gefährdungen (Kategorie) und Maßnahmen (T-O-P).",
+            "Projektübersicht zeigt Dateigrößen und erlaubt direktes Laden per Karten-Tap."
+          ]},
+          { title: "Changed", notes: [
+            "Vorschlagslogik berücksichtigt den vollständigen Maßnahmenkatalog konsistenter.",
+            "Sektionen der Einsatzplanung um PDF-Aktionskarten und Bibliothekszugriff erweitert.",
+            "Dunkles Theme und Karten-/Menüdarstellung sichtbar verbessert."
+          ]},
+          { title: "Fixed", notes: [
+            "Dropdown-Layouts in Bearbeitungsdialogen verhindern Overflow zuverlässiger."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.3",
+        date: "2025-09-26",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Rechtsbereich als eigenes Bottom-Sheet mit Impressum, Datenschutz, Haftungsausschluss und Lizenzen.",
+            "Eigene Dialoge für Impressum und Haftungsausschluss."
+          ]},
+          { title: "Changed", notes: [
+            "Projektaktionen (Speichern/Laden/Neu) ins App-Bar-Menü verlagert.",
+            "PDF-Vorschau und -Export als hervorgehobenes Aktions-Duo in der Übersicht.",
+            "Popup-Menü optisch überarbeitet."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.2",
+        date: "2025-09-26",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Warndreieck in PDF-Maßnahmenzeilen bei unverändertem/erhöhtem Risiko.",
+            "Fester Footer-Hinweis „Erstellt mit der HeightPlanPro App“ auf jeder PDF-Seite.",
+            "Nutzer können eigene Gefährdungen/Maßnahmen global verwalten sowie per JSON importieren/exportieren.",
+            "Drei-Punkte-Menü zum direkten Bearbeiten oder Löschen eigener Einträge."
+          ]},
+          { title: "Fixed", notes: [
+            "JSON-Export der Benutzerbibliothek liefert wieder zuverlässig die erwarteten Daten.",
+            "Abbrechen in Dialogen für eigene Einträge führt nicht mehr zu Controller-Fehlern."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.1",
+        date: "2025-09-24",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Zusätzliche Auftraggeber-Kontakte in den Stammdaten.",
+            "Anzeige der Zusatzkontakte im PDF-Export."
+          ]},
+          { title: "Changed", notes: [
+            "Warnhinweise bei unverändertem/erhöhtem Risiko wurden deutlicher hervorgehoben.",
+            "PDF-Layout weiter verdichtet."
+          ]},
+          { title: "Fixed", notes: [
+            "Konsistente Farbgebung für Erfolgs- und Warnsymbole."
+          ]}
+        ]
+      },
+      {
+        version: "1.4.0",
+        date: "2025-09-23",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Hive-basierte Projektspeicherung mit Migration älterer JSON-Dateien.",
+            "Bestätigungsdialoge für „Projekt laden“ und „Neues Projekt“."
+          ]},
+          { title: "Changed", notes: [
+            "Einsatzplanungsübersicht auf kompaktes, responsives Kartenlayout umgestellt.",
+            "App-weites Design modernisiert (Material 3, Noto Sans, konsistentere Komponenten).",
+            "Projektliste deutlich übersichtlicher gestaltet."
+          ]},
+          { title: "Fixed", notes: [
+            "Geladene Altprojekte verursachen keinen _Map<dynamic, dynamic>-Fehler mehr."
+          ]}
+        ]
+      },
+      {
+        version: "1.3.1",
+        date: "2025-09-22",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Option „eigene“ für Tätigkeiten mit Freitext; Inhalte erscheinen in PDF und Dateiname.",
+            "Logo-Import skaliert hochgeladene Grafiken automatisch.",
+            "Lokale Projektverwaltung mit „Projekt speichern“ und „Projekt laden“.",
+            "Hinweis vor PDF-Export, das aktuelle Projekt zu sichern."
+          ]},
+          { title: "Changed", notes: [
+            "Firmenlogo im PDF besser ausgerichtet.",
+            "Telefonnummern werden konsistenter im E.164-Format verarbeitet.",
+            "Maßnahmenkatalog in externe Daten ausgelagert und erweitert."
+          ]}
+        ]
+      },
+      {
+        version: "1.3.0",
+        date: "2025-09-21",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Volltext-Suche über sämtliche Gefährdungen mit automatischer Zuordnung."
+          ]},
+          { title: "Changed", notes: [
+            "Gefährdungs- und Maßnahmenkatalog umfassend überarbeitet.",
+            "Such- und Auswahlfluss für bereits bearbeitete Gefährdungen verbessert."
+          ]},
+          { title: "Fixed", notes: [
+            "Abwahl einzelner Gefährdungen blendet Maßnahmen nicht mehr zu früh aus."
+          ]}
+        ]
+      },
+      {
+        version: "1.2.0",
+        date: "2025-09-20",
+        channel: "Stable",
+        sections: [
+          { title: "Changed", notes: [
+            "Sichtbares App-Branding auf allen Plattformen auf „HeightPlanPro“ vereinheitlicht.",
+            "App-Namen für Android, iOS, macOS, Windows und Linux angepasst."
+          ]}
+        ]
+      },
+      {
+        version: "1.1.0",
+        date: "2025-09-20",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Datenschutzhinweis beim ersten Start mit verpflichtender Zustimmung und Widerrufsmöglichkeit.",
+            "Lizenzseite als eigener Menüpunkt."
+          ]},
+          { title: "Changed", notes: [
+            "Kapitel-Screens und Routen auf klarere Bezeichnungen umbenannt.",
+            "Datenschutzhinweis sprachlich aktualisiert."
+          ]}
+        ]
+      },
+      {
+        version: "1.0.1",
+        date: "2025-09-15",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Firmenlogo-Upload inklusive Vorschau und optionalem Zurücksetzen.",
+            "Optionales Firmenlogo in der PDF-Ausgabe (Fallback auf App-Icon).",
+            "Mehrzeiliges App-Bar-Layout für bessere Lesbarkeit.",
+            "Zusätzliche Felder und Optimierungen in Arbeitsort/Unterschriften.",
+            "Zusätzliche Gefährdungskategorien und Maßnahmen.",
+            "Dezente Versionsinfo im Welcome-Screen."
+          ]},
+          { title: "Changed", notes: [
+            "Launch-Screen-Grafiken durch App-Icon ersetzt.",
+            "PDF-Layout sichtbar verfeinert."
+          ]},
+          { title: "Fixed", notes: [
+            "Dark-Mode-Kontraste bei Risiko-Chips und Signatur-Pad verbessert.",
+            "Löschen gespeicherter Unterschriften funktioniert wieder zuverlässig.",
+            "Tastatur in Kapitel 9 schließt wieder beim Tippen außerhalb."
+          ]}
+        ]
+      },
+      {
+        version: "1.0.0",
+        date: "2025-09-01",
+        channel: "Stable",
+        sections: [
+          { title: "Added", notes: [
+            "Erste Veröffentlichung der SZP Einsatzplanung App."
+          ]}
+        ]
+      },
+
+      {
+        version: "1.5.7",
+        date: "2025-11-30",
+        channel: "Stable",
+        sections: [
+          { title: "Changed", notes: [
+            "Autosave reagiert spürbar schneller und robuster bei laufender Eingabe.",
+            "Rechtliches-Menü erweitert und aktualisiert (u. a. AGB, Impressum, Datenschutz).",
+            "PDF-Export-/Druckabläufe im Projektworkflow verbessert."
+          ]}
+        ]
+      }
+    ];
+
+    const releasesEl = document.getElementById("releases");
+    const qEl = document.getElementById("q");
+    const channelEl = document.getElementById("channel");
+
+    function norm(s) { return (s || "").toLowerCase(); }
+
+    function matchesQuery(r, q) {
+      if (!q) return true;
+      const hay = [
+        r.version, r.date, r.channel,
+        ...(r.sections || []).flatMap(s => [s.title, ...(s.notes || [])])
+      ].join(" • ");
+      return norm(hay).includes(norm(q));
+    }
+
+    function matchesChannel(r, c) {
+      if (c === "all") return true;
+      const rc = norm(r.channel);
+      if (c === "stable") return rc === "stable";
+      if (c === "beta") return rc === "beta";
+      if (c === "unreleased") return rc === "unreleased";
+      return true;
+    }
+
+    function badgeClass(channel) {
+      const c = norm(channel);
+      if (c === "stable") return "badge good";
+      if (c === "beta") return "badge warn";
+      if (c === "unreleased") return "badge warn";
+      return "badge";
+    }
+
+    function render() {
+      const q = qEl.value.trim();
+      const c = channelEl.value;
+
+      const filtered = releaseData.filter(r => matchesChannel(r, c) && matchesQuery(r, q));
+
+      releasesEl.innerHTML = "";
+      if (!filtered.length) {
+        releasesEl.innerHTML = `<p class="muted">Keine Treffer.</p>`;
+        return;
+      }
+
+      filtered.forEach(r => {
+        const article = document.createElement("article");
+        article.className = "release";
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+
+        const v = document.createElement("span");
+        v.className = "version";
+        v.textContent = r.version === "Unreleased" ? "Unreleased" : `v${r.version}`;
+        meta.appendChild(v);
+
+        if (r.channel) {
+          const b = document.createElement("span");
+          b.className = badgeClass(r.channel);
+          b.textContent = r.channel;
+          meta.appendChild(b);
+        }
+
+        if (r.date) {
+          const d = document.createElement("span");
+          d.className = "muted";
+          d.textContent = r.date;
+          meta.appendChild(d);
+        }
+
+        article.appendChild(meta);
+
+        (r.sections || []).forEach(sec => {
+          const h = document.createElement("h3");
+          h.textContent = sec.title || "";
+          article.appendChild(h);
+
+          const ul = document.createElement("ul");
+          (sec.notes || []).forEach(n => {
+            const li = document.createElement("li");
+            li.textContent = n;
+            ul.appendChild(li);
+          });
+          article.appendChild(ul);
+        });
+
+        releasesEl.appendChild(article);
+      });
+    }
+
+    qEl.addEventListener("input", render);
+    channelEl.addEventListener("change", render);
+    render();
+  </script>
+</body>
+</html>
