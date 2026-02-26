@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HeightPlanPro</title>
+    <meta
+      name="description"
+      content="HeightPlanPro unterstützt Teams dabei, Höhenarbeiten sicher zu planen, Risiken transparent zu bewerten und Compliance verlässlich zu dokumentieren."
+    />
     <style>
       :root {
         color-scheme: light;
@@ -26,13 +30,26 @@
         box-sizing: border-box;
       }
 
+      html,
       body {
         margin: 0;
+        padding: 0;
+      }
+
+      body {
         font-family: "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont,
           system-ui, sans-serif;
         background:
-          radial-gradient(1100px 500px at 10% -10%, rgba(58, 134, 255, 0.1), transparent 60%),
-          radial-gradient(900px 400px at 100% 0%, rgba(31, 60, 136, 0.1), transparent 60%),
+          radial-gradient(
+            1100px 500px at 10% -10%,
+            rgba(58, 134, 255, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 400px at 100% 0%,
+            rgba(31, 60, 136, 0.1),
+            transparent 60%
+          ),
           var(--bg);
         color: var(--text);
         line-height: 1.6;
@@ -44,7 +61,11 @@
       }
 
       .hero {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
         color: #fff;
         padding: clamp(3rem, 7vw, 5rem) 0;
         border-bottom-left-radius: var(--radius-lg);
@@ -177,14 +198,17 @@
         <section class="card">
           <h2>Sichere Einsatzplanung in der Höhe</h2>
           <p>
-            HeightPlanPro unterstützt Teams dabei, Höhenarbeiten sauber zu planen,
-            Risiken transparent zu bewerten und Compliance verlässlich zu dokumentieren.
-            Diese Seite dient als zentraler Einstiegspunkt rund um das Projekt.
+            HeightPlanPro unterstützt Teams dabei, Höhenarbeiten sauber zu
+            planen, Risiken transparent zu bewerten und Compliance verlässlich
+            zu dokumentieren. Diese Seite dient als zentraler Einstiegspunkt
+            rund um das Projekt.
           </p>
           <div class="links">
-            <a class="btn btn-primary" href="/release-history/">Release History</a>
-            <a class="btn btn-secondary" href="/impressum/">Impressum</a>
-            <a class="btn btn-secondary" href="/datenschutz/">Datenschutz</a>
+            <a class="btn btn-primary" href="./release-history/"
+              >Release History</a
+            >
+            <a class="btn btn-secondary" href="./impressum/">Impressum</a>
+            <a class="btn btn-secondary" href="./datenschutz/">Datenschutz</a>
           </div>
         </section>
       </div>
