@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
@@ -9,37 +9,51 @@
       content="Impressum der Website HeightPlanPro – Anbieter, Kontakt, Steuerangaben und rechtliche Hinweise."
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap");
-
       :root {
         color-scheme: light;
-        --ink: #15232d;
-        --muted: #4c6070;
-        --primary: #0f6678;
-        --primary-soft: #dceef2;
-        --accent: #c97f34;
-        --bg-a: #edf4f8;
-        --bg-b: #fbf6ee;
-        --surface: rgba(255, 255, 255, 0.9);
-        --line: rgba(20, 44, 58, 0.12);
-        --radius: 20px;
-        --shadow: 0 20px 45px -28px rgba(18, 39, 52, 0.42);
+        --primary: #1f3c88;
+        --primary-dark: #152654;
+        --accent: #3a86ff;
+        --bg: #f6f8fb;
+        --surface: #ffffff;
+        --text-strong: #0f172a;
+        --text: #1e293b;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html,
       body {
         margin: 0;
-        font-family: "Public Sans", "Segoe UI", system-ui, sans-serif;
-        color: var(--ink);
+        padding: 0;
+      }
+
+      body {
+        font-family: "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont,
+          system-ui, sans-serif;
+        color: var(--text);
         background:
-          radial-gradient(80rem 80rem at -10% -20%, #d5eaf0 0%, transparent 55%),
-          radial-gradient(70rem 70rem at 110% -20%, #f8e6ce 0%, transparent 50%),
-          linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
-        min-height: 100dvh;
+          radial-gradient(
+            1100px 500px at 10% -10%,
+            rgba(58, 134, 255, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 400px at 100% 0%,
+            rgba(31, 60, 136, 0.1),
+            transparent 60%
+          ),
+          var(--bg);
         line-height: 1.65;
+        min-height: 100dvh;
       }
 
       .container {
@@ -48,7 +62,15 @@
       }
 
       header {
-        padding: clamp(2.5rem, 5vw, 4rem) 0 1.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: #fff;
+        padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(1.5rem, 3vw, 2rem);
+        border-bottom-left-radius: var(--radius-lg);
+        border-bottom-right-radius: var(--radius-lg);
       }
 
       .brand {
@@ -56,26 +78,27 @@
         align-items: center;
         padding: 0.42rem 0.9rem;
         border-radius: 999px;
-        background: var(--primary-soft);
-        color: var(--primary);
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #fff;
         text-decoration: none;
-        font-weight: 600;
-        font-size: 0.84rem;
-        letter-spacing: 0.04em;
+        font-weight: 700;
+        font-size: 0.82rem;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
       }
 
       h1 {
-        font-family: "Sora", "Public Sans", sans-serif;
-        font-size: clamp(2rem, 5vw, 3.3rem);
-        line-height: 1.1;
-        margin: 1rem 0 0.65rem;
+        margin: 1rem 0 0.55rem;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.08;
+        color: #fff;
       }
 
       .lead {
         margin: 0;
-        color: var(--muted);
         max-width: 62ch;
+        color: rgba(255, 255, 255, 0.92);
       }
 
       .meta {
@@ -86,16 +109,16 @@
       }
 
       .meta span {
-        padding: 0.35rem 0.65rem;
+        padding: 0.35rem 0.7rem;
         border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.65);
-        font-size: 0.88rem;
-        color: #264353;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        font-size: 0.86rem;
       }
 
       main {
-        padding: 1.2rem 0 clamp(2.8rem, 5vw, 4rem);
+        padding: clamp(1.6rem, 4vw, 2.5rem) 0 clamp(2.8rem, 6vw, 4rem);
       }
 
       .grid {
@@ -106,18 +129,11 @@
 
       .card {
         background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
         box-shadow: var(--shadow);
-        padding: clamp(1.2rem, 2.8vw, 1.8rem);
-        backdrop-filter: blur(6px);
-        animation: fade-up 0.5s ease both;
+        padding: clamp(1.15rem, 2.7vw, 1.7rem);
       }
-
-      .card:nth-child(2) { animation-delay: 0.05s; }
-      .card:nth-child(3) { animation-delay: 0.1s; }
-      .card:nth-child(4) { animation-delay: 0.15s; }
-      .card:nth-child(5) { animation-delay: 0.2s; }
 
       .card.full {
         grid-column: 1 / -1;
@@ -125,8 +141,8 @@
 
       .card h2 {
         margin: 0 0 0.7rem;
-        font-family: "Sora", "Public Sans", sans-serif;
-        font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+        color: var(--text-strong);
       }
 
       p {
@@ -139,13 +155,13 @@
       }
 
       a {
-        color: var(--primary);
+        color: var(--accent);
         text-decoration-thickness: 0.08em;
         text-underline-offset: 0.14em;
       }
 
       a:hover {
-        color: #084b59;
+        color: #2f78ea;
       }
 
       .small {
@@ -161,26 +177,9 @@
         font-size: 0.9rem;
       }
 
-      @keyframes fade-up {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
       @media (max-width: 760px) {
         .grid {
           grid-template-columns: 1fr;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .card {
-          animation: none;
         }
       }
     </style>
@@ -188,7 +187,7 @@
   <body>
     <header>
       <div class="container">
-        <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
+        <a href="./" class="brand">HeightPlanPro</a>
         <h1>Impressum</h1>
         <p class="lead">
           Angaben gemäß § 5 DDG für die Website von HeightPlanPro.
@@ -218,7 +217,8 @@
             Telefon:
             <a href="tel:+4916096091823">+49 (0) 160 96091823</a><br />
             E-Mail:
-            <a href="mailto:info@heightplanpro.de">info@heightplanpro.de</a><br />
+            <a href="mailto:info@heightplanpro.de">info@heightplanpro.de</a
+            ><br />
             Website:
             <a href="https://www.heightplanpro.de/">www.heightplanpro.de</a>
           </p>
@@ -243,28 +243,25 @@
         <section class="card">
           <h2>Verbraucherstreitbeilegung</h2>
           <p>
-            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-            Verbraucherschlichtungsstelle teilzunehmen.
+            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+            vor einer Verbraucherschlichtungsstelle teilzunehmen.
           </p>
         </section>
 
         <section class="card full">
           <h2>Haftung für Links</h2>
           <p>
-            Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir
-            keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir daher keine Gewähr.
-            Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber
-            der Seiten verantwortlich.
+            Diese Website enthält Links zu externen Websites Dritter, auf deren
+            Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte
+            übernehmen wir daher keine Gewähr. Für die Inhalte der verlinkten
+            Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+            verantwortlich.
           </p>
-          <p class="small">
-            © 2026 HeightPlanPro. Alle Rechte vorbehalten.
-          </p>
+          <p class="small">© 2026 HeightPlanPro. Alle Rechte vorbehalten.</p>
         </section>
       </div>
     </main>
 
-    <footer>
-      HeightPlanPro
-    </footer>
+    <footer>HeightPlanPro</footer>
   </body>
 </html>
