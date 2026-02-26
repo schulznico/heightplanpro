@@ -1,243 +1,476 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Release History | HeightPlanPro</title>
-  <meta name="description" content="Release History und Changelog von HeightPlanPro." />
-  <style>
-    :root { color-scheme: light dark; }
-    body { max-width: 920px; margin: 56px auto; padding: 0 18px; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    header { margin-bottom: 28px; }
-    nav a { margin-right: 14px; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    h1 { line-height: 1.2; margin: 0 0 10px; }
-    .muted { opacity: .75; }
-    .intro { margin-bottom: 18px; }
-    .controls { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin: 18px 0 10px; }
-    input[type="search"] { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(127,127,127,.45); background: transparent; min-width: 240px; }
-    select { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(127,127,127,.45); background: transparent; }
-    .release { border-top: 1px solid rgba(127,127,127,.35); padding: 18px 0; }
-    .release:first-of-type { border-top: 0; padding-top: 0; }
-    .meta { display:flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
-    .version { font-weight: 800; letter-spacing: .2px; }
-    .badge { font-size: 12px; padding: 2px 8px; border: 1px solid rgba(127,127,127,.45); border-radius: 999px; }
-    .badge.good { border-style: solid; }
-    .badge.warn { border-style: dashed; }
-    h3 { margin: 14px 0 6px; font-size: 14px; text-transform: uppercase; letter-spacing: .08em; opacity: .8; }
-    ul { margin: 8px 0 0 18px; }
-    li { margin: 4px 0; }
-    footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid rgba(127,127,127,.35); font-size: 14px; }
-  </style>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Release History | HeightPlanPro</title>
+    <meta
+      name="description"
+      content="Release History und Changelog von HeightPlanPro."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --primary: #1f3c88;
+        --primary-dark: #152654;
+        --accent: #3a86ff;
+        --success: #2fb07f;
+        --warning: #f6c343;
+        --bg: #f6f8fb;
+        --surface: #ffffff;
+        --text-strong: #0f172a;
+        --text: #1e293b;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
 
-<body>
-  <header>
-    <nav>
-      <a href="/">HeightPlanPro</a>
-      <a href="/release-history/">Release History</a>
-      <a href="/impressum/">Impressum</a>
-      <a href="/datenschutz/">Datenschutz</a>
-    </nav>
-  </header>
+      * {
+        box-sizing: border-box;
+      }
 
-  <main>
-    <h1>Release History</h1>
-    <p class="muted intro">
-      Alle nennenswerten nutzerrelevanten Änderungen werden hier dokumentiert.
-      Interne Refactorings/CI/Build-Wartung ohne Nutzerwirkung werden bewusst nicht aufgeführt.
-    </p>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-    <div class="controls">
-      <input id="q" type="search" placeholder="Suchen (z.B. 'PDF', 'PLZ', 'GPS', 'iOS')…" autocomplete="off" />
-      <select id="channel">
-        <option value="all">Alle</option>
-        <option value="stable">Stable</option>
-        <option value="beta">Beta</option>
-        <option value="unreleased">Unreleased</option>
-      </select>
-    </div>
+      body {
+        font-family: "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont,
+          system-ui, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            1100px 500px at 10% -10%,
+            rgba(58, 134, 255, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 400px at 100% 0%,
+            rgba(31, 60, 136, 0.1),
+            transparent 60%
+          ),
+          var(--bg);
+        line-height: 1.6;
+      }
 
-    <section id="releases" aria-live="polite"></section>
-  </main>
+      .container {
+        width: min(1040px, 92vw);
+        margin: 0 auto;
+      }
 
-  <footer>
-    © <span id="year"></span> HeightPlanPro.
-  </footer>
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: #fff;
+        border-bottom-left-radius: var(--radius-lg);
+        border-bottom-right-radius: var(--radius-lg);
+        padding: clamp(1.4rem, 3vw, 2rem) 0 clamp(2rem, 5vw, 3rem);
+      }
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-bottom: 1.1rem;
+      }
 
-    // Daten: neueste zuerst
-    const releaseData = [
-      {
-        version: "Unreleased",
-        date: "",
-        channel: "Unreleased",
-        sections: []
-      },
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
 
-      {
-        version: "1.6.1+42",
-        date: "2026-02-25",
-        channel: "Beta",
-        sections: [
-    { title: "Changed", notes: [
-      "Follow-up-Build für den iOS-TestFlight-Upload mit aktualisiertem Paket-Lockfile und erneut verifizierten Release-Checks.",
-      "Keine zusätzlichen sichtbaren Funktionen gegenüber 1.6.1+41.",
-      "Kapitelüberschrift für Maßnahmen ist jetzt konsistent zweizeilig: Titel „Maßnahmen“ mit Untertitel „nach T-O-P“.",
-      "Navigationstasten am unteren Rand reagieren robuster auf größere iPhone-Schriftgrößen; bei sehr wenig Platz werden automatisch kompakte Icon-Buttons verwendet.",
-      "Überschriften- und Buttontexte bleiben bei erhöhter Systemschriftgröße optisch stabiler, ohne die Lesbarkeit von Fließtexten einzuschränken.",
-      "Der Pro-Freischaltungsdialog (Kaufen/Wiederherstellen) wurde visuell überarbeitet: klarere Struktur, bessere Status-Hinweise und modernisiertes Layout.",
-      "Dialog-Aktionsbuttons haben jetzt konsistent mehr Abstand und ein stabileres Wrap-Verhalten (u. a. im Datenschutzhinweis).",
-      "Pro-Markierungen im Menü wurden mit einem passenden Pro-Icon aufgewertet."
-    ]},
-    { title: "Fixed", notes: [
-      "Signaturerfassung bei Aufsichtsführenden und unterwiesenen Personen bleibt beim Gerätewechsel zwischen Hoch-/Querformat korrekt innerhalb des weißen Signaturfelds und zeichnet nicht mehr über Dialogelemente."
-    ]}
-  ]
-},
-{
-  version: "1.6.1+41",
-  date: "2026-02-25",
-  channel: "Beta",
-  sections: [
-          { title: "Changed", notes: [
-            "Kapitelüberschrift für Maßnahmen ist jetzt konsistent zweizeilig: Titel „Maßnahmen“ mit Untertitel „nach T-O-P“.",
-            "Navigationstasten am unteren Rand reagieren robuster auf größere iPhone-Schriftgrößen; bei sehr wenig Platz werden automatisch kompakte Icon-Buttons verwendet.",
-            "Überschriften- und Buttontexte bleiben bei erhöhter Systemschriftgröße optisch stabiler, ohne die Lesbarkeit von Fließtexten einzuschränken.",
-            "Der Pro-Freischaltungsdialog (Kaufen/Wiederherstellen) wurde visuell überarbeitet: klarere Struktur, bessere Status-Hinweise und modernisiertes Layout.",
-            "Dialog-Aktionsbuttons haben jetzt konsistent mehr Abstand und ein stabileres Wrap-Verhalten (u. a. im Datenschutzhinweis).",
-            "Pro-Markierungen im Menü wurden mit einem passenden Pro-Icon aufgewertet."
-          ]},
-          { title: "Fixed", notes: [
-            "Signaturerfassung bei Aufsichtsführenden und unterwiesenen Personen bleibt beim Gerätewechsel zwischen Hoch-/Querformat korrekt innerhalb des weißen Signaturfelds und zeichnet nicht mehr über Dialogelemente."
-          ]}
-        ]
-      }, 
-      {
-        version: "1.6.0+40",
-        date: "2026-02-18",
-        channel: "Beta",
-        sections: [
-          { title: "Changed", notes: [
-            "Follow-up-Build für iOS-TestFlight-Upload und Archivierungsstabilität.",
-            "Keine neuen sichtbaren Funktionen in der Oberfläche."
-          ]}
-        ]
-      },
-      {
-        version: "1.6.0+39",
-        date: "2026-02-18",
-        channel: "Beta",
-        sections: [
-          { title: "Changed", notes: [
-            "Stabilitäts- und Kompatibilitätsrelease für iOS/macOS.",
-            "Keine neuen sichtbaren Funktionen in der Oberfläche.",
-            "Postleitzahlen-Daten und Ortszuordnung für mehrere Länder wurden weiter verbessert (präzisere Treffer bei gleichnamigen Orten).",
-            "Die Länderauswahl für PLZ-/Stammdaten enthält wieder Ungarn (HU)."
-          ]}
-        ]
-      },
-      {
-        version: "1.6.0+38",
-        date: "2026-02-15",
-        channel: "Beta",
-        sections: [
-          { title: "Added", notes: [
-            "Zusätzliche PLZ-Daten für Belgien, Dänemark, Frankreich, Italien, Liechtenstein, Luxemburg und die Niederlande.",
-            "PDF-Export zeigt bei Unterschriften jetzt Datum und Uhrzeit der Signatur."
-          ]},
-          { title: "Changed", notes: [
-            "Standardmäßig aktivierte PLZ-Länder beim Erststart: Deutschland, Österreich und Schweiz.",
-            "Telefonnummern-Parsing und -Validierung nutzen konsistent den ausgewählten Länderkontext.",
-            "Firmenlogo-Auswahl erfolgt über Dateiauswahl statt Foto-Mediathek."
-          ]},
-          { title: "Fixed", notes: [
-            "Kein Layout-Overflow mehr im Bildschirm für PLZ-Länderauswahl auf kleinen Displays.",
-            "Schweizer Nummernvalidierung fällt während der Eingabe nicht mehr auf +49 zurück.",
-            "Tätigkeitsauswahl bleibt stabil scrollbar und springt nicht mehr ungewollt auf „eigene“ zurück.",
-            "Betriebsinterne Notrufnummer bleibt bei Teil-/Korrektureingaben editierbar und vollständig löschbar."
-          ]}
-        ]
-      },
-      {
-        version: "1.6.0+37",
-        date: "2026-02-05",
-        channel: "Beta",
-        sections: [
-          { title: "Added", notes: [
-            "Neue Aktion „Bibliothek reparieren“ in den Einstellungen, um fehlerhafte oder verwaiste Bibliothekseinträge zu bereinigen."
-          ]},
-          { title: "Changed", notes: [
-            "Gefährdungs- und Maßnahmenkatalog sichtbar überarbeitet und erweitert."
-          ]}
-        ]
-      },
-      {
-        version: "1.6.0+36",
-        date: "2026-02-05",
-        channel: "Beta",
-        sections: [
-          { title: "Fixed", notes: [
-            "„Als neues Projekt speichern“ übernimmt aktuelle Änderungen jetzt zuverlässig in das neu gespeicherte Projekt."
-          ]}
-        ]
-      },
-      {
-        version: "1.6.0+35",
-        date: "2026-02-04",
-        channel: "Beta",
-        sections: [
-          { title: "Added", notes: [
-            "Neue Qualifikationsoptionen IVBV Level 3 (Aufsichtsführende) und IVBV (Unterwiesene)."
-          ]},
-          { title: "Changed", notes: [
-            "PDF-Wasserzeichen wirkt dezenter und skaliert seitenfüllender.",
-            "PDF-Aktionsbereiche in der Übersicht wurden vereinfacht und vereinheitlicht.",
-            "Bedienelemente in Bibliothek und Stammdaten wurden kontrastreicher gestaltet."
-          ]},
-          { title: "Fixed", notes: [
-            "PDF-Vorschau zeigt beim Neuladen/Umschalten keinen doppelten Ladezustand mehr.",
-            "Umschalten Hoch-/Querformat in der PDF-Vorschau reagiert wieder zuverlässig.",
-            "Der diagonale „TESTVERSION“-Overlay wurde aus den PDFs entfernt.",
-            "GPS-Kartenpicker bricht festhängende Adressauflösungen sauber mit Hinweis ab."
-          ]}
-        ]
-      },
-      {
-        version: "1.6.0+34",
-        date: "2026-02-03",
-        channel: "Beta",
-        sections: [
-          { title: "Fixed", notes: [
-            "„Neues Projekt“ setzt Formularzustände jetzt vollständig und stabil zurück.",
-            "Speichern/Laden nach Projekt-Reset arbeitet zuverlässiger ohne veraltete Zustände.",
-            "Kontakt-PDF rendert Umlaute/Unicode stabiler."
-          ]}
-        ]
-      },
-      {
-        version: "1.5.8+33",
-        date: "2026-02-01",
-        channel: "Stable",
-        sections: [
-          { title: "Changed", notes: [
-            "Keine neuen sichtbaren Funktionen; Stabilitäts- und Kompatibilitätsupdate."
-          ]}
-        ]
-      },
-      {
-        version: "1.5.8",
-        date: "2026-01-04",
-        channel: "Stable",
-        sections: [
-          { title: "Changed", notes: [
-            "Keine neuen sichtbaren Funktionen; Qualitäts- und Stabilitätsupdate."
-          ]}
-        ]
-      },
-      {
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        line-height: 1.1;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+      }
+
+      .intro {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.92);
+        max-width: 72ch;
+      }
+
+      main {
+        padding: clamp(1.25rem, 4vw, 2rem) 0 clamp(2.5rem, 6vw, 3.5rem);
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        padding: clamp(1rem, 2.6vw, 1.4rem);
+      }
+
+      .controls {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      input[type="search"],
+      select {
+        min-height: 48px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+        padding: 0.7rem 0.9rem;
+        font: inherit;
+      }
+
+      input[type="search"] {
+        min-width: 260px;
+        flex: 1 1 320px;
+      }
+
+      #releases {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .release {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        padding: 1rem 1rem 1.1rem;
+      }
+
+      .meta {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .version {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        color: var(--text-strong);
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .badge {
+        font-size: 12px;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .badge.stable {
+        color: #155a3f;
+        background: rgba(47, 176, 127, 0.15);
+        border-color: rgba(47, 176, 127, 0.35);
+      }
+
+      .badge.beta {
+        color: #1f3c88;
+        background: rgba(58, 134, 255, 0.12);
+        border-color: rgba(58, 134, 255, 0.35);
+      }
+
+      .badge.unreleased {
+        color: #7a5a00;
+        background: rgba(246, 195, 67, 0.2);
+        border-color: rgba(246, 195, 67, 0.45);
+      }
+
+      h3 {
+        margin: 0.8rem 0 0.4rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0.25rem 0 0 1.1rem;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.28rem 0;
+      }
+
+      .empty {
+        color: var(--muted);
+      }
+
+      footer {
+        margin: 1.8rem 0 2rem;
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 640px) {
+        .controls > * {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="./">HeightPlanPro</a>
+          <a href="./release-history/">Release History</a>
+          <a href="./impressum/">Impressum</a>
+          <a href="./datenschutz/">Datenschutz</a>
+        </nav>
+        <h1>Release History</h1>
+        <p class="intro">
+          Alle nennenswerten nutzerrelevanten Änderungen werden hier dokumentiert.
+          Interne Refactorings/CI/Build-Wartung ohne Nutzerwirkung werden bewusst
+          nicht aufgeführt.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="panel">
+          <div class="controls">
+            <input
+              id="q"
+              type="search"
+              placeholder="Suchen (z. B. PDF, PLZ, GPS, iOS)…"
+              autocomplete="off"
+            />
+            <select id="channel">
+              <option value="all">Alle</option>
+              <option value="stable">Stable</option>
+              <option value="beta">Beta</option>
+              <option value="unreleased">Unreleased</option>
+            </select>
+          </div>
+          <section id="releases" aria-live="polite"></section>
+        </section>
+      </div>
+    </main>
+
+    <footer>© <span id="year"></span> HeightPlanPro.</footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const releaseData = [
+        {
+          version: "Unreleased",
+          date: "",
+          channel: "Unreleased",
+          sections: [],
+        },
+        {
+          version: "1.6.2+43",
+          date: "2026-02-26",
+          channel: "Beta",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Die Überschriften in den Gruppen-Dialogen der Einsatzplanung wurden visuell klarer hervorgehoben und stärker von den auswählbaren Unterpunkten getrennt.",
+                "Das Top-Level-Menü wurde auf den Dialog-Stil der Gruppenmenüs umgestellt (konsistenter Header, Kacheln und Abstände).",
+                "Pro-gesperrte Aktionen sind an weiteren Stellen direkter erkennbar (Kontakt-PDF-Export, Log-Export, GPS-Kartenwahl), inklusive klarer Pro-Kennzeichnung.",
+                "Das IAP-Wording wurde vereinheitlicht: Statt „Pro-Freischaltung“ wird in Dialogen, Statushinweisen und Einstellungen nun „Pro-Upgrade“ verwendet (PRO-Badges/Tabs bleiben unverändert).",
+                "Die Inhalte im Kaufdialog wurden aktualisiert und um neue Pro-Funktionen ergänzt, u. a. MapTiler-GPS-Kartendaten sowie alle Export-/Importfunktionen.",
+                "Rechtliche und Datenschutztexte benennen den In-App-Kauf konsistent als „Pro-Upgrade (Lifetime Unlock)“.",
+                "Tooltips der Gefährdungs-Oberkategorien wurden fachlich überarbeitet und auf alle Kategorien erweitert.",
+                "Die Maßnahmen-Änderungshistorie wurde bis zum Katalogstand vom 2026-02-05 aktualisiert.",
+              ],
+            },
+            {
+              title: "Fixed",
+              notes: [
+                "Zähler in der Stammdatenverwaltung (Firmen/Auftraggeber) aktualisieren sich nach neuen Einträgen jetzt sofort, ohne die Ansicht neu öffnen zu müssen.",
+                "Zähler in der eigenen Bibliothek (Gefährdungen/Maßnahmen) werden nach neu angelegten Einträgen unmittelbar aktualisiert.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.6.1+42",
+          date: "2026-02-25",
+          channel: "Beta",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Follow-up-Build für den iOS-TestFlight-Upload mit aktualisiertem Paket-Lockfile und erneut verifizierten Release-Checks.",
+                "Keine zusätzlichen sichtbaren Funktionen gegenüber 1.6.1+41.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.6.1+41",
+          date: "2026-02-25",
+          channel: "Beta",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Kapitelüberschrift für Maßnahmen ist jetzt konsistent zweizeilig: Titel „Maßnahmen“ mit Untertitel „nach T-O-P“.",
+                "Navigationstasten am unteren Rand reagieren robuster auf größere iPhone-Schriftgrößen; bei sehr wenig Platz werden automatisch kompakte Icon-Buttons verwendet.",
+                "Überschriften- und Buttontexte bleiben bei erhöhter Systemschriftgröße optisch stabiler, ohne die Lesbarkeit von Fließtexten einzuschränken.",
+                "Der Pro-Freischaltungsdialog (Kaufen/Wiederherstellen) wurde visuell überarbeitet: klarere Struktur, bessere Status-Hinweise und modernisiertes Layout.",
+                "Dialog-Aktionsbuttons haben jetzt konsistent mehr Abstand und ein stabileres Wrap-Verhalten (u. a. im Datenschutzhinweis).",
+                "Pro-Markierungen im Menü wurden mit einem passenden Pro-Icon aufgewertet.",
+              ],
+            },
+            {
+              title: "Fixed",
+              notes: [
+                "Signaturerfassung bei Aufsichtsführenden und unterwiesenen Personen bleibt beim Gerätewechsel zwischen Hoch-/Querformat korrekt innerhalb des weißen Signaturfelds und zeichnet nicht mehr über Dialogelemente.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.6.0+40",
+          date: "2026-02-18",
+          channel: "Beta",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Follow-up-Build für iOS-TestFlight-Upload und Archivierungsstabilität.",
+                "Keine neuen sichtbaren Funktionen in der Oberfläche.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.6.0+39",
+          date: "2026-02-18",
+          channel: "Beta",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Stabilitäts- und Kompatibilitätsrelease für iOS/macOS.",
+                "Keine neuen sichtbaren Funktionen in der Oberfläche.",
+                "Postleitzahlen-Daten und Ortszuordnung für mehrere Länder wurden weiter verbessert (präzisere Treffer bei gleichnamigen Orten).",
+                "Die Länderauswahl für PLZ-/Stammdaten enthält wieder Ungarn (HU).",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.6.0+38",
+          date: "2026-02-15",
+          channel: "Beta",
+          sections: [
+            {
+              title: "Added",
+              notes: [
+                "Zusätzliche PLZ-Daten für Belgien, Dänemark, Frankreich, Italien, Liechtenstein, Luxemburg und die Niederlande.",
+                "PDF-Export zeigt bei Unterschriften jetzt Datum und Uhrzeit der Signatur.",
+              ],
+            },
+            {
+              title: "Changed",
+              notes: [
+                "Standardmäßig aktivierte PLZ-Länder beim Erststart: Deutschland, Österreich und Schweiz.",
+                "Telefonnummern-Parsing und -Validierung nutzen konsistent den ausgewählten Länderkontext.",
+                "Firmenlogo-Auswahl erfolgt über Dateiauswahl statt Foto-Mediathek.",
+              ],
+            },
+            {
+              title: "Fixed",
+              notes: [
+                "Kein Layout-Overflow mehr im Bildschirm für PLZ-Länderauswahl auf kleinen Displays.",
+                "Schweizer Nummernvalidierung fällt während der Eingabe nicht mehr auf +49 zurück.",
+                "Tätigkeitsauswahl bleibt stabil scrollbar und springt nicht mehr ungewollt auf „eigene“ zurück.",
+                "Betriebsinterne Notrufnummer bleibt bei Teil-/Korrektureingaben editierbar und vollständig löschbar.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.5.8+33",
+          date: "2026-02-01",
+          channel: "Stable",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Keine neuen sichtbaren Funktionen; Stabilitäts- und Kompatibilitätsupdate.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.5.8",
+          date: "2026-01-04",
+          channel: "Stable",
+          sections: [
+            {
+              title: "Changed",
+              notes: [
+                "Keine neuen sichtbaren Funktionen; Qualitäts- und Stabilitätsupdate.",
+              ],
+            },
+          ],
+        },
+        {
+          version: "1.5.6",
+          date: "2025-11-02",
+          channel: "Stable",
+          sections: [
+            {
+              title: "Added",
+              notes: [
+                "Maßnahmenlisten zeigen passende Info-Tooltips direkt neben den Maßnahmen.",
+              ],
+            },
+            {
+              title: "Changed",
+              notes: [
+                "Gefährdungseintrag klarer benannt: „Kantenüberstieg ohne zweite, unabhängige Sicherung“.",
+              ],
+            },
+            {
+              title: "Fixed",
+              notes: [
+                "Einstellungen-Menü stürzt beim Öffnen des Gefahren-Hinweis-Toggles nicht mehr ab.",
+                "Tooltips in Gefährdungs- und Maßnahmenlisten laden wieder zuverlässig.",
+                "Zurück-Navigation in der Einsatzplanung springt konsistent zum vorherigen Kapitel.",
+                "Oberkategorien in der Risikobewertung blenden aus, sobald keine aktiven Gefährdungen mehr vorhanden sind.",
+              ],
+            },
+          ],
+        },
+              {
         version: "1.5.7",
         date: "2025-11-30",
         channel: "Stable",
@@ -566,102 +799,101 @@
           ]}
         ]
       }
-
     ];
 
-    const releasesEl = document.getElementById("releases");
-    const qEl = document.getElementById("q");
-    const channelEl = document.getElementById("channel");
+      const releasesEl = document.getElementById("releases");
+      const qEl = document.getElementById("q");
+      const channelEl = document.getElementById("channel");
 
-    function norm(s) { return (s || "").toLowerCase(); }
+      const norm = (s) => (s || "").toLowerCase();
 
-    function matchesQuery(r, q) {
-      if (!q) return true;
-      const hay = [
-        r.version, r.date, r.channel,
-        ...(r.sections || []).flatMap(s => [s.title, ...(s.notes || [])])
-      ].join(" • ");
-      return norm(hay).includes(norm(q));
-    }
-
-    function matchesChannel(r, c) {
-      if (c === "all") return true;
-      const rc = norm(r.channel);
-      if (c === "stable") return rc === "stable";
-      if (c === "beta") return rc === "beta";
-      if (c === "unreleased") return rc === "unreleased";
-      return true;
-    }
-
-    function badgeClass(channel) {
-      const c = norm(channel);
-      if (c === "stable") return "badge good";
-      if (c === "beta") return "badge warn";
-      if (c === "unreleased") return "badge warn";
-      return "badge";
-    }
-
-    function render() {
-      const q = qEl.value.trim();
-      const c = channelEl.value;
-
-      const filtered = releaseData.filter(r => matchesChannel(r, c) && matchesQuery(r, q));
-
-      releasesEl.innerHTML = "";
-      if (!filtered.length) {
-        releasesEl.innerHTML = `<p class="muted">Keine Treffer.</p>`;
-        return;
+      function matchesQuery(r, q) {
+        if (!q) return true;
+        const hay = [
+          r.version,
+          r.date,
+          r.channel,
+          ...(r.sections || []).flatMap((s) => [s.title, ...(s.notes || [])]),
+        ].join(" • ");
+        return norm(hay).includes(norm(q));
       }
 
-      filtered.forEach(r => {
-        const article = document.createElement("article");
-        article.className = "release";
+      function matchesChannel(r, c) {
+        if (c === "all") return true;
+        return norm(r.channel) === c;
+      }
 
-        const meta = document.createElement("div");
-        meta.className = "meta";
+      function badgeClass(channel) {
+        const c = norm(channel);
+        if (c === "stable") return "badge stable";
+        if (c === "beta") return "badge beta";
+        if (c === "unreleased") return "badge unreleased";
+        return "badge";
+      }
 
-        const v = document.createElement("span");
-        v.className = "version";
-        v.textContent = r.version === "Unreleased" ? "Unreleased" : `v${r.version}`;
-        meta.appendChild(v);
+      function render() {
+        const q = qEl.value.trim();
+        const c = channelEl.value;
+        const filtered = releaseData.filter(
+          (r) => matchesChannel(r, c) && matchesQuery(r, q)
+        );
 
-        if (r.channel) {
-          const b = document.createElement("span");
-          b.className = badgeClass(r.channel);
-          b.textContent = r.channel;
-          meta.appendChild(b);
+        releasesEl.innerHTML = "";
+        if (!filtered.length) {
+          releasesEl.innerHTML = `<p class="empty">Keine Treffer.</p>`;
+          return;
         }
 
-        if (r.date) {
-          const d = document.createElement("span");
-          d.className = "muted";
-          d.textContent = r.date;
-          meta.appendChild(d);
-        }
+        filtered.forEach((r) => {
+          const article = document.createElement("article");
+          article.className = "release";
 
-        article.appendChild(meta);
+          const meta = document.createElement("div");
+          meta.className = "meta";
 
-        (r.sections || []).forEach(sec => {
-          const h = document.createElement("h3");
-          h.textContent = sec.title || "";
-          article.appendChild(h);
+          const v = document.createElement("span");
+          v.className = "version";
+          v.textContent =
+            r.version === "Unreleased" ? "Unreleased" : `v${r.version}`;
+          meta.appendChild(v);
 
-          const ul = document.createElement("ul");
-          (sec.notes || []).forEach(n => {
-            const li = document.createElement("li");
-            li.textContent = n;
-            ul.appendChild(li);
+          if (r.channel) {
+            const b = document.createElement("span");
+            b.className = badgeClass(r.channel);
+            b.textContent = r.channel;
+            meta.appendChild(b);
+          }
+
+          if (r.date) {
+            const d = document.createElement("span");
+            d.className = "date";
+            d.textContent = r.date;
+            meta.appendChild(d);
+          }
+
+          article.appendChild(meta);
+
+          (r.sections || []).forEach((sec) => {
+            const h = document.createElement("h3");
+            h.textContent = sec.title || "";
+            article.appendChild(h);
+
+            const ul = document.createElement("ul");
+            (sec.notes || []).forEach((n) => {
+              const li = document.createElement("li");
+              li.textContent = n;
+              ul.appendChild(li);
+            });
+            article.appendChild(ul);
           });
-          article.appendChild(ul);
+
+          releasesEl.appendChild(article);
         });
+      }
 
-        releasesEl.appendChild(article);
-      });
-    }
-
-    qEl.addEventListener("input", render);
-    channelEl.addEventListener("change", render);
-    render();
-  </script>
-</body>
+      qEl.addEventListener("input", render);
+      channelEl.addEventListener("change", render);
+      render();
+    </script>
+  </body>
 </html>
