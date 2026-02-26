@@ -1,38 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Datenschutzerklärung | HeightPlanPro</title>
+    <meta
+      name="description"
+      content="Datenschutzerklärung für HeightPlanPro."
+    />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap");
-
       :root {
         color-scheme: light;
-        --ink: #15232d;
-        --muted: #4c6070;
-        --primary: #0f6678;
-        --primary-soft: #dceef2;
-        --bg-a: #edf4f8;
-        --bg-b: #fbf6ee;
-        --surface: rgba(255, 255, 255, 0.9);
-        --line: rgba(20, 44, 58, 0.12);
-        --radius: 20px;
-        --shadow: 0 20px 45px -28px rgba(18, 39, 52, 0.42);
+        --primary: #1f3c88;
+        --primary-dark: #152654;
+        --accent: #3a86ff;
+        --bg: #f6f8fb;
+        --surface: #ffffff;
+        --text-strong: #0f172a;
+        --text: #1e293b;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html,
       body {
         margin: 0;
-        font-family: "Public Sans", "Segoe UI", system-ui, sans-serif;
-        color: var(--ink);
+        padding: 0;
+      }
+
+      body {
+        font-family: "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont,
+          system-ui, sans-serif;
+        color: var(--text);
         background:
-          radial-gradient(80rem 80rem at -10% -20%, #d5eaf0 0%, transparent 55%),
-          radial-gradient(70rem 70rem at 110% -20%, #f8e6ce 0%, transparent 50%),
-          linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
+          radial-gradient(
+            1100px 500px at 10% -10%,
+            rgba(58, 134, 255, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 400px at 100% 0%,
+            rgba(31, 60, 136, 0.1),
+            transparent 60%
+          ),
+          var(--bg);
         min-height: 100dvh;
         line-height: 1.65;
       }
@@ -43,7 +62,15 @@
       }
 
       header {
-        padding: clamp(2.5rem, 5vw, 4rem) 0 1.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: #fff;
+        padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(1.5rem, 3vw, 2rem);
+        border-bottom-left-radius: var(--radius-lg);
+        border-bottom-right-radius: var(--radius-lg);
       }
 
       .brand {
@@ -51,24 +78,31 @@
         align-items: center;
         padding: 0.42rem 0.9rem;
         border-radius: 999px;
-        background: var(--primary-soft);
-        color: var(--primary);
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #fff;
         text-decoration: none;
-        font-weight: 600;
-        font-size: 0.84rem;
-        letter-spacing: 0.04em;
+        font-weight: 700;
+        font-size: 0.82rem;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
       }
 
       h1 {
-        font-family: "Sora", "Public Sans", sans-serif;
-        font-size: clamp(2rem, 5vw, 3.3rem);
-        line-height: 1.1;
-        margin: 1rem 0 0.65rem;
+        margin: 1rem 0 0.55rem;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.08;
+        color: #fff;
+      }
+
+      .lead {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.92);
+        max-width: 62ch;
       }
 
       main {
-        padding: 1.2rem 0 clamp(2.8rem, 5vw, 4rem);
+        padding: clamp(1.6rem, 4vw, 2.5rem) 0 clamp(2.8rem, 6vw, 4rem);
       }
 
       .stack {
@@ -78,16 +112,16 @@
 
       .card {
         background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
         box-shadow: var(--shadow);
-        padding: clamp(1.2rem, 2.8vw, 1.8rem);
+        padding: clamp(1.15rem, 2.7vw, 1.7rem);
       }
 
       .card h2 {
         margin: 0 0 0.7rem;
-        font-family: "Sora", "Public Sans", sans-serif;
-        font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+        color: var(--text-strong);
       }
 
       p {
@@ -96,7 +130,24 @@
       }
 
       .card p + p {
-        margin-top: 0.75rem;
+        margin-top: 0.85rem;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.14em;
+      }
+
+      a:hover {
+        color: #2f78ea;
+      }
+
+      footer {
+        padding: 0 0 2rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -109,8 +160,9 @@
   <body>
     <header>
       <div class="container">
-        <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
+        <a href="./" class="brand">HeightPlanPro</a>
         <h1>Datenschutzhinweis</h1>
+        <p class="lead">Datenschutzerklärung für die App und Website.</p>
       </div>
     </header>
 
@@ -124,7 +176,7 @@
           <h2>Anwendungsbereich der Datenschutzerklärung</h2>
           <p>Diese Datenschutzerklärung gilt für die in der Überschrift genannte App für mobile Betriebssysteme und -geräte (im Folgenden „App“). In dieser Erklärung werden Art, Zweck und Umfang der Datenerhebung im Rahmen der App-Nutzung erläutert.</p>
           <p>Bitte beachten Sie, dass Sie sich beim Download unserer App in einen AppStore beim jeweiligen AppStore-Betreiber registrieren bzw. identifizieren müssen (z.B. über eine Apple-ID). Beim Download können verschiedene personenbezogene Daten, wie E-Mail-Adresse, Nutzername, die Kundennummer Ihres AppStore-Accounts, Ihre individuelle Gerätekennziffer, der Zeitpunkt des Downloads und ggf. Zahlungsinformationen vom Betreiber des AppStores verarbeitet werden. Hierbei gelten die Datenschutzrichtlinien und Nutzungsbedingungen der AppStore-Betreiber, die unter Umständen von den Datenschutzgesetzen der Europäischen Union abweichen können. Auf diese Bedingungen haben wir keinen Einfluss.</p>
-          <p>Die App verarbeitet personenbezogene Daten ausschließlich lokal auf dem Endgerät des Nutzers. Eine serverseitige Datenverarbeitung durch uns findet nicht statt</p>
+          <p>Die App verarbeitet personenbezogene Daten ausschließlich lokal auf dem Endgerät des Nutzers. Eine serverseitige Datenverarbeitung durch uns findet nicht statt.</p>
           <p>Wir behalten uns das Recht vor, diese Datenschutzbestimmungen unter Einhaltung der gesetzlichen Vorgaben jederzeit zu ändern.</p>
         </section>
 
@@ -136,13 +188,13 @@ Nico Schulz
 Eilenburger Str. 13
 01309 Dresden
 
-E-Mail-Adresse: info@heightplanpro.de
-Telefonnummer: 0160 96091823</p>
+E-Mail-Adresse: <a href="mailto:info@heightplanpro.de">info@heightplanpro.de</a>
+Telefonnummer: <a href="tel:+4916096091823">0160 96091823</a></p>
         </section>
 
         <section class="card">
           <h2>Zweck und Rechtsgrundlage der Datenverarbeitung</h2>
-          <p>Die App kann ohne Registrierung genutzt werden.  Alle durch die Nutzung erzeugten oder eingegebenen Daten werden ausschließlich lokal auf dem Endgerät des Nutzers gespeichert. Eine Übermittlung dieser Daten an uns findet nicht statt.</p>
+          <p>Die App kann ohne Registrierung genutzt werden. Alle durch die Nutzung erzeugten oder eingegebenen Daten werden ausschließlich lokal auf dem Endgerät des Nutzers gespeichert. Eine Übermittlung dieser Daten an uns findet nicht statt.</p>
           <p>Wir verarbeiten personenbezogene Daten nur, wenn Sie aktiv mit uns in Kontakt treten oder uns Daten (z. B. ein Fehlerprotokoll) freiwillig übermitteln. In diesen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Kommunikation bzw. Durchführung des Nutzungsverhältnisses) sowie unseres berechtigten Interesses an der Bearbeitung von Anfragen und der Fehleranalyse (Art. 6 Abs. 1 lit. f DSGVO).</p>
           <p>Soweit bestimmte Funktionen der App Systemzugriffsrechte erfordern (z. B. Zugriff auf Dateien oder das lokale Netzwerk), erfolgt die Erteilung dieser Rechte auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Die über diese Rechte verarbeiteten Daten verbleiben jedoch vollständig auf Ihrem Endgerät und werden nicht an uns übermittelt.</p>
         </section>
@@ -198,8 +250,8 @@ Rechtsgrundlage für die Nutzung dieser Zugriffsrechte ist Art. 6 Abs. 1 lit. b 
           <h2>InApp-Käufe</h2>
           <p>Innerhalb der App haben Sie die Möglichkeit, weitere Dienstleistungen, wie z.B. kostenpflichtige Abonnements, zu kaufen (InApp-Käufe). Der Kauf findet über den AppStore statt, über den Sie die App erhalten haben. Details entnehmen Sie den jeweiligen Datenschutzerklärungen des AppStores. Im Falle von InApp-Käufen werden Sie an den Anbieter Ihres AppStores weitergeleitet. Hierbei kann es sich um folgende App-Stores handeln:
 
-Apple App Store: Apple Inc., Infinite Loop, Cupertino, CA 95014, USA,  https://www.apple.com/de/ios/app-store/. Die Datenschutzerklärung finden Sie unter:  https://www.apple.com/legal/privacy/de-ww/.
-Google Play: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, https://play.google.com/store/apps?hl=de. Das Mutterunternehmen ist die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA, sodass eine Weitergabe Ihrer Daten in die USA nicht ausgeschlossen werden kann. Die Datenschutzerklärung finden Sie unter:  https://policies.google.com/privacy.</p>
+Apple App Store: Apple Inc., Infinite Loop, Cupertino, CA 95014, USA, https://www.apple.com/de/ios/app-store/. Die Datenschutzerklärung finden Sie unter: https://www.apple.com/legal/privacy/de-ww/.
+Google Play: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, https://play.google.com/store/apps?hl=de. Das Mutterunternehmen ist die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA, sodass eine Weitergabe Ihrer Daten in die USA nicht ausgeschlossen werden kann. Die Datenschutzerklärung finden Sie unter: https://policies.google.com/privacy.</p>
         </section>
 
         <section class="card">
@@ -209,7 +261,7 @@ Google Play: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irla
 
         <section class="card">
           <h2>Empfänger von personenbezogenen Daten</h2>
-          <p>Ihre personenbezogenen Daten werden an folgende Empfänger übermittelt: 
+          <p>Ihre personenbezogenen Daten werden an folgende Empfänger übermittelt:
 MapTiler: Beim Laden von Kartendaten wird die MapTiler AG Empfänger technischer Daten (insbesondere IP-Adresse), die zum Abruf der Kartenkacheln erforderlich sind. Die Übermittlung technischer Daten an die MapTiler AG erfolgt in die Schweiz. Für die Schweiz besteht ein Angemessenheitsbeschluss der Europäischen Kommission gemäß Art. 45 DSGVO.</p>
         </section>
 
@@ -231,23 +283,23 @@ MapTiler: Beim Laden von Kartendaten wird die MapTiler AG Empfänger technischer
 
         <section class="card">
           <h2>Ihre Rechte</h2>
-          <p>Ihnen stehen im Rahmen der Vorgaben der DSGVO folgende Datenschutzrecht zu: 
+          <p>Ihnen stehen im Rahmen der Vorgaben der DSGVO folgende Datenschutzrecht zu:
 
-Recht auf Auskunft (Art. 15 DSGVO): Sie haben das Recht Auskunft über bei uns Ihre gespeicherten personenbezogenen Daten zu verlangen. 
+Recht auf Auskunft (Art. 15 DSGVO): Sie haben das Recht Auskunft über bei uns Ihre gespeicherten personenbezogenen Daten zu verlangen.
 
-Recht auf Berichtigung (Art. 16 DSGVO): Sie haben das Recht, die Berichtigung Sie betreffender unrichtiger personenbezogener Daten zu verlangen. Unter Berücksichtigung des Verarbeitungszwecks haben Sie ferner das Recht, die Vervollständigung unvollständiger personenbezogener Daten zu verlangen. 
+Recht auf Berichtigung (Art. 16 DSGVO): Sie haben das Recht, die Berichtigung Sie betreffender unrichtiger personenbezogener Daten zu verlangen. Unter Berücksichtigung des Verarbeitungszwecks haben Sie ferner das Recht, die Vervollständigung unvollständiger personenbezogener Daten zu verlangen.
 
-Recht auf Löschung (Art. 17 DSGVO): Sie haben das Recht, die Löschung Ihrer personenbezogener Daten zu verlangen. 
+Recht auf Löschung (Art. 17 DSGVO): Sie haben das Recht, die Löschung Ihrer personenbezogener Daten zu verlangen.
 
-Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO): Sie haben das Recht, die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten zu verlangen. 
+Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO): Sie haben das Recht, die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten zu verlangen.
 
-Recht auf Datenübertragbarkeit (Art. 20 DSGVO): Sie haben das Recht, personenbezogene Daten, die wir automatisiert, auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags verarbeiten an sich oder an einen anderen Verantwortlichen in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist. 
+Recht auf Datenübertragbarkeit (Art. 20 DSGVO): Sie haben das Recht, personenbezogene Daten, die wir automatisiert, auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags verarbeiten an sich oder an einen anderen Verantwortlichen in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.
 
 Recht auf Widerruf Ihrer Einwilligungen (Art. 7 Abs. 3 DSGVO): Wenn Sie eine Einwilligung in die Verarbeitung Ihrer Daten erteilt haben, haben Sie das Recht, diese jederzeit mit Wirkung für die Zukunft zu widerrufen.
 
-Recht auf Beschwerde (Art. 77 DSGVO): Wenn Sie der Auffassung sind, dass wir bei der Verarbeitung Ihrer personenbezogenen Daten datenschutzrechtliche Vorschriften nicht beachten, haben Sie das Recht eine Beschwerde bei einer Datenschutzbehörde hiergegen einzulegen. 
+Recht auf Beschwerde (Art. 77 DSGVO): Wenn Sie der Auffassung sind, dass wir bei der Verarbeitung Ihrer personenbezogenen Daten datenschutzrechtliche Vorschriften nicht beachten, haben Sie das Recht eine Beschwerde bei einer Datenschutzbehörde hiergegen einzulegen.
 
-In Fällen, in denen die Datenverarbeitung auf Art. 6 Abs. 1 S. 1 lit. e oder f DSGVO erfolgt, haben Sie das Recht, der Datenverarbeitung aus Gründen, die sich aus Ihrer besonderen Situation ergeben, zu widersprechen (Recht auf Widerspruch nach Art. 21 DSGVO). </p>
+In Fällen, in denen die Datenverarbeitung auf Art. 6 Abs. 1 S. 1 lit. e oder f DSGVO erfolgt, haben Sie das Recht, der Datenverarbeitung aus Gründen, die sich aus Ihrer besonderen Situation ergeben, zu widersprechen (Recht auf Widerspruch nach Art. 21 DSGVO).</p>
         </section>
 
         <section class="card">
@@ -256,5 +308,7 @@ In Fällen, in denen die Datenverarbeitung auf Art. 6 Abs. 1 S. 1 lit. e oder f 
         </section>
       </div>
     </main>
+
+    <footer>HeightPlanPro</footer>
   </body>
 </html>
