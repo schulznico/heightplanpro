@@ -282,6 +282,39 @@
       },
 
       {
+  version: "1.6.3+47",
+  date: "2026-03-04",
+  channel: "Beta",
+  sections: [
+    { title: "Changed", notes: [
+      "In-App-Kauf auf iOS intern auf StoreKit 2 umgestellt (native Channel-Bridge); Android nutzt weiterhin Google Play Billing.",
+      "Neues Pro-Feature „Gefährdungs-Favoriten“ in „Gefährdungen bewerten“: Stern-Markierung, Favoriten-Sektion, „Nur Favoriten“-Filter und Favoriten-Priorisierung in der Suche.",
+      "In der Free-Version wird der Favoriten-Stern in der Risikobewertung nicht angezeigt.",
+      "Oberkategorien in „Gefährdungen bewerten“ und „Maßnahmen nach T-O-P“ sind einklappbar, damit lange Listen schneller navigierbar bleiben.",
+      "Oberkategorie-Header nutzen jetzt konsistente, eindeutige Icons über alle Hazard-Kategorien hinweg.",
+      "Kategorien zeigen den Fortschritt jetzt als `x/Gesamt` (aktiv ausgewählt vs. Gesamtanzahl) für Gefährdungen und Maßnahmen.",
+      "Der Gefährdungskatalog wurde fachlich neu geordnet: neue Oberkategorien „Bauliche Substanz & Tragwerk“, „Energiequellen & Freischaltung (LOTO)“ sowie „Dritte/Unbefugte & Sicherheitslage“, inkl. neu zugeordneter und ergänzter Gefährdungen.",
+      "Maßnahmen innerhalb eines T-O-P-Blocks sind visuell stärker getrennt; Rest-Risiko-Chips sind klarer als eigener Abschnitt platziert.",
+      "„Gefährdungen bewerten“ wurde visuell an „Maßnahmen nach T-O-P“ angeglichen (Kartenstil, Typografie, kompaktere Risikobadges und konsistente Abstände in Auswahl und Suchtreffern).",
+      "In „Gefährdungen bewerten“ wurde die Beschriftung bei den Badges auf „Risiko“ vereinfacht; die Legende `1 = sehr niedrig` / `5 = sehr hoch` ist jetzt in beiden Screens kompakt rechts neben den Badges integriert.",
+      "Gefährdungskarten in „Maßnahmen nach T-O-P“ wurden optisch vereinheitlicht; die Zuordnung der Inhalte bleibt über einen klaren Abschnitt „Maßnahmen zu dieser Gefährdung“ explizit erkennbar.",
+      "Die Vorher/Nachher-Darstellung der Rest-Risikobewertung im Maßnahmen-Screen wurde auf ein ruhigeres Pill-Design mit „Risikobewertung:“ umgestellt.",
+      "Der Maßnahmenkatalog wurde vollständig an den aktualisierten Gefährdungskatalog angepasst, inhaltlich entdoppelt und sprachlich praxisnäher vereinheitlicht.",
+      "Im Gefährdungskatalog wurde die kombinierte Gefährdung „Fangraum/Restseillänge nach unten unzureichend“ fachlich getrennt und als „Restseillänge nach unten unzureichend“ präzisiert; die Fallraum-Thematik bleibt als eigene Gefährdung separat erhalten.",
+      "Die Maßnahmen-Änderungshistorie wurde auf den Katalogstand vom 2026-03-03 aktualisiert.",
+      "Tooltip-Inhalte wurden fachlich erweitert: zusätzliche Kurzinfos u. a. zu Restseillänge/Fallraum, Induktions-/Schrittspannung, Durchsturzflächen, Sprachbarrieren, Redundanz sowie Umlenkrollen/Biegeradius."
+    ]},
+    { title: "Fixed", notes: [
+      "Lange Kategorienamen und Einträge umbrechen robuster (u. a. in Gefährdungen, Risikobewertung und Benutzerbibliothek), auch bei größeren Systemschriftgrößen.",
+      "Doppelte Info-Icons bei einzelnen Gefährdungen im Screen „Maßnahmen nach T-O-P“ wurden entfernt (bei fehlender Maßnahmenauswahl wird nur noch ein Info-Hinweis angezeigt).",
+      "Abstände zwischen Oberkategorien im Screen „Gefährdungen bewerten“ wurden auf den Abstandsrhythmus von „Maßnahmen nach T-O-P“ angeglichen.",
+      "Im Screen „Gefährdungen > Oberkategorien“ zeigen die Listeneinträge wieder die zugehörigen Kategorie-Icons statt generischer Info-Icons.",
+      "Hinweistexte im Screen „Gefährdungen > Oberkategorien“ wurden bei mehreren Kategorien sprachlich/fachlich präzisiert (u. a. Elektrik, Physik, Organisation, beengte Räume)."
+    ]}
+  ]
+},
+      
+      {
         version: "1.6.2+43",
         date: "2026-02-26",
         channel: "Beta",
