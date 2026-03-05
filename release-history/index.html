@@ -280,7 +280,24 @@
         channel: "Unreleased",
         sections: []
       },
-
+      
+      {
+        version: "1.6.3+49",
+        date: "2026-03-05",
+        channel: "Beta",
+        sections: [
+        { title: "Changed", notes: [
+          "Der „Nur Favoriten“-Filter in „Gefährdungen bewerten“ wurde platzsparender direkt in das Suchfeld integriert.",
+          "In der Free-Version ist der „Nur Favoriten“-Filter in der Suche ausgeblendet und nur mit aktivem Pro-Upgrade sichtbar.",
+          "Bei aktivem Favoritenfilter zeigt ein deutlicher Statushinweis („Filter aktiv: Nur Favoriten“) den aktuellen Filterzustand inklusive schneller „Aufheben“-Aktion.",
+          "Die Kategorie-Zähler `x/Gesamt` schalten im Favoritenmodus auf den Favoriten-Scope um (`ausgewählte Favoriten / Favoriten gesamt`) und zeigen außerhalb des Filters weiterhin den Gesamt-Scope aller Gefährdungen."
+        ]},
+        { title: "Fixed", notes: [
+          "Der Favoritenzähler in „Gefährdungen bewerten“ aktualisiert sich nach App-Neustart und beim Reload jetzt sofort korrekt; zuvor wurde im Startpfad unter bestimmten Bedingungen erst nach einer Interaktion die richtige Anzahl sichtbar."
+        ]}
+      ]
+    },
+      
       {
        version: "1.6.3+48",
        date: "2026-03-04",
