@@ -282,9 +282,33 @@
       },
       
       {
+  version: "1.6.7+55",
+  date: "2026-03-15",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neue Aktion „Backup wiederherstellen“ im Bereich „Daten & Wartung“: Backups als `.zip` auswählen, vorab prüfen und gezielt wiederherstellen."
+    ]},
+    { title: "Changed", notes: [
+      "Backup-Export ist jetzt in allen App-Varianten verfügbar (nicht mehr Pro-gebunden).",
+      "Backup-Export und -Restore unterstützen jetzt einen klaren Passphrase-Flow für verschlüsselte Backups (inkl. Bestätigung, Retry bei falscher Eingabe und Fortsetzen ohne erneute Dateiauswahl).",
+      "Der Restore-Ablauf wurde auf Zuverlässigkeit und Sicherheit ausgelegt: zusätzliche Archiv-Sicherheitsgrenzen, automatisches Sicherheits-Backup vor dem Restore, kontrollierter Abbruch bei ausbleibendem Fortschritt sowie stabiles App-Reinitialisieren nach erfolgreicher Wiederherstellung.",
+      "Restore- und Preflight-Feedback ist jetzt klarer und lokalisiert (DE/EN/PL), inklusive präziser Hinweise für verschlüsselte Backups.",
+      "Backup-Manifeste enthalten jetzt erweiterte Schema- und Quell-App-Metadaten; verschlüsselte Container (v3) werden unterstützt."
+    ]},
+    { title: "Fixed", notes: [
+      "Absturz im Passphrase-Dialog beim Schließen/Aktualisieren (`ChangeNotifier ... debugAssertNotDisposed`) behoben.",
+      "Passphrase-Felder in Backup-Export und -Restore bieten jetzt Ein-/Ausblenden der Eingabe.",
+      "Unverschlüsselter Backup-Export erfordert jetzt eine explizite zusätzliche Bestätigung."
+    ]}
+  ]
+},
+
+      
+      {
         version: "1.6.6+53",
         date: "2026-03-11",
-        channel: "Unreleased",
+        channel: "Beta",
         sections: [
         { title: "Added", notes: [
           "Der Maßnahmen-Hinweiskatalog wurde deutlich erweitert: zusätzliche praxisnahe Kurzinfos u. a. zu Karabiner-Querbelastung, Endknoten/Endmarkierung, Pendelsturz, Backup-Sicherung, Funkdisziplin, Wettergrenzwerten, Freigaben, Gas-/Belüftungskonzept, Werkzeugfang sowie LOTO- und PSA-Themen.",
