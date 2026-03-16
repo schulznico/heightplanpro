@@ -282,6 +282,22 @@
       },
 
       {
+  version: "1.6.7+60",
+  date: "2026-03-16",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Nach fehlgeschlagenem Backup-Restore wird die App-Sitzung jetzt trotzdem sauber reinitialisiert; falls das nicht gelingt, erscheint ein klarer Neustart-Hinweis statt stiller Folgezustände.",
+      "Restore-Fehler werden für den Support detaillierter protokolliert (inkl. Rollback-Ursache), damit Geräteprobleme schneller eingegrenzt werden können.",
+      "Restore schreibt zusätzlich eine separate Diagnose-Trace-Datei außerhalb der ersetzten App-Datenordner; auch bei fehlgeschlagenem Rollback bleiben damit technische Fehlerdetails für den Support erhalten.",
+      "Restore führt vor Datenänderungen einen harten Dateisystem-Preflight (Schreiben/Umbenennen/Löschen) durch und bricht bei blockiertem Dateizugriff früh mit einer klaren Meldung ab, ohne bestehende Projektdaten anzufassen.",
+      "Fallback-Replace im Restore ist weiter gehärtet: Wenn ein Directory-Swap nicht möglich ist, wird zunächst in ein Kandidat-Verzeichnis geschrieben und erst danach auf das Ziel übernommen, wodurch bestehende Daten bis zum späten Schritt unangetastet bleiben.",
+      "Restore-Fehlermeldungen enthalten jetzt eine Support-Referenz (`Incident-ID`); der zugehörige Diagnose-Trace wird automatisch als Support-Artefakt in den Log-Export übernommen."
+    ]}
+  ]
+},
+      
+      {
   version: "1.6.7+59",
   date: "2026-03-16",
   channel: "Beta",
