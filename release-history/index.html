@@ -280,6 +280,18 @@
         channel: "Unreleased",
         sections: []
       },
+
+      {
+  version: "1.6.7+57",
+  date: "2026-03-16",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Kritischer Restore-Fehlerpfad behoben: Bei fehlgeschlagenem Restore oder Rollback werden bestehende Projektdaten nicht mehr durch den Rollback-Prozess geleert.",
+      "Restore- und Rollback-Ablauf ist robuster bei Fehlern während der Wiederherstellung; bei kritischen Rollback-Fehlern wird jetzt zusätzlich auf möglichen Speicherplatzmangel hingewiesen."
+    ]}
+  ]
+},
       
       {
   version: "1.6.7+56",
