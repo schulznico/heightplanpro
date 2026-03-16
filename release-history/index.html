@@ -280,7 +280,18 @@
         channel: "Unreleased",
         sections: []
       },
-
+  
+      {
+  version: "1.6.7+61",
+  date: "2026-03-16",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Backup-Restore auf iOS bricht nicht mehr fälschlich im Vorab-Dateizugriffstest ab (`Operation not permitted`), wenn nur der Container-Parent eingeschränkt ist; der Schreibtest läuft jetzt direkt im tatsächlichen Zielordner."
+    ]}
+  ]
+},
+      
       {
   version: "1.6.7+60",
   date: "2026-03-16",
