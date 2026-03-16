@@ -282,6 +282,19 @@
       },
 
       {
+  version: "1.6.7+59",
+  date: "2026-03-16",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Backup-Restore ist robuster bei temporär blockierten App-Dateien (insbesondere auf iOS): kritische Dateioperationen werden mit kurzen Retry-Intervallen erneut versucht statt sofort abzubrechen.",
+      "Restore- und Rollback-Timeouts sind weniger strikt und für langlaufende Dateisystemschritte erweitert, um Abbrüche bei großen Backups zu reduzieren.",
+      "Bei fehlgeschlagenem Rollback zeigt die App jetzt zielgenauere Fehlhinweise (z. B. blockierter Dateizugriff, zu wenig freier Speicher oder Timeout) statt nur einer generischen Sammelmeldung."
+    ]}
+  ]
+},
+      
+      {
   version: "1.6.7+58",
   date: "2026-03-16",
   channel: "Beta",
