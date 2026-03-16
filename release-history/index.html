@@ -282,6 +282,27 @@
       },
       
       {
+  version: "1.6.7+56",
+  date: "2026-03-16",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neue Einstellung `Backup-Erinnerung` in `App & Konto` mit den Optionen `Nie`, `Wöchentlich`, `Monatlich` und `Quartalsweise` (DE/EN/PL) sowie In-App-Erinnerungsdialog mit direkter Aktion `Jetzt Backup erstellen`."
+    ]},
+    { title: "Changed", notes: [
+      "Backup-Export und -Restore verwenden jetzt konsistent `Passwort` / `Password` / `Hasło`; die Mindestlänge für Backup-Passwörter wurde auf 8 Zeichen gesenkt.",
+      "Backup-Export zeigt jetzt eine Live-Passwortstärke (`schwach`, `mittel`, `stark`) mit zusätzlicher Sicherheitswarnung bei schwachen Passwörtern.",
+      "Der Restore weist klar darauf hin, dass Store- bzw. In-App-Käufe nicht im Backup enthalten sind, und bietet nach erfolgreicher Wiederherstellung direkt die Aktion `Käufe wiederherstellen`.",
+      "Neue verschlüsselte Backups nutzen standardmäßig das v4-Sicherheitsprofil (`Argon2id`); bestehende v3-Backups bleiben weiterhin wiederherstellbar."
+    ]},
+    { title: "Fixed", notes: [
+      "Backup-Import blockiert kleine, gültige Backups nicht mehr fälschlich als „zu groß“, wenn stark komprimierte kleine Dateien verwendet werden.",
+      "Restore-Fehlermeldungen beim Backup-Import sind jetzt klarer aufgeschlüsselt (Archivgröße, entpackte Datenmenge, Sicherheitsgrenzen)."
+    ]}
+  ]
+},
+      
+      {
   version: "1.6.7+55",
   date: "2026-03-15",
   channel: "Beta",
