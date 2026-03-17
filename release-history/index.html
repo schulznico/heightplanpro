@@ -6,93 +6,189 @@
   <title>Release History | HeightPlanPro</title>
   <meta name="description" content="Release History und Changelog von HeightPlanPro." />
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap");
-
     :root {
       color-scheme: light;
-      --ink: #15232d;
-      --muted: #4c6070;
-      --primary: #0f6678;
-      --primary-soft: #dceef2;
-      --bg-a: #edf4f8;
-      --bg-b: #fbf6ee;
-      --surface: rgba(255, 255, 255, 0.9);
-      --line: rgba(20, 44, 58, 0.14);
-      --radius: 20px;
-      --shadow: 0 20px 45px -28px rgba(18, 39, 52, 0.42);
+      --primary: #1f3c88;
+      --primary-dark: #152654;
+      --accent: #3a86ff;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text-strong: #0f172a;
+      --text: #1e293b;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     }
 
     * { box-sizing: border-box; }
 
-    body {
+    html, body {
       margin: 0;
-      font-family: "Public Sans", "Segoe UI", system-ui, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(80rem 80rem at -10% -20%, #d5eaf0 0%, transparent 55%),
-        radial-gradient(70rem 70rem at 110% -20%, #f8e6ce 0%, transparent 50%),
-        linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
-      min-height: 100dvh;
-      line-height: 1.65;
+      padding: 0;
     }
 
-    header, main, footer {
-      width: min(980px, 92vw);
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 500px at 10% -10%, rgba(58, 134, 255, 0.1), transparent 60%),
+        radial-gradient(900px 400px at 100% 0%, rgba(31, 60, 136, 0.1), transparent 60%),
+        var(--bg);
+      line-height: 1.65;
+      min-height: 100dvh;
+    }
+
+    .container {
+      width: min(1100px, 92vw);
       margin: 0 auto;
     }
 
     header {
-      padding: clamp(2.2rem, 5vw, 3.6rem) 0 1rem;
-      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(1.5rem, 3vw, 2rem);
+      border-bottom-left-radius: var(--radius-lg);
+      border-bottom-right-radius: var(--radius-lg);
     }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      align-items: center;
-    }
-
-    nav a {
+    .brand {
       display: inline-flex;
       align-items: center;
       padding: 0.42rem 0.9rem;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.72);
-      color: var(--ink);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-    }
-
-    nav a:hover {
-      background: var(--primary-soft);
-      color: var(--primary);
-      border-color: rgba(15, 102, 120, 0.3);
-      text-decoration: none;
-    }
-
-    main {
-      padding: 0 0 clamp(2.8rem, 5vw, 4rem);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-family: "Sora", "Public Sans", sans-serif;
-      line-height: 1.1;
-      font-size: clamp(2rem, 5vw, 3.1rem);
-      margin: 0 0 0.65rem;
+      margin: 1rem 0 0.55rem;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      color: #fff;
     }
 
-    .muted {
-      color: var(--muted);
-      opacity: 1;
+    .lead {
+      margin: 0;
+      max-width: 72ch;
+      color: rgba(255, 255, 255, 0.92);
     }
 
-    .intro {
-      max-width: 76ch;
-      margin: 0 0 1.1rem;
+    .meta-pills {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .meta-pills span {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 0.86rem;
+    }
+
+    main {
+      padding: clamp(1.6rem, 4vw, 2.5rem) 0 clamp(2.8rem, 6vw, 4rem);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .toc-card,
+    .card,
+    .release {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .toc-card {
+      position: sticky;
+      top: 1rem;
+      padding: 1.1rem;
+      max-height: calc(100vh - 2rem);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .toc-card h2,
+    .card h2,
+    .release h2 {
+      margin: 0 0 0.7rem;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      color: var(--text-strong);
+    }
+
+    .toc {
+      display: grid;
+      gap: 0.3rem;
+      overflow-y: auto;
+      padding-right: 0.2rem;
+      min-height: 0;
+    }
+
+    .toc a {
+      display: block;
+      padding: 0.45rem 0.55rem;
+      border-radius: var(--radius-sm);
+      color: var(--accent);
+      text-decoration: none;
+      line-height: 1.35;
+    }
+
+    .toc a:hover {
+      background: #eff6ff;
+      color: #2f78ea;
+    }
+
+    .toc::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .toc::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 999px;
+    }
+
+    .toc::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 999px;
+      border: 2px solid #f1f5f9;
+    }
+
+    .toc::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    .content {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card,
+    .release {
+      padding: clamp(1.15rem, 2.7vw, 1.7rem);
     }
 
     .controls {
@@ -100,22 +196,15 @@
       gap: 0.75rem;
       flex-wrap: wrap;
       align-items: center;
-      margin: 1rem 0 1.2rem;
-      padding: 1rem;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
     }
 
     input[type="search"],
     select {
       padding: 0.72rem 0.9rem;
       border-radius: 12px;
-      border: 1px solid var(--line);
+      border: 1px solid var(--border);
       background: #fff;
-      color: var(--ink);
+      color: var(--text);
       font: inherit;
       outline: none;
     }
@@ -132,97 +221,138 @@
 
     input[type="search"]:focus,
     select:focus {
-      border-color: rgba(15, 102, 120, 0.45);
-      box-shadow: 0 0 0 3px rgba(15, 102, 120, 0.12);
+      border-color: rgba(58, 134, 255, 0.55);
+      box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.12);
     }
 
-    .release {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1rem 1.05rem;
-      margin: 0 0 0.9rem;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.65rem;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
 
-    .release:first-of-type {
-      border-top: 1px solid var(--line);
-      padding-top: 1rem;
-    }
-
-    .meta {
+    .release-head {
       display: flex;
-      gap: 0.55rem;
       flex-wrap: wrap;
-      align-items: baseline;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 0.8rem;
     }
 
     .version {
       font-weight: 800;
       letter-spacing: 0.2px;
-      color: #122f3f;
-      font-size: 1.02rem;
+      color: var(--text-strong);
+      font-size: 1.08rem;
     }
 
     .badge {
-      font-size: 0.73rem;
-      padding: 0.2rem 0.55rem;
-      border: 1px solid var(--line);
+      font-size: 0.78rem;
+      padding: 0.24rem 0.6rem;
+      border: 1px solid var(--border);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-    }
-
-    .badge.good {
-      border-style: solid;
-      color: #115e49;
-      background: #e7f7ef;
-    }
-
-    .badge.warn {
-      border-style: solid;
-      color: #7a4a11;
-      background: #fff4dd;
-    }
-
-    h3 {
-      margin: 0.9rem 0 0.35rem;
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #355264;
-      font-family: "Sora", "Public Sans", sans-serif;
-      opacity: 1;
-    }
-
-    ul {
-      margin: 0.25rem 0 0 1.1rem;
-      padding: 0;
-    }
-
-    li {
-      margin: 0.27rem 0;
-    }
-
-    footer {
-      margin-top: 0.4rem;
-      padding: 0 0 2rem;
-      border-top: 0;
-      font-size: 0.9rem;
+      background: #f8fafc;
       color: var(--muted);
     }
 
+    .badge.good {
+      color: #166534;
+      background: #ecfdf5;
+      border-color: #bbf7d0;
+    }
+
+    .badge.warn {
+      color: #92400e;
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .release-section + .release-section {
+      margin-top: 0.9rem;
+    }
+
+    h3 {
+      margin: 0 0 0.45rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p,
+    p + ul,
+    p + ol,
+    ul + p,
+    ol + p,
+    ul + ul,
+    ol + ol {
+      margin-top: 0.8rem;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.32rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .empty {
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 0 0 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc-card {
+        position: static;
+        max-height: none;
+        overflow: visible;
+      }
+
+      .toc {
+        overflow: visible;
+        max-height: none;
+      }
+    }
+
     @media (max-width: 760px) {
-      header {
-        padding-top: 1.4rem;
-      }
-
-      .controls {
-        padding: 0.8rem;
-      }
-
-      .release {
-        padding: 0.88rem 0.85rem;
+      .release,
+      .card,
+      .toc-card {
+        padding: 1rem;
       }
     }
 
@@ -231,38 +361,56 @@
         animation: none !important;
         transition: none !important;
       }
+
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <nav>
-      <a href="/">HeightPlanPro</a>
-      <a href="/release-history/">Release History</a>
-      <a href="/impressum/">Impressum</a>
-      <a href="/datenschutz/">Datenschutz</a>
-    </nav>
+    <div class="container">
+      <a href="/" class="brand">HeightPlanPro</a>
+      <h1>Release History</h1>
+      <p class="lead">
+        Alle nennenswerten nutzerrelevanten Änderungen werden hier dokumentiert.
+        Interne Refactorings, CI- oder reine Build-Wartung ohne Nutzerwirkung werden bewusst nicht aufgeführt.
+      </p>
+      <div class="meta-pills">
+        <span>Dokumenttyp: Changelog</span>
+        <span>Sortierung: Neueste zuerst</span>
+        <span>Kanäle: Stable, Beta, Unreleased</span>
+      </div>
+    </div>
   </header>
 
   <main>
-    <h1>Release History</h1>
-    <p class="muted intro">
-      Alle nennenswerten nutzerrelevanten Änderungen werden hier dokumentiert.
-      Interne Refactorings/CI/Build-Wartung ohne Nutzerwirkung werden bewusst nicht aufgeführt.
-    </p>
+    <div class="container layout">
+      <aside class="toc-card">
+        <h2>Inhaltsverzeichnis</h2>
+        <nav class="toc" id="toc" aria-label="Inhaltsverzeichnis Release History"></nav>
+      </aside>
 
-    <div class="controls">
-      <input id="q" type="search" placeholder="Suchen (z.B. 'PDF', 'PLZ', 'GPS', 'iOS')…" autocomplete="off" />
-      <select id="channel">
-        <option value="all">Alle</option>
-        <option value="stable">Stable</option>
-        <option value="beta">Beta</option>
-        <option value="unreleased">Unreleased</option>
-      </select>
+      <div class="content">
+        <section class="card">
+          <span class="section-tag">Filter</span>
+          <h2>Versionen durchsuchen</h2>
+          <div class="controls">
+            <input id="q" type="search" placeholder="Suchen (z. B. PDF, PLZ, GPS, iOS) …" autocomplete="off" />
+            <select id="channel">
+              <option value="all">Alle</option>
+              <option value="stable">Stable</option>
+              <option value="beta">Beta</option>
+              <option value="unreleased">Unreleased</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="releases" aria-live="polite"></section>
+      </div>
     </div>
-
-    <section id="releases" aria-live="polite"></section>
   </main>
 
   <footer>
@@ -272,7 +420,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Daten: neueste zuerst
     const releaseData = [
       {
         version: "Unreleased",
@@ -280,264 +427,246 @@
         channel: "Unreleased",
         sections: []
       },
-
       {
-  version: "1.6.7+63",
-  date: "2026-03-17",
-  channel: "Beta",
-  sections: [
-    { title: "Changed", notes: [
-      "Build-Aktualisierung für den nächsten iOS-TestFlight-Upload.",
-      "Im Dialog `Backup-Erinnerung` wird jetzt dezent angezeigt, wann das letzte Backup erstellt wurde; falls noch keines existiert, erscheint ein entsprechender Hinweis."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+63",
+        date: "2026-03-17",
+        channel: "Beta",
+        sections: [
+          { title: "Changed", notes: [
+            "Build-Aktualisierung für den nächsten iOS-TestFlight-Upload.",
+            "Im Dialog `Backup-Erinnerung` wird jetzt dezent angezeigt, wann das letzte Backup erstellt wurde; falls noch keines existiert, erscheint ein entsprechender Hinweis."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+62",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Changed", notes: [
-      "Build-Aktualisierung für erneuten iOS-Device- und TestFlight-Testlauf."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+62",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Changed", notes: [
+            "Build-Aktualisierung für erneuten iOS-Device- und TestFlight-Testlauf."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+61",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Fixed", notes: [
-      "Backup-Restore auf iOS bricht nicht mehr fälschlich im Vorab-Dateizugriffstest ab (`Operation not permitted`), wenn nur der Container-Parent eingeschränkt ist; der Schreibtest läuft jetzt direkt im tatsächlichen Zielordner."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+61",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "Backup-Restore auf iOS bricht nicht mehr fälschlich im Vorab-Dateizugriffstest ab (`Operation not permitted`), wenn nur der Container-Parent eingeschränkt ist; der Schreibtest läuft jetzt direkt im tatsächlichen Zielordner."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+60",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Fixed", notes: [
-      "Nach fehlgeschlagenem Backup-Restore wird die App-Sitzung jetzt trotzdem sauber reinitialisiert; falls das nicht gelingt, erscheint ein klarer Neustart-Hinweis statt stiller Folgezustände.",
-      "Restore-Fehler werden für den Support detaillierter protokolliert (inkl. Rollback-Ursache), damit Geräteprobleme schneller eingegrenzt werden können.",
-      "Restore schreibt zusätzlich eine separate Diagnose-Trace-Datei außerhalb der ersetzten App-Datenordner; auch bei fehlgeschlagenem Rollback bleiben damit technische Fehlerdetails für den Support erhalten.",
-      "Restore führt vor Datenänderungen einen harten Dateisystem-Preflight (Schreiben/Umbenennen/Löschen) durch und bricht bei blockiertem Dateizugriff früh mit einer klaren Meldung ab, ohne bestehende Projektdaten anzufassen.",
-      "Fallback-Replace im Restore ist weiter gehärtet: Wenn ein Directory-Swap nicht möglich ist, wird zunächst in ein Kandidat-Verzeichnis geschrieben und erst danach auf das Ziel übernommen, wodurch bestehende Daten bis zum späten Schritt unangetastet bleiben.",
-      "Restore-Fehlermeldungen enthalten jetzt eine Support-Referenz (`Incident-ID`); der zugehörige Diagnose-Trace wird automatisch als Support-Artefakt in den Log-Export übernommen."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+60",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "Nach fehlgeschlagenem Backup-Restore wird die App-Sitzung jetzt trotzdem sauber reinitialisiert; falls das nicht gelingt, erscheint ein klarer Neustart-Hinweis statt stiller Folgezustände.",
+            "Restore-Fehler werden für den Support detaillierter protokolliert (inkl. Rollback-Ursache), damit Geräteprobleme schneller eingegrenzt werden können.",
+            "Restore schreibt zusätzlich eine separate Diagnose-Trace-Datei außerhalb der ersetzten App-Datenordner; auch bei fehlgeschlagenem Rollback bleiben damit technische Fehlerdetails für den Support erhalten.",
+            "Restore führt vor Datenänderungen einen harten Dateisystem-Preflight (Schreiben/Umbenennen/Löschen) durch und bricht bei blockiertem Dateizugriff früh mit einer klaren Meldung ab, ohne bestehende Projektdaten anzufassen.",
+            "Fallback-Replace im Restore ist weiter gehärtet: Wenn ein Directory-Swap nicht möglich ist, wird zunächst in ein Kandidat-Verzeichnis geschrieben und erst danach auf das Ziel übernommen, wodurch bestehende Daten bis zum späten Schritt unangetastet bleiben.",
+            "Restore-Fehlermeldungen enthalten jetzt eine Support-Referenz (`Incident-ID`); der zugehörige Diagnose-Trace wird automatisch als Support-Artefakt in den Log-Export übernommen."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+59",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Fixed", notes: [
-      "Backup-Restore ist robuster bei temporär blockierten App-Dateien (insbesondere auf iOS): kritische Dateioperationen werden mit kurzen Retry-Intervallen erneut versucht statt sofort abzubrechen.",
-      "Restore- und Rollback-Timeouts sind weniger strikt und für langlaufende Dateisystemschritte erweitert, um Abbrüche bei großen Backups zu reduzieren.",
-      "Bei fehlgeschlagenem Rollback zeigt die App jetzt zielgenauere Fehlhinweise (z. B. blockierter Dateizugriff, zu wenig freier Speicher oder Timeout) statt nur einer generischen Sammelmeldung."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+59",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "Backup-Restore ist robuster bei temporär blockierten App-Dateien (insbesondere auf iOS): kritische Dateioperationen werden mit kurzen Retry-Intervallen erneut versucht statt sofort abzubrechen.",
+            "Restore- und Rollback-Timeouts sind weniger strikt und für langlaufende Dateisystemschritte erweitert, um Abbrüche bei großen Backups zu reduzieren.",
+            "Bei fehlgeschlagenem Rollback zeigt die App jetzt zielgenauere Fehlhinweise (z. B. blockierter Dateizugriff, zu wenig freier Speicher oder Timeout) statt nur einer generischen Sammelmeldung."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+58",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Fixed", notes: [
-      "Backup-Restore ist robuster auf iOS-Geräten, wenn Systemordner nicht per Verzeichnis-Swap umbenannt werden können; der Rollback erfolgt in diesem Fall über einen sicheren In-Place-Fallback statt fälschlich mit `Rollback fehlgeschlagen` abzubrechen."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+58",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "Backup-Restore ist robuster auf iOS-Geräten, wenn Systemordner nicht per Verzeichnis-Swap umbenannt werden können; der Rollback erfolgt in diesem Fall über einen sicheren In-Place-Fallback statt fälschlich mit `Rollback fehlgeschlagen` abzubrechen."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+57",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Fixed", notes: [
-      "Kritischer Restore-Fehlerpfad behoben: Bei fehlgeschlagenem Restore oder Rollback werden bestehende Projektdaten nicht mehr durch den Rollback-Prozess geleert.",
-      "Restore- und Rollback-Ablauf ist robuster bei Fehlern während der Wiederherstellung; bei kritischen Rollback-Fehlern wird jetzt zusätzlich auf möglichen Speicherplatzmangel hingewiesen."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+57",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Fixed", notes: [
+            "Kritischer Restore-Fehlerpfad behoben: Bei fehlgeschlagenem Restore oder Rollback werden bestehende Projektdaten nicht mehr durch den Rollback-Prozess geleert.",
+            "Restore- und Rollback-Ablauf ist robuster bei Fehlern während der Wiederherstellung; bei kritischen Rollback-Fehlern wird jetzt zusätzlich auf möglichen Speicherplatzmangel hingewiesen."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+56",
-  date: "2026-03-16",
-  channel: "Beta",
-  sections: [
-    { title: "Added", notes: [
-      "Neue Einstellung `Backup-Erinnerung` in `App & Konto` mit den Optionen `Nie`, `Wöchentlich`, `Monatlich` und `Quartalsweise` (DE/EN/PL) sowie In-App-Erinnerungsdialog mit direkter Aktion `Jetzt Backup erstellen`."
-    ]},
-    { title: "Changed", notes: [
-      "Backup-Export und -Restore verwenden jetzt konsistent `Passwort` / `Password` / `Hasło`; die Mindestlänge für Backup-Passwörter wurde auf 8 Zeichen gesenkt.",
-      "Backup-Export zeigt jetzt eine Live-Passwortstärke (`schwach`, `mittel`, `stark`) mit zusätzlicher Sicherheitswarnung bei schwachen Passwörtern.",
-      "Der Restore weist klar darauf hin, dass Store- bzw. In-App-Käufe nicht im Backup enthalten sind, und bietet nach erfolgreicher Wiederherstellung direkt die Aktion `Käufe wiederherstellen`.",
-      "Neue verschlüsselte Backups nutzen standardmäßig das v4-Sicherheitsprofil (`Argon2id`); bestehende v3-Backups bleiben weiterhin wiederherstellbar."
-    ]},
-    { title: "Fixed", notes: [
-      "Backup-Import blockiert kleine, gültige Backups nicht mehr fälschlich als „zu groß“, wenn stark komprimierte kleine Dateien verwendet werden.",
-      "Restore-Fehlermeldungen beim Backup-Import sind jetzt klarer aufgeschlüsselt (Archivgröße, entpackte Datenmenge, Sicherheitsgrenzen)."
-    ]}
-  ]
-},
-      
+        version: "1.6.7+56",
+        date: "2026-03-16",
+        channel: "Beta",
+        sections: [
+          { title: "Added", notes: [
+            "Neue Einstellung `Backup-Erinnerung` in `App & Konto` mit den Optionen `Nie`, `Wöchentlich`, `Monatlich` und `Quartalsweise` (DE/EN/PL) sowie In-App-Erinnerungsdialog mit direkter Aktion `Jetzt Backup erstellen`."
+          ]},
+          { title: "Changed", notes: [
+            "Backup-Export und -Restore verwenden jetzt konsistent `Passwort` / `Password` / `Hasło`; die Mindestlänge für Backup-Passwörter wurde auf 8 Zeichen gesenkt.",
+            "Backup-Export zeigt jetzt eine Live-Passwortstärke (`schwach`, `mittel`, `stark`) mit zusätzlicher Sicherheitswarnung bei schwachen Passwörtern.",
+            "Der Restore weist klar darauf hin, dass Store- bzw. In-App-Käufe nicht im Backup enthalten sind, und bietet nach erfolgreicher Wiederherstellung direkt die Aktion `Käufe wiederherstellen`.",
+            "Neue verschlüsselte Backups nutzen standardmäßig das v4-Sicherheitsprofil (`Argon2id`); bestehende v3-Backups bleiben weiterhin wiederherstellbar."
+          ]},
+          { title: "Fixed", notes: [
+            "Backup-Import blockiert kleine, gültige Backups nicht mehr fälschlich als „zu groß“, wenn stark komprimierte kleine Dateien verwendet werden.",
+            "Restore-Fehlermeldungen beim Backup-Import sind jetzt klarer aufgeschlüsselt (Archivgröße, entpackte Datenmenge, Sicherheitsgrenzen)."
+          ]}
+        ]
+      },
       {
-  version: "1.6.7+55",
-  date: "2026-03-15",
-  channel: "Beta",
-  sections: [
-    { title: "Added", notes: [
-      "Neue Aktion „Backup wiederherstellen“ im Bereich „Daten & Wartung“: Backups als `.zip` auswählen, vorab prüfen und gezielt wiederherstellen."
-    ]},
-    { title: "Changed", notes: [
-      "Backup-Export ist jetzt in allen App-Varianten verfügbar (nicht mehr Pro-gebunden).",
-      "Backup-Export und -Restore unterstützen jetzt einen klaren Passphrase-Flow für verschlüsselte Backups (inkl. Bestätigung, Retry bei falscher Eingabe und Fortsetzen ohne erneute Dateiauswahl).",
-      "Der Restore-Ablauf wurde auf Zuverlässigkeit und Sicherheit ausgelegt: zusätzliche Archiv-Sicherheitsgrenzen, automatisches Sicherheits-Backup vor dem Restore, kontrollierter Abbruch bei ausbleibendem Fortschritt sowie stabiles App-Reinitialisieren nach erfolgreicher Wiederherstellung.",
-      "Restore- und Preflight-Feedback ist jetzt klarer und lokalisiert (DE/EN/PL), inklusive präziser Hinweise für verschlüsselte Backups.",
-      "Backup-Manifeste enthalten jetzt erweiterte Schema- und Quell-App-Metadaten; verschlüsselte Container (v3) werden unterstützt."
-    ]},
-    { title: "Fixed", notes: [
-      "Absturz im Passphrase-Dialog beim Schließen/Aktualisieren (`ChangeNotifier ... debugAssertNotDisposed`) behoben.",
-      "Passphrase-Felder in Backup-Export und -Restore bieten jetzt Ein-/Ausblenden der Eingabe.",
-      "Unverschlüsselter Backup-Export erfordert jetzt eine explizite zusätzliche Bestätigung."
-    ]}
-  ]
-},
-
-      
+        version: "1.6.7+55",
+        date: "2026-03-15",
+        channel: "Beta",
+        sections: [
+          { title: "Added", notes: [
+            "Neue Aktion „Backup wiederherstellen“ im Bereich „Daten & Wartung“: Backups als `.zip` auswählen, vorab prüfen und gezielt wiederherstellen."
+          ]},
+          { title: "Changed", notes: [
+            "Backup-Export ist jetzt in allen App-Varianten verfügbar (nicht mehr Pro-gebunden).",
+            "Backup-Export und -Restore unterstützen jetzt einen klaren Passphrase-Flow für verschlüsselte Backups (inkl. Bestätigung, Retry bei falscher Eingabe und Fortsetzen ohne erneute Dateiauswahl).",
+            "Der Restore-Ablauf wurde auf Zuverlässigkeit und Sicherheit ausgelegt: zusätzliche Archiv-Sicherheitsgrenzen, automatisches Sicherheits-Backup vor dem Restore, kontrollierter Abbruch bei ausbleibendem Fortschritt sowie stabiles App-Reinitialisieren nach erfolgreicher Wiederherstellung.",
+            "Restore- und Preflight-Feedback ist jetzt klarer und lokalisiert (DE/EN/PL), inklusive präziser Hinweise für verschlüsselte Backups.",
+            "Backup-Manifeste enthalten jetzt erweiterte Schema- und Quell-App-Metadaten; verschlüsselte Container (v3) werden unterstützt."
+          ]},
+          { title: "Fixed", notes: [
+            "Absturz im Passphrase-Dialog beim Schließen/Aktualisieren (`ChangeNotifier ... debugAssertNotDisposed`) behoben.",
+            "Passphrase-Felder in Backup-Export und -Restore bieten jetzt Ein-/Ausblenden der Eingabe.",
+            "Unverschlüsselter Backup-Export erfordert jetzt eine explizite zusätzliche Bestätigung."
+          ]}
+        ]
+      },
       {
         version: "1.6.6+53",
         date: "2026-03-11",
         channel: "Beta",
         sections: [
-        { title: "Added", notes: [
-          "Der Maßnahmen-Hinweiskatalog wurde deutlich erweitert: zusätzliche praxisnahe Kurzinfos u. a. zu Karabiner-Querbelastung, Endknoten/Endmarkierung, Pendelsturz, Backup-Sicherung, Funkdisziplin, Wettergrenzwerten, Freigaben, Gas-/Belüftungskonzept, Werkzeugfang sowie LOTO- und PSA-Themen.",
-          "Für wichtige Kürzel und Fachbegriffe wurden gezielte Hinweise ergänzt (u. a. `GBU`, `EFK`, `FI/RCD`, `CLP`, `SZP`, `SDB`, `FFP2/FFP3`, `CO/VOC`, `QR`)."
-        ]},
-        { title: "Changed", notes: [
-          "Die Oberkategorien sind jetzt in allen drei Screens (`Gefährdungen`, `Gefährdungen bewerten`, `Maßnahmen nach T-O-P`) systematisch in Blöcke gegliedert, mit lokalisierter Zwischenüberschrift (DE/EN/PL) und einheitlicher, dezent hinterlegter Flächenhervorhebung.",
-          "Die Maßnahmen-Änderungshistorie ist mehrsprachig aufbereitet und wird im Verlaufsdialog sprachabhängig in Deutsch, Englisch oder Polnisch angezeigt.",
-          "Mehrere Hinweistexte wurden sprachlich vereinheitlicht und fachlich präzisiert (u. a. verständlichere deutsche Benennungen und konsistente EN/PL-Übersetzungen)."
-        ]},
-        { title: "Fixed", notes: [
-          "Hinweise werden in `Gefährdungen bewerten` und `Maßnahmen nach T-O-P` jetzt konsistent nur dann angezeigt, wenn der Hinweis-Schalter im Menü aktiv ist."
-        ]}
-      ]
-    },
-      
+          { title: "Added", notes: [
+            "Der Maßnahmen-Hinweiskatalog wurde deutlich erweitert: zusätzliche praxisnahe Kurzinfos u. a. zu Karabiner-Querbelastung, Endknoten/Endmarkierung, Pendelsturz, Backup-Sicherung, Funkdisziplin, Wettergrenzwerten, Freigaben, Gas-/Belüftungskonzept, Werkzeugfang sowie LOTO- und PSA-Themen.",
+            "Für wichtige Kürzel und Fachbegriffe wurden gezielte Hinweise ergänzt (u. a. `GBU`, `EFK`, `FI/RCD`, `CLP`, `SZP`, `SDB`, `FFP2/FFP3`, `CO/VOC`, `QR`)."
+          ]},
+          { title: "Changed", notes: [
+            "Die Oberkategorien sind jetzt in allen drei Screens (`Gefährdungen`, `Gefährdungen bewerten`, `Maßnahmen nach T-O-P`) systematisch in Blöcke gegliedert, mit lokalisierter Zwischenüberschrift (DE/EN/PL) und einheitlicher, dezent hinterlegter Flächenhervorhebung.",
+            "Die Maßnahmen-Änderungshistorie ist mehrsprachig aufbereitet und wird im Verlaufsdialog sprachabhängig in Deutsch, Englisch oder Polnisch angezeigt.",
+            "Mehrere Hinweistexte wurden sprachlich vereinheitlicht und fachlich präzisiert (u. a. verständlichere deutsche Benennungen und konsistente EN/PL-Übersetzungen)."
+          ]},
+          { title: "Fixed", notes: [
+            "Hinweise werden in `Gefährdungen bewerten` und `Maßnahmen nach T-O-P` jetzt konsistent nur dann angezeigt, wenn der Hinweis-Schalter im Menü aktiv ist."
+          ]}
+        ]
+      },
       {
         version: "1.6.5+52",
         date: "2026-03-09",
         channel: "Beta",
         sections: [
-        { title: "Changed", notes: [
-          "Das Menü „Mehr Optionen“ wurde klarer strukturiert und stärker am praktischen Ablauf ausgerichtet (`Projekte`, `PDF & Export`, `Stammdaten & Bibliothek`, `App & Konto`, `Daten & Wartung`, `Hilfe & Rechtliches`).",
-          "Englisch und Polnisch wurden app-weit sprachlich und fachlich überarbeitet, inklusive Gefährdungshinweisen, Pro-Dialogen, Notfall- und Rettungsterminologie sowie konsistenter Länderbezeichnungen.",
-          "Support-Logs anonymisieren sensible Kennungen (`transactionId`, `session.id`) jetzt automatisch."
-        ]}
-      ]
-    },
-      
+          { title: "Changed", notes: [
+            "Das Menü „Mehr Optionen“ wurde klarer strukturiert und stärker am praktischen Ablauf ausgerichtet (`Projekte`, `PDF & Export`, `Stammdaten & Bibliothek`, `App & Konto`, `Daten & Wartung`, `Hilfe & Rechtliches`).",
+            "Englisch und Polnisch wurden app-weit sprachlich und fachlich überarbeitet, inklusive Gefährdungshinweisen, Pro-Dialogen, Notfall- und Rettungsterminologie sowie konsistenter Länderbezeichnungen.",
+            "Support-Logs anonymisieren sensible Kennungen (`transactionId`, `session.id`) jetzt automatisch."
+          ]}
+        ]
+      },
       {
         version: "1.6.4+51",
         date: "2026-03-07",
         channel: "Beta",
         sections: [
-        { title: "Changed", notes: [
-          "Keine zusätzlichen nutzerrelevanten Änderungen gegenüber `1.6.4+50`."
-        ]}
-      ]
-    },
-      
+          { title: "Changed", notes: [
+            "Keine zusätzlichen nutzerrelevanten Änderungen gegenüber `1.6.4+50`."
+          ]}
+        ]
+      },
       {
         version: "1.6.4+50",
         date: "2026-03-07",
         channel: "Beta",
         sections: [
-        { title: "Changed", notes: [
-          "Die App unterstützt jetzt Deutsch, Englisch und Polnisch app-weit; standardmäßig wird die Systemsprache verwendet.",
-          "In den Einstellungen kann die App-Sprache manuell auf `System`, `Deutsch`, `English` oder `Polski` umgestellt werden; die Auswahl bleibt nach Neustart erhalten.",
-          "Kernoberflächen inkl. Gefährdungen, Maßnahmen, Hinweise, Dialoge und Projekt-Workflows sind vollständig in DE/EN/PL lokalisiert.",
-          "PDF-Vorschau und PDF-Export geben Inhalte sprachabhängig in DE/EN/PL aus, inklusive lokalisierter Gefährdungs- und Maßnahmenbezeichnungen sowie passender Datums- und Zeitformate.",
-          "Das Kontakt-PDF (inkl. Dateiname und Labels) ist ebenfalls sprachabhängig lokalisiert."
-        ]},
-        { title: "Fixed", notes: [
-          "Das Tätigkeiten-Dropdown im Arbeitsauftrag zeigt in EN/PL jetzt die korrekten übersetzten Begriffe.",
-          "Nach einem Sprachwechsel wird die Tätigkeit in der Startup-Projektübersicht nun korrekt in der aktiven Sprache angezeigt."
-        ]}
-      ]
-    },
-      
+          { title: "Changed", notes: [
+            "Die App unterstützt jetzt Deutsch, Englisch und Polnisch app-weit; standardmäßig wird die Systemsprache verwendet.",
+            "In den Einstellungen kann die App-Sprache manuell auf `System`, `Deutsch`, `English` oder `Polski` umgestellt werden; die Auswahl bleibt nach Neustart erhalten.",
+            "Kernoberflächen inkl. Gefährdungen, Maßnahmen, Hinweise, Dialoge und Projekt-Workflows sind vollständig in DE/EN/PL lokalisiert.",
+            "PDF-Vorschau und PDF-Export geben Inhalte sprachabhängig in DE/EN/PL aus, inklusive lokalisierter Gefährdungs- und Maßnahmenbezeichnungen sowie passender Datums- und Zeitformate.",
+            "Das Kontakt-PDF (inkl. Dateiname und Labels) ist ebenfalls sprachabhängig lokalisiert."
+          ]},
+          { title: "Fixed", notes: [
+            "Das Tätigkeiten-Dropdown im Arbeitsauftrag zeigt in EN/PL jetzt die korrekten übersetzten Begriffe.",
+            "Nach einem Sprachwechsel wird die Tätigkeit in der Startup-Projektübersicht nun korrekt in der aktiven Sprache angezeigt."
+          ]}
+        ]
+      },
       {
         version: "1.6.3+49",
         date: "2026-03-05",
         channel: "Beta",
         sections: [
-        { title: "Changed", notes: [
-          "Der „Nur Favoriten“-Filter in „Gefährdungen bewerten“ wurde platzsparender direkt in das Suchfeld integriert.",
-          "In der Free-Version ist der „Nur Favoriten“-Filter in der Suche ausgeblendet und nur mit aktivem Pro-Upgrade sichtbar.",
-          "Bei aktivem Favoritenfilter zeigt ein deutlicher Statushinweis („Filter aktiv: Nur Favoriten“) den aktuellen Filterzustand inklusive schneller „Aufheben“-Aktion.",
-          "Die Kategorie-Zähler `x/Gesamt` schalten im Favoritenmodus auf den Favoriten-Scope um (`ausgewählte Favoriten / Favoriten gesamt`) und zeigen außerhalb des Filters weiterhin den Gesamt-Scope aller Gefährdungen."
-        ]},
-        { title: "Fixed", notes: [
-          "Der Favoritenzähler in „Gefährdungen bewerten“ aktualisiert sich nach App-Neustart und beim Reload jetzt sofort korrekt; zuvor wurde im Startpfad unter bestimmten Bedingungen erst nach einer Interaktion die richtige Anzahl sichtbar."
-        ]}
-      ]
-    },
-      
-      {
-       version: "1.6.3+48",
-       date: "2026-03-04",
-       channel: "Beta",
-       sections: [
-        { title: "Changed", notes: [
-          "In „Einstellungen > Käufe wiederherstellen“ wird der Pro-Status jetzt klar angezeigt (`Free-Version` oder `Pro-Upgrade aktiv`).",
-          "Bei aktivem Pro-Upgrade wird zusätzlich ein Datum angezeigt: `Gekauft am` oder `Kauf wiederhergestellt am`.",
-          "Der Pro-Upgrade-Dialog zeigt den aktuellen Pro-Status ebenfalls direkt im Dialogbereich."
-        ]}
-      ]
-    },
-      
-      {
-       version: "1.6.3+47",
-       date: "2026-03-04",
-       channel: "Beta",
-       sections: [
-        { title: "Changed", notes: [
-          "In-App-Kauf auf iOS intern auf StoreKit 2 umgestellt (native Channel-Bridge); Android nutzt weiterhin Google Play Billing.",
-          "Neues Pro-Feature „Gefährdungs-Favoriten“ in „Gefährdungen bewerten“: Stern-Markierung, Favoriten-Sektion, „Nur Favoriten“-Filter und Favoriten-Priorisierung in der Suche.",
-          "In der Free-Version wird der Favoriten-Stern in der Risikobewertung nicht angezeigt.",
-          "Oberkategorien in „Gefährdungen bewerten“ und „Maßnahmen nach T-O-P“ sind einklappbar, damit lange Listen schneller navigierbar bleiben.",
-          "Oberkategorie-Header nutzen jetzt konsistente, eindeutige Icons über alle Hazard-Kategorien hinweg.",
-          "Kategorien zeigen den Fortschritt jetzt als `x/Gesamt` (aktiv ausgewählt vs. Gesamtanzahl) für Gefährdungen und Maßnahmen.",
-          "Der Gefährdungskatalog wurde fachlich neu geordnet: neue Oberkategorien „Bauliche Substanz & Tragwerk“, „Energiequellen & Freischaltung (LOTO)“ sowie „Dritte/Unbefugte & Sicherheitslage“, inkl. neu zugeordneter und ergänzter Gefährdungen.",
-          "Maßnahmen innerhalb eines T-O-P-Blocks sind visuell stärker getrennt; Rest-Risiko-Chips sind klarer als eigener Abschnitt platziert.",
-          "„Gefährdungen bewerten“ wurde visuell an „Maßnahmen nach T-O-P“ angeglichen (Kartenstil, Typografie, kompaktere Risikobadges und konsistente Abstände in Auswahl und Suchtreffern).",
-          "In „Gefährdungen bewerten“ wurde die Beschriftung bei den Badges auf „Risiko“ vereinfacht; die Legende `1 = sehr niedrig` / `5 = sehr hoch` ist jetzt in beiden Screens kompakt rechts neben den Badges integriert.",
-          "Gefährdungskarten in „Maßnahmen nach T-O-P“ wurden optisch vereinheitlicht; die Zuordnung der Inhalte bleibt über einen klaren Abschnitt „Maßnahmen zu dieser Gefährdung“ explizit erkennbar.",
-          "Die Vorher/Nachher-Darstellung der Rest-Risikobewertung im Maßnahmen-Screen wurde auf ein ruhigeres Pill-Design mit „Risikobewertung:“ umgestellt.",
-          "Der Maßnahmenkatalog wurde vollständig an den aktualisierten Gefährdungskatalog angepasst, inhaltlich entdoppelt und sprachlich praxisnäher vereinheitlicht.",
-          "Im Gefährdungskatalog wurde die kombinierte Gefährdung „Fangraum/Restseillänge nach unten unzureichend“ fachlich getrennt und als „Restseillänge nach unten unzureichend“ präzisiert; die Fallraum-Thematik bleibt als eigene Gefährdung separat erhalten.",
-          "Die Maßnahmen-Änderungshistorie wurde auf den Katalogstand vom 2026-03-03 aktualisiert.",
-          "Tooltip-Inhalte wurden fachlich erweitert: zusätzliche Kurzinfos u. a. zu Restseillänge/Fallraum, Induktions-/Schrittspannung, Durchsturzflächen, Sprachbarrieren, Redundanz sowie Umlenkrollen/Biegeradius."
-        ]},
-        { title: "Fixed", notes: [
-          "Lange Kategorienamen und Einträge umbrechen robuster (u. a. in Gefährdungen, Risikobewertung und Benutzerbibliothek), auch bei größeren Systemschriftgrößen.",
-          "Doppelte Info-Icons bei einzelnen Gefährdungen im Screen „Maßnahmen nach T-O-P“ wurden entfernt (bei fehlender Maßnahmenauswahl wird nur noch ein Info-Hinweis angezeigt).",
-          "Abstände zwischen Oberkategorien im Screen „Gefährdungen bewerten“ wurden auf den Abstandsrhythmus von „Maßnahmen nach T-O-P“ angeglichen.",
-          "Im Screen „Gefährdungen > Oberkategorien“ zeigen die Listeneinträge wieder die zugehörigen Kategorie-Icons statt generischer Info-Icons.",
-          "Hinweistexte im Screen „Gefährdungen > Oberkategorien“ wurden bei mehreren Kategorien sprachlich/fachlich präzisiert (u. a. Elektrik, Physik, Organisation, beengte Räume)."
-        ]}
-       ]
+          { title: "Changed", notes: [
+            "Der „Nur Favoriten“-Filter in „Gefährdungen bewerten“ wurde platzsparender direkt in das Suchfeld integriert.",
+            "In der Free-Version ist der „Nur Favoriten“-Filter in der Suche ausgeblendet und nur mit aktivem Pro-Upgrade sichtbar.",
+            "Bei aktivem Favoritenfilter zeigt ein deutlicher Statushinweis („Filter aktiv: Nur Favoriten“) den aktuellen Filterzustand inklusive schneller „Aufheben“-Aktion.",
+            "Die Kategorie-Zähler `x/Gesamt` schalten im Favoritenmodus auf den Favoriten-Scope um (`ausgewählte Favoriten / Favoriten gesamt`) und zeigen außerhalb des Filters weiterhin den Gesamt-Scope aller Gefährdungen."
+          ]},
+          { title: "Fixed", notes: [
+            "Der Favoritenzähler in „Gefährdungen bewerten“ aktualisiert sich nach App-Neustart und beim Reload jetzt sofort korrekt; zuvor wurde im Startpfad unter bestimmten Bedingungen erst nach einer Interaktion die richtige Anzahl sichtbar."
+          ]}
+        ]
       },
-      
+      {
+        version: "1.6.3+48",
+        date: "2026-03-04",
+        channel: "Beta",
+        sections: [
+          { title: "Changed", notes: [
+            "In „Einstellungen > Käufe wiederherstellen“ wird der Pro-Status jetzt klar angezeigt (`Free-Version` oder `Pro-Upgrade aktiv`).",
+            "Bei aktivem Pro-Upgrade wird zusätzlich ein Datum angezeigt: `Gekauft am` oder `Kauf wiederhergestellt am`.",
+            "Der Pro-Upgrade-Dialog zeigt den aktuellen Pro-Status ebenfalls direkt im Dialogbereich."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.3+47",
+        date: "2026-03-04",
+        channel: "Beta",
+        sections: [
+          { title: "Changed", notes: [
+            "In-App-Kauf auf iOS intern auf StoreKit 2 umgestellt (native Channel-Bridge); Android nutzt weiterhin Google Play Billing.",
+            "Neues Pro-Feature „Gefährdungs-Favoriten“ in „Gefährdungen bewerten“: Stern-Markierung, Favoriten-Sektion, „Nur Favoriten“-Filter und Favoriten-Priorisierung in der Suche.",
+            "In der Free-Version wird der Favoriten-Stern in der Risikobewertung nicht angezeigt.",
+            "Oberkategorien in „Gefährdungen bewerten“ und „Maßnahmen nach T-O-P“ sind einklappbar, damit lange Listen schneller navigierbar bleiben.",
+            "Oberkategorie-Header nutzen jetzt konsistente, eindeutige Icons über alle Hazard-Kategorien hinweg.",
+            "Kategorien zeigen den Fortschritt jetzt als `x/Gesamt` (aktiv ausgewählt vs. Gesamtanzahl) für Gefährdungen und Maßnahmen.",
+            "Der Gefährdungskatalog wurde fachlich neu geordnet: neue Oberkategorien „Bauliche Substanz & Tragwerk“, „Energiequellen & Freischaltung (LOTO)“ sowie „Dritte/Unbefugte & Sicherheitslage“, inkl. neu zugeordneter und ergänzter Gefährdungen.",
+            "Maßnahmen innerhalb eines T-O-P-Blocks sind visuell stärker getrennt; Rest-Risiko-Chips sind klarer als eigener Abschnitt platziert.",
+            "„Gefährdungen bewerten“ wurde visuell an „Maßnahmen nach T-O-P“ angeglichen (Kartenstil, Typografie, kompaktere Risikobadges und konsistente Abstände in Auswahl und Suchtreffern).",
+            "In „Gefährdungen bewerten“ wurde die Beschriftung bei den Badges auf „Risiko“ vereinfacht; die Legende `1 = sehr niedrig` / `5 = sehr hoch` ist jetzt in beiden Screens kompakt rechts neben den Badges integriert.",
+            "Gefährdungskarten in „Maßnahmen nach T-O-P“ wurden optisch vereinheitlicht; die Zuordnung der Inhalte bleibt über einen klaren Abschnitt „Maßnahmen zu dieser Gefährdung“ explizit erkennbar.",
+            "Die Vorher/Nachher-Darstellung der Rest-Risikobewertung im Maßnahmen-Screen wurde auf ein ruhigeres Pill-Design mit „Risikobewertung:“ umgestellt.",
+            "Der Maßnahmenkatalog wurde vollständig an den aktualisierten Gefährdungskatalog angepasst, inhaltlich entdoppelt und sprachlich praxisnäher vereinheitlicht.",
+            "Im Gefährdungskatalog wurde die kombinierte Gefährdung „Fangraum/Restseillänge nach unten unzureichend“ fachlich getrennt und als „Restseillänge nach unten unzureichend“ präzisiert; die Fallraum-Thematik bleibt als eigene Gefährdung separat erhalten.",
+            "Die Maßnahmen-Änderungshistorie wurde auf den Katalogstand vom 2026-03-03 aktualisiert.",
+            "Tooltip-Inhalte wurden fachlich erweitert: zusätzliche Kurzinfos u. a. zu Restseillänge/Fallraum, Induktions-/Schrittspannung, Durchsturzflächen, Sprachbarrieren, Redundanz sowie Umlenkrollen/Biegeradius."
+          ]},
+          { title: "Fixed", notes: [
+            "Lange Kategorienamen und Einträge umbrechen robuster (u. a. in Gefährdungen, Risikobewertung und Benutzerbibliothek), auch bei größeren Systemschriftgrößen.",
+            "Doppelte Info-Icons bei einzelnen Gefährdungen im Screen „Maßnahmen nach T-O-P“ wurden entfernt (bei fehlender Maßnahmenauswahl wird nur noch ein Info-Hinweis angezeigt).",
+            "Abstände zwischen Oberkategorien im Screen „Gefährdungen bewerten“ wurden auf den Abstandsrhythmus von „Maßnahmen nach T-O-P“ angeglichen.",
+            "Im Screen „Gefährdungen > Oberkategorien“ zeigen die Listeneinträge wieder die zugehörigen Kategorie-Icons statt generischer Info-Icons.",
+            "Hinweistexte im Screen „Gefährdungen > Oberkategorien“ wurden bei mehreren Kategorien sprachlich/fachlich präzisiert (u. a. Elektrik, Physik, Organisation, beengte Räume)."
+          ]}
+        ]
+      },
       {
         version: "1.6.2+43",
         date: "2026-02-26",
@@ -559,32 +688,31 @@
           ]}
         ]
       },
-
       {
         version: "1.6.1+42",
         date: "2026-02-25",
         channel: "Beta",
         sections: [
-    { title: "Changed", notes: [
-      "Follow-up-Build für den iOS-TestFlight-Upload mit aktualisiertem Paket-Lockfile und erneut verifizierten Release-Checks.",
-      "Keine zusätzlichen sichtbaren Funktionen gegenüber 1.6.1+41.",
-      "Kapitelüberschrift für Maßnahmen ist jetzt konsistent zweizeilig: Titel „Maßnahmen“ mit Untertitel „nach T-O-P“.",
-      "Navigationstasten am unteren Rand reagieren robuster auf größere iPhone-Schriftgrößen; bei sehr wenig Platz werden automatisch kompakte Icon-Buttons verwendet.",
-      "Überschriften- und Buttontexte bleiben bei erhöhter Systemschriftgröße optisch stabiler, ohne die Lesbarkeit von Fließtexten einzuschränken.",
-      "Der Pro-Freischaltungsdialog (Kaufen/Wiederherstellen) wurde visuell überarbeitet: klarere Struktur, bessere Status-Hinweise und modernisiertes Layout.",
-      "Dialog-Aktionsbuttons haben jetzt konsistent mehr Abstand und ein stabileres Wrap-Verhalten (u. a. im Datenschutzhinweis).",
-      "Pro-Markierungen im Menü wurden mit einem passenden Pro-Icon aufgewertet."
-    ]},
-    { title: "Fixed", notes: [
-      "Signaturerfassung bei Aufsichtsführenden und unterwiesenen Personen bleibt beim Gerätewechsel zwischen Hoch-/Querformat korrekt innerhalb des weißen Signaturfelds und zeichnet nicht mehr über Dialogelemente."
-    ]}
-  ]
-},
-{
-  version: "1.6.1+41",
-  date: "2026-02-25",
-  channel: "Beta",
-  sections: [
+          { title: "Changed", notes: [
+            "Follow-up-Build für den iOS-TestFlight-Upload mit aktualisiertem Paket-Lockfile und erneut verifizierten Release-Checks.",
+            "Keine zusätzlichen sichtbaren Funktionen gegenüber 1.6.1+41.",
+            "Kapitelüberschrift für Maßnahmen ist jetzt konsistent zweizeilig: Titel „Maßnahmen“ mit Untertitel „nach T-O-P“.",
+            "Navigationstasten am unteren Rand reagieren robuster auf größere iPhone-Schriftgrößen; bei sehr wenig Platz werden automatisch kompakte Icon-Buttons verwendet.",
+            "Überschriften- und Buttontexte bleiben bei erhöhter Systemschriftgröße optisch stabiler, ohne die Lesbarkeit von Fließtexten einzuschränken.",
+            "Der Pro-Freischaltungsdialog (Kaufen/Wiederherstellen) wurde visuell überarbeitet: klarere Struktur, bessere Status-Hinweise und modernisiertes Layout.",
+            "Dialog-Aktionsbuttons haben jetzt konsistent mehr Abstand und ein stabileres Wrap-Verhalten (u. a. im Datenschutzhinweis).",
+            "Pro-Markierungen im Menü wurden mit einem passenden Pro-Icon aufgewertet."
+          ]},
+          { title: "Fixed", notes: [
+            "Signaturerfassung bei Aufsichtsführenden und unterwiesenen Personen bleibt beim Gerätewechsel zwischen Hoch-/Querformat korrekt innerhalb des weißen Signaturfelds und zeichnet nicht mehr über Dialogelemente."
+          ]}
+        ]
+      },
+      {
+        version: "1.6.1+41",
+        date: "2026-02-25",
+        channel: "Beta",
+        sections: [
           { title: "Changed", notes: [
             "Kapitelüberschrift für Maßnahmen ist jetzt konsistent zweizeilig: Titel „Maßnahmen“ mit Untertitel „nach T-O-P“.",
             "Navigationstasten am unteren Rand reagieren robuster auf größere iPhone-Schriftgrößen; bei sehr wenig Platz werden automatisch kompakte Icon-Buttons verwendet.",
@@ -597,7 +725,7 @@
             "Signaturerfassung bei Aufsichtsführenden und unterwiesenen Personen bleibt beim Gerätewechsel zwischen Hoch-/Querformat korrekt innerhalb des weißen Signaturfelds und zeichnet nicht mehr über Dialogelemente."
           ]}
         ]
-      }, 
+      },
       {
         version: "1.6.0+40",
         date: "2026-02-18",
@@ -1049,19 +1177,30 @@
           ]}
         ]
       }
-
     ];
 
     const releasesEl = document.getElementById("releases");
     const qEl = document.getElementById("q");
     const channelEl = document.getElementById("channel");
+    const tocEl = document.getElementById("toc");
 
-    function norm(s) { return (s || "").toLowerCase(); }
+    function norm(s) {
+      return (s || "").toLowerCase();
+    }
+
+    function slugify(value) {
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9+]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
 
     function matchesQuery(r, q) {
       if (!q) return true;
       const hay = [
-        r.version, r.date, r.channel,
+        r.version,
+        r.date,
+        r.channel,
         ...(r.sections || []).flatMap(s => [s.title, ...(s.notes || [])])
       ].join(" • ");
       return norm(hay).includes(norm(q));
@@ -1084,50 +1223,77 @@
       return "badge";
     }
 
+    function renderToc(items) {
+      tocEl.innerHTML = "";
+      items.forEach(r => {
+        const a = document.createElement("a");
+        a.href = `#release-${slugify(r.version)}`;
+        a.textContent = r.version === "Unreleased" ? "Unreleased" : `v${r.version}`;
+        tocEl.appendChild(a);
+      });
+    }
+
     function render() {
       const q = qEl.value.trim();
       const c = channelEl.value;
-
       const filtered = releaseData.filter(r => matchesChannel(r, c) && matchesQuery(r, q));
 
+      renderToc(filtered);
       releasesEl.innerHTML = "";
+
       if (!filtered.length) {
-        releasesEl.innerHTML = `<p class="muted">Keine Treffer.</p>`;
+        releasesEl.innerHTML = `<section class="card"><p class="empty">Keine Treffer.</p></section>`;
         return;
       }
 
       filtered.forEach(r => {
         const article = document.createElement("article");
         article.className = "release";
+        article.id = `release-${slugify(r.version)}`;
 
-        const meta = document.createElement("div");
-        meta.className = "meta";
+        const tag = document.createElement("span");
+        tag.className = "section-tag";
+        tag.textContent = r.version === "Unreleased" ? "Unreleased" : `Release ${r.version}`;
+        article.appendChild(tag);
+
+        const head = document.createElement("div");
+        head.className = "release-head";
 
         const v = document.createElement("span");
         v.className = "version";
         v.textContent = r.version === "Unreleased" ? "Unreleased" : `v${r.version}`;
-        meta.appendChild(v);
+        head.appendChild(v);
 
         if (r.channel) {
           const b = document.createElement("span");
           b.className = badgeClass(r.channel);
           b.textContent = r.channel;
-          meta.appendChild(b);
+          head.appendChild(b);
         }
 
         if (r.date) {
           const d = document.createElement("span");
-          d.className = "muted";
+          d.className = "date";
           d.textContent = r.date;
-          meta.appendChild(d);
+          head.appendChild(d);
         }
 
-        article.appendChild(meta);
+        article.appendChild(head);
+
+        if (!r.sections || !r.sections.length) {
+          const p = document.createElement("p");
+          p.className = "muted";
+          p.textContent = "Noch keine veröffentlichten Einträge.";
+          article.appendChild(p);
+        }
 
         (r.sections || []).forEach(sec => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "release-section";
+
           const h = document.createElement("h3");
           h.textContent = sec.title || "";
-          article.appendChild(h);
+          wrapper.appendChild(h);
 
           const ul = document.createElement("ul");
           (sec.notes || []).forEach(n => {
@@ -1135,7 +1301,8 @@
             li.textContent = n;
             ul.appendChild(li);
           });
-          article.appendChild(ul);
+          wrapper.appendChild(ul);
+          article.appendChild(wrapper);
         });
 
         releasesEl.appendChild(article);
