@@ -72,9 +72,8 @@
       }
 
       .intro {
-        color: var(--muted);
-        max-width: 70ch;
         margin: 0;
+        color: var(--muted);
       }
 
       main {
@@ -100,99 +99,18 @@
         font-size: clamp(1.08rem, 2.4vw, 1.35rem);
       }
 
-      .meta-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 0.75rem;
-      }
-
-      .meta-item {
-        padding: 0.9rem 1rem;
-        border-radius: 16px;
-        background: rgba(15, 102, 120, 0.06);
-        border: 1px solid rgba(15, 102, 120, 0.1);
-      }
-
-      .meta-label {
-        display: block;
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: var(--primary);
-        margin-bottom: 0.2rem;
-      }
-
-      .meta-value {
-        margin: 0;
-        font-weight: 600;
-        color: var(--ink);
-      }
-
-      .toc {
-        display: grid;
-        gap: 0.6rem;
-      }
-
-      .toc a {
-        display: block;
-        text-decoration: none;
-        color: var(--ink);
-        padding: 0.75rem 0.95rem;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.6);
-        border: 1px solid var(--line);
-        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-      }
-
-      .toc a:hover {
-        transform: translateY(-1px);
-        border-color: rgba(15, 102, 120, 0.25);
-        background: rgba(15, 102, 120, 0.05);
-      }
-
-      .eyebrow {
-        display: inline-block;
-        margin-bottom: 0.55rem;
-        padding: 0.22rem 0.58rem;
-        border-radius: 999px;
-        background: var(--primary-soft);
-        color: var(--primary);
-        font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .section-title {
-        display: flex;
-        align-items: baseline;
-        gap: 0.6rem;
-        flex-wrap: wrap;
-      }
-
-      .section-number {
-        color: var(--primary);
-        font-weight: 700;
-      }
-
-      .label {
-        font-weight: 700;
-        color: var(--ink);
-      }
-
       p {
         margin: 0;
       }
 
       .card p + p,
-      .card ul + p,
-      .card ol + p,
       .card p + ul,
       .card p + ol,
+      .card ul + p,
+      .card ol + p,
       .card ul + ul,
       .card ol + ol {
-        margin-top: 0.85rem;
+        margin-top: 0.75rem;
       }
 
       ul,
@@ -202,28 +120,34 @@
       }
 
       li + li {
-        margin-top: 0.35rem;
+        margin-top: 0.32rem;
+      }
+
+      a {
+        color: var(--primary);
+      }
+
+      .toc {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .toc a {
+        text-decoration: none;
+      }
+
+      .toc a:hover {
+        text-decoration: underline;
+      }
+
+      .label {
+        font-weight: 600;
+        color: var(--ink);
       }
 
       code {
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 0.94em;
-        background: rgba(21, 35, 45, 0.06);
-        padding: 0.1rem 0.35rem;
-        border-radius: 8px;
-      }
-
-      .footer-note {
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.95rem;
-        padding-top: 0.5rem;
-      }
-
-      @media (max-width: 640px) {
-        .toc a {
-          padding: 0.7rem 0.85rem;
-        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -233,7 +157,6 @@
 
         * {
           animation: none !important;
-          transition: none !important;
         }
       }
     </style>
@@ -244,7 +167,7 @@
         <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
         <h1>Bedienungsanleitung</h1>
         <p class="intro">
-          Übersicht über Aufbau, Funktionen und Bedienlogik der App HeightPlanPro.
+          Stand: 17.03.2026 · Version: 1.6.7+63
         </p>
       </div>
     </header>
@@ -252,21 +175,7 @@
     <main>
       <div class="container stack">
         <section class="card">
-          <span class="eyebrow">Dokument</span>
-          <div class="meta-grid">
-            <div class="meta-item">
-              <span class="meta-label">Stand</span>
-              <p class="meta-value">17.03.2026</p>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Version</span>
-              <p class="meta-value">1.6.7+63</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Inhaltsverzeichnis</h2>
+          <h2>Inhalt</h2>
           <nav class="toc">
             <a href="#section-1">1. Zweck der App</a>
             <a href="#section-2">2. Start und Navigation</a>
@@ -292,9 +201,7 @@
         </section>
 
         <section class="card" id="section-1">
-          <div class="section-title">
-            <h2><span class="section-number">1.</span> Zweck der App</h2>
-          </div>
+          <h2>1. Zweck der App</h2>
           <p><span class="label">Zweck:</span> HeightPlanPro dient der strukturierten Einsatzplanung für Höhen- und Seilzugangstechnik.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -306,7 +213,7 @@
         </section>
 
         <section class="card" id="section-2">
-          <h2><span class="section-number">2.</span> Start und Navigation</h2>
+          <h2>2. Start und Navigation</h2>
           <p><span class="label">Zweck:</span> Nach dem Datenschutzhinweis startet die Übersicht Einsatzplanung mit acht Kapiteln.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -327,7 +234,7 @@
         </section>
 
         <section class="card" id="section-3">
-          <h2><span class="section-number">3.</span> Kapitel 1 - Stammdaten</h2>
+          <h2>3. Kapitel 1 - Stammdaten</h2>
           <p><span class="label">Zweck:</span> Erfasst die Daten für ausführende Firma und Auftraggeber inklusive Kontaktstrukturen.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -350,7 +257,7 @@
         </section>
 
         <section class="card" id="section-4">
-          <h2><span class="section-number">4.</span> Kapitel 2 - Einsatzort</h2>
+          <h2>4. Kapitel 2 - Einsatzort</h2>
           <p><span class="label">Zweck:</span> Beschreibt Bau-/Montagestelle und den konkreten Arbeitsort.</p>
           <p><span class="label">Verhalten/Hinweise:</span></p>
           <ul>
@@ -373,7 +280,7 @@
         </section>
 
         <section class="card" id="section-5">
-          <h2><span class="section-number">5.</span> Kapitel 3 - Arbeitsauftrag</h2>
+          <h2>5. Kapitel 3 - Arbeitsauftrag</h2>
           <p><span class="label">Zweck:</span> Definiert Tätigkeit, Verfahren und Leistungsumfang.</p>
           <p><span class="label">Eingabefelder:</span></p>
           <ul>
@@ -387,7 +294,7 @@
         </section>
 
         <section class="card" id="section-6">
-          <h2><span class="section-number">6.</span> Kapitel 4 - Gefährdungen</h2>
+          <h2>6. Kapitel 4 - Gefährdungen</h2>
           <p><span class="label">Zweck:</span> Wählt die für den Einsatz relevanten Gefährdungen aus dem Katalog.</p>
           <p><span class="label">Eingabefelder:</span></p>
           <ul>
@@ -398,7 +305,7 @@
         </section>
 
         <section class="card" id="section-7">
-          <h2><span class="section-number">7.</span> Kapitel 5 - Gefährdungen bewerten</h2>
+          <h2>7. Kapitel 5 - Gefährdungen bewerten</h2>
           <p><span class="label">Zweck:</span> Bewertet das Ausgangsrisiko je ausgewählter Gefährdung.</p>
           <p><span class="label">Eingabefelder:</span></p>
           <ul>
@@ -409,7 +316,7 @@
         </section>
 
         <section class="card" id="section-8">
-          <h2><span class="section-number">8.</span> Kapitel 6 - Maßnahmen nach T-O-P</h2>
+          <h2>8. Kapitel 6 - Maßnahmen nach T-O-P</h2>
           <p><span class="label">Zweck:</span> Legt technische, organisatorische und persönliche Maßnahmen fest.</p>
           <p><span class="label">Eingabefelder:</span></p>
           <ul>
@@ -420,7 +327,7 @@
         </section>
 
         <section class="card" id="section-9">
-          <h2><span class="section-number">9.</span> Kapitel 7 - Notfall- und Rettungskonzepte</h2>
+          <h2>9. Kapitel 7 - Notfall- und Rettungskonzepte</h2>
           <p><span class="label">Zweck:</span> Dokumentiert Alarmierung und Rettungsablauf.</p>
           <p><span class="label">Eingabefelder:</span></p>
           <ul>
@@ -433,7 +340,7 @@
         </section>
 
         <section class="card" id="section-10">
-          <h2><span class="section-number">10.</span> Kapitel 8 - Unterwiesene Personen</h2>
+          <h2>10. Kapitel 8 - Unterwiesene Personen</h2>
           <p><span class="label">Zweck:</span> Schließt Unterweisung mit Rollen, Qualifikationen und Signaturen ab.</p>
           <p><span class="label">Eingabefelder:</span></p>
           <ul>
@@ -450,7 +357,7 @@
         </section>
 
         <section class="card" id="section-11">
-          <h2><span class="section-number">11.</span> Bereich Projekte</h2>
+          <h2>11. Bereich Projekte</h2>
           <p><span class="label">Zweck:</span> Verwaltet den Projektlebenszyklus.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -461,7 +368,7 @@
         </section>
 
         <section class="card" id="section-12">
-          <h2><span class="section-number">12.</span> Bereich PDF &amp; Export</h2>
+          <h2>12. Bereich PDF &amp; Export</h2>
           <p><span class="label">Zweck:</span> Erzeugt, teilt und verwaltet PDF-Dokumente.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -476,7 +383,7 @@
         </section>
 
         <section class="card" id="section-13">
-          <h2><span class="section-number">13.</span> Bereich Stammdaten &amp; Bibliothek</h2>
+          <h2>13. Bereich Stammdaten &amp; Bibliothek</h2>
           <p><span class="label">Zweck:</span> Pflegt Unternehmensdaten und benutzerdefinierte Katalogeinträge.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -488,7 +395,7 @@
         </section>
 
         <section class="card" id="section-14">
-          <h2><span class="section-number">14.</span> Bereich App &amp; Konto</h2>
+          <h2>14. Bereich App &amp; Konto</h2>
           <p><span class="label">Zweck:</span> Steuert Sprache, Hilfen und Kaufstatus.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -504,7 +411,7 @@
         </section>
 
         <section class="card" id="section-15">
-          <h2><span class="section-number">15.</span> Bereich Daten &amp; Wartung</h2>
+          <h2>15. Bereich Daten &amp; Wartung</h2>
           <p><span class="label">Zweck:</span> Fasst Datensicherung, Restore und lokale Wartung zusammen.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -517,7 +424,7 @@
         </section>
 
         <section class="card" id="section-16">
-          <h2><span class="section-number">16.</span> Bereich Hilfe &amp; Rechtliches</h2>
+          <h2>16. Bereich Hilfe &amp; Rechtliches</h2>
           <p><span class="label">Zweck:</span> Bietet Support- und Rechtstexte innerhalb der App.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -532,7 +439,7 @@
         </section>
 
         <section class="card" id="section-17">
-          <h2><span class="section-number">17.</span> Backup- und Restore-Details</h2>
+          <h2>17. Backup- und Restore-Details</h2>
           <p><span class="label">Zweck:</span> Beschreibt den sicheren Ablauf für Backup und Wiederherstellung.</p>
           <p><span class="label">Wichtige Inhalte:</span></p>
           <ul>
@@ -546,7 +453,7 @@
         </section>
 
         <section class="card" id="section-18">
-          <h2><span class="section-number">18.</span> Funktionsumfang Free vs. Pro</h2>
+          <h2>18. Funktionsumfang Free vs. Pro</h2>
           <p><span class="label">Pro-gebunden:</span></p>
           <ul>
             <li>Projekte speichern und laden</li>
@@ -574,7 +481,7 @@
         </section>
 
         <section class="card" id="section-19">
-          <h2><span class="section-number">19.</span> Datenexport und Datenschutz</h2>
+          <h2>19. Datenexport und Datenschutz</h2>
           <p><span class="label">Relevante Exportarten in der App:</span></p>
           <ul>
             <li>PDF-Export (Dokumentausgabe)</li>
@@ -591,7 +498,7 @@
         </section>
 
         <section class="card" id="section-20">
-          <h2><span class="section-number">20.</span> Empfohlener Abschluss-Check</h2>
+          <h2>20. Empfohlener Abschluss-Check</h2>
           <p><span class="label">Vor dem finalen Export prüfen:</span></p>
           <ol>
             <li>Stammdaten beider Parteien vollständig</li>
@@ -602,10 +509,6 @@
             <li>Unterwiesene Personen inkl. Signaturen vorhanden</li>
           </ol>
         </section>
-
-        <p class="footer-note">
-          HeightPlanPro – Bedienungsanleitung
-        </p>
       </div>
     </main>
   </body>
