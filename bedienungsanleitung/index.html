@@ -1,1 +1,612 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bedienungsanleitung | HeightPlanPro</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap");
 
+      :root {
+        color-scheme: light;
+        --ink: #15232d;
+        --muted: #4c6070;
+        --primary: #0f6678;
+        --primary-soft: #dceef2;
+        --bg-a: #edf4f8;
+        --bg-b: #fbf6ee;
+        --surface: rgba(255, 255, 255, 0.9);
+        --line: rgba(20, 44, 58, 0.12);
+        --radius: 20px;
+        --shadow: 0 20px 45px -28px rgba(18, 39, 52, 0.42);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Public Sans", "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(80rem 80rem at -10% -20%, #d5eaf0 0%, transparent 55%),
+          radial-gradient(70rem 70rem at 110% -20%, #f8e6ce 0%, transparent 50%),
+          linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
+        min-height: 100dvh;
+        line-height: 1.65;
+      }
+
+      .container {
+        width: min(980px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: clamp(2.5rem, 5vw, 4rem) 0 1.5rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.42rem 0.9rem;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-family: "Sora", "Public Sans", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.3rem);
+        line-height: 1.1;
+        margin: 1rem 0 0.65rem;
+      }
+
+      .intro {
+        color: var(--muted);
+        max-width: 70ch;
+        margin: 0;
+      }
+
+      main {
+        padding: 1.2rem 0 clamp(2.8rem, 5vw, 4rem);
+      }
+
+      .stack {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: clamp(1.2rem, 2.8vw, 1.8rem);
+      }
+
+      .card h2 {
+        margin: 0 0 0.7rem;
+        font-family: "Sora", "Public Sans", sans-serif;
+        font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .meta-item {
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+        background: rgba(15, 102, 120, 0.06);
+        border: 1px solid rgba(15, 102, 120, 0.1);
+      }
+
+      .meta-label {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--primary);
+        margin-bottom: 0.2rem;
+      }
+
+      .meta-value {
+        margin: 0;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .toc {
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .toc a {
+        display: block;
+        text-decoration: none;
+        color: var(--ink);
+        padding: 0.75rem 0.95rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid var(--line);
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .toc a:hover {
+        transform: translateY(-1px);
+        border-color: rgba(15, 102, 120, 0.25);
+        background: rgba(15, 102, 120, 0.05);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 0.55rem;
+        padding: 0.22rem 0.58rem;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+
+      .section-number {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .label {
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .card p + p,
+      .card ul + p,
+      .card ol + p,
+      .card p + ul,
+      .card p + ol,
+      .card ul + ul,
+      .card ol + ol {
+        margin-top: 0.85rem;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      li + li {
+        margin-top: 0.35rem;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.94em;
+        background: rgba(21, 35, 45, 0.06);
+        padding: 0.1rem 0.35rem;
+        border-radius: 8px;
+      }
+
+      .footer-note {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+        padding-top: 0.5rem;
+      }
+
+      @media (max-width: 640px) {
+        .toc a {
+          padding: 0.7rem 0.85rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="https://www.heightplanpro.de/" class="brand">HeightPlanPro</a>
+        <h1>Bedienungsanleitung</h1>
+        <p class="intro">
+          Übersicht über Aufbau, Funktionen und Bedienlogik der App HeightPlanPro.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container stack">
+        <section class="card">
+          <span class="eyebrow">Dokument</span>
+          <div class="meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Stand</span>
+              <p class="meta-value">17.03.2026</p>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Version</span>
+              <p class="meta-value">1.6.7+63</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Inhaltsverzeichnis</h2>
+          <nav class="toc">
+            <a href="#section-1">1. Zweck der App</a>
+            <a href="#section-2">2. Start und Navigation</a>
+            <a href="#section-3">3. Kapitel 1 - Stammdaten</a>
+            <a href="#section-4">4. Kapitel 2 - Einsatzort</a>
+            <a href="#section-5">5. Kapitel 3 - Arbeitsauftrag</a>
+            <a href="#section-6">6. Kapitel 4 - Gefährdungen</a>
+            <a href="#section-7">7. Kapitel 5 - Gefährdungen bewerten</a>
+            <a href="#section-8">8. Kapitel 6 - Maßnahmen nach T-O-P</a>
+            <a href="#section-9">9. Kapitel 7 - Notfall- und Rettungskonzepte</a>
+            <a href="#section-10">10. Kapitel 8 - Unterwiesene Personen</a>
+            <a href="#section-11">11. Bereich Projekte</a>
+            <a href="#section-12">12. Bereich PDF &amp; Export</a>
+            <a href="#section-13">13. Bereich Stammdaten &amp; Bibliothek</a>
+            <a href="#section-14">14. Bereich App &amp; Konto</a>
+            <a href="#section-15">15. Bereich Daten &amp; Wartung</a>
+            <a href="#section-16">16. Bereich Hilfe &amp; Rechtliches</a>
+            <a href="#section-17">17. Backup- und Restore-Details</a>
+            <a href="#section-18">18. Funktionsumfang Free vs. Pro</a>
+            <a href="#section-19">19. Datenexport und Datenschutz</a>
+            <a href="#section-20">20. Empfohlener Abschluss-Check</a>
+          </nav>
+        </section>
+
+        <section class="card" id="section-1">
+          <div class="section-title">
+            <h2><span class="section-number">1.</span> Zweck der App</h2>
+          </div>
+          <p><span class="label">Zweck:</span> HeightPlanPro dient der strukturierten Einsatzplanung für Höhen- und Seilzugangstechnik.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Projektbezogene Planung in acht Kapiteln.</li>
+            <li>Gefährdungen, Risiken, Maßnahmen und Rettungskonzepte dokumentieren.</li>
+            <li>Unterweisungen mit Signaturen und Zeitstempeln abschließen.</li>
+            <li>PDF-Dokumente, Bibliotheken und Backups lokal verwalten.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-2">
+          <h2><span class="section-number">2.</span> Start und Navigation</h2>
+          <p><span class="label">Zweck:</span> Nach dem Datenschutzhinweis startet die Übersicht Einsatzplanung mit acht Kapiteln.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Stammdaten</li>
+            <li>Einsatzort</li>
+            <li>Arbeitsauftrag</li>
+            <li>Gefährdungen</li>
+            <li>Gefährdungen bewerten</li>
+            <li>Maßnahmen nach T-O-P</li>
+            <li>Notfall- und Rettungskonzepte</li>
+            <li>Unterwiesene Personen</li>
+          </ul>
+          <p><span class="label">Verhalten/Hinweise:</span></p>
+          <ul>
+            <li>Die Menüs sind in sechs Bereiche gegliedert: Projekte, PDF &amp; Export, Stammdaten &amp; Bibliothek, App &amp; Konto, Daten &amp; Wartung, Hilfe &amp; Rechtliches.</li>
+            <li>Diese Anleitung und die PDF werden bewusst ohne Screenshots erzeugt.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-3">
+          <h2><span class="section-number">3.</span> Kapitel 1 - Stammdaten</h2>
+          <p><span class="label">Zweck:</span> Erfasst die Daten für ausführende Firma und Auftraggeber inklusive Kontaktstrukturen.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Firma und Auftraggeber können als Verzeichnis-Einträge gespeichert werden (Pro).</li>
+            <li>Weitere Ansprechpartner können pro Auftraggeber gepflegt werden.</li>
+            <li>Telefonnummern werden mit Länderkontext validiert.</li>
+          </ul>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Firmenname</code> (Pflichtfeld): Eindeutige Bezeichnung der ausführenden Firma bzw. des Auftraggebers.</li>
+            <li><code>Straße und Hausnummer</code> (Pflichtfeld): Postanschrift des Unternehmens.</li>
+            <li><code>Postleitzahl</code> (Pflichtfeld): PLZ mit länderspezifischer Validierung und PLZ-Logik.</li>
+            <li><code>Ort</code> (Pflichtfeld): Ort passend zur Anschrift.</li>
+            <li><code>Land</code> (Pflichtfeld): Steuert PLZ- und Telefonlogik (inkl. Ländervorwahl).</li>
+            <li><code>Telefonnummer (mit Ländercode)</code> (Pflichtfeld): Primäre Kontakttelefonnummer, format- und plausibilitätsgeprüft.</li>
+            <li><code>Ansprechpartner</code> (Pflichtfeld): Hauptkontakt für Rückfragen zum Projekt.</li>
+            <li><code>Abteilung / Position</code>: Rolle des Kontakts im Unternehmen.</li>
+            <li><code>Firmenlogo / Wasserzeichen</code>: Eigenes Logo als PDF-Wasserzeichen (Pro), sonst App-Icon.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-4">
+          <h2><span class="section-number">4.</span> Kapitel 2 - Einsatzort</h2>
+          <p><span class="label">Zweck:</span> Beschreibt Bau-/Montagestelle und den konkreten Arbeitsort.</p>
+          <p><span class="label">Verhalten/Hinweise:</span></p>
+          <ul>
+            <li>PLZ-Vorschläge können den Ort automatisch auflösen.</li>
+            <li>Unplausible Koordinaten werden bei relevanten Adressänderungen verworfen.</li>
+            <li>Kartenauswahl für GPS ist Pro-gebunden.</li>
+          </ul>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Land</code> (Pflichtfeld): Länderkontext für PLZ-Prüfung und Ortsvorschläge.</li>
+            <li><code>Bezeichnung</code> (Pflichtfeld): Name der Bau-/Montagestelle.</li>
+            <li><code>Adresse</code> (Pflichtfeld): Straße und Hausnummer des Einsatzortes.</li>
+            <li><code>Postleitzahl</code> (Pflichtfeld): PLZ der Bau-/Montagestelle.</li>
+            <li><code>Ort</code> (Pflichtfeld): Ort der Bau-/Montagestelle.</li>
+            <li><code>Gebäude</code>: Objekt-/Gebäudebezeichnung des Arbeitsortes.</li>
+            <li><code>Ebene</code>: Stockwerk/Bereich innerhalb des Objekts.</li>
+            <li><code>GPS-Koordinaten</code>: Optionale Koordinaten, per Karte wählen (Pro) oder manuell eingeben.</li>
+            <li><code>Arbeitshöhe (m)</code>: Geplante Arbeitshöhe in Metern.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-5">
+          <h2><span class="section-number">5.</span> Kapitel 3 - Arbeitsauftrag</h2>
+          <p><span class="label">Zweck:</span> Definiert Tätigkeit, Verfahren und Leistungsumfang.</p>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Tätigkeit</code> (Pflichtfeld): Kernaktivität aus Liste oder als freie eigene Eingabe.</li>
+            <li><code>Auftragsnummer</code>: Interne oder externe Zuordnungsnummer.</li>
+            <li><code>Arbeitsverfahren (Kurzbezeichnung)</code>: Kurze Methodik-Benennung.</li>
+            <li><code>Beschreibung des Arbeitsauftrags / Arbeitsverfahrens</code>: Detaillierte textliche Beschreibung der auszuführenden Arbeiten.</li>
+            <li><code>Seillänge (m)</code>: Planwert für verwendete Seillänge.</li>
+            <li><code>Zugangsverfahren</code>: Mehrfachauswahl der eingesetzten Zugangs-/Sicherungsmethoden.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-6">
+          <h2><span class="section-number">6.</span> Kapitel 4 - Gefährdungen</h2>
+          <p><span class="label">Zweck:</span> Wählt die für den Einsatz relevanten Gefährdungen aus dem Katalog.</p>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Oberkategorie aktiv</code>: Aktiviert/deaktiviert ganze Gefährdungsblöcke.</li>
+            <li><code>Gefährdung ausgewählt</code>: Einzelne Gefährdungen je Oberkategorie für den Einsatz markieren.</li>
+            <li><code>Eigene Bibliothekseinträge</code>: Benutzerdefinierte Gefährdungen in die Auswahl übernehmen (Pro für Bearbeitung).</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-7">
+          <h2><span class="section-number">7.</span> Kapitel 5 - Gefährdungen bewerten</h2>
+          <p><span class="label">Zweck:</span> Bewertet das Ausgangsrisiko je ausgewählter Gefährdung.</p>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Risiko-Stufe (1-5)</code>: Bewertung vor Maßnahmen je Gefährdung.</li>
+            <li><code>Suche</code>: Filtert Gefährdungen im Bewertungsbildschirm.</li>
+            <li><code>Favoritenfilter</code>: Optionaler Filter auf Favoritengefährdungen (Pro-Feature).</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-8">
+          <h2><span class="section-number">8.</span> Kapitel 6 - Maßnahmen nach T-O-P</h2>
+          <p><span class="label">Zweck:</span> Legt technische, organisatorische und persönliche Maßnahmen fest.</p>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Maßnahme ausgewählt</code>: Zuordnung konkreter Maßnahmen zu jeder Gefährdung.</li>
+            <li><code>Restrisiko/Nach-Risiko (1-5)</code>: Bewertung nach geplanter Umsetzung der gewählten Maßnahmen.</li>
+            <li><code>Eigene Maßnahmen</code>: Benutzerdefinierte Maßnahmen in die Planung aufnehmen (Pro für Bearbeitung).</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-9">
+          <h2><span class="section-number">9.</span> Kapitel 7 - Notfall- und Rettungskonzepte</h2>
+          <p><span class="label">Zweck:</span> Dokumentiert Alarmierung und Rettungsablauf.</p>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Betriebsinterne Notrufnummer</code>: Optionale interne Notfallnummer, nummernlogisch validiert.</li>
+            <li><code>Rettungsvarianten (Checkboxen)</code>: Auswahl vordefinierter Rettungstypen (z. B. nach unten/nach oben).</li>
+            <li><code>Seillänge / Höhe</code>: Numerischer Orientierungswert für die Rettung.</li>
+            <li><code>Rettungsvariante 1 (Freitext)</code>: Detaillierter Ablauf für Variante 1.</li>
+            <li><code>Rettungsvariante 2 (Freitext)</code>: Detaillierter Ablauf für Variante 2.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-10">
+          <h2><span class="section-number">10.</span> Kapitel 8 - Unterwiesene Personen</h2>
+          <p><span class="label">Zweck:</span> Schließt Unterweisung mit Rollen, Qualifikationen und Signaturen ab.</p>
+          <p><span class="label">Eingabefelder:</span></p>
+          <ul>
+            <li><code>Erstellt durch</code> (Pflichtfeld): Name der dokumentierenden Person.</li>
+            <li><code>Datum</code> (Pflichtfeld): Unterweisungs-/Dokumentationsdatum.</li>
+            <li><code>Aufsichtführende: Vorname, Nachname</code> (Pflichtfeld): Stammdaten pro Aufsichtführendem.</li>
+            <li><code>Aufsichtführende: Qualifikation / Eigene Qualifikation</code> (Pflichtfeld): Auswahl oder freie Qualifikationsangabe.</li>
+            <li><code>Aufsichtführende: Qualifikations-ID</code> (Pflichtfeld): ID wie z. B. FISAT-ID / IRATA-ID.</li>
+            <li><code>Unterwiesene: Vorname, Nachname</code> (Pflichtfeld): Personendaten der unterwiesenen Person.</li>
+            <li><code>Unterwiesene: Qualifikation / Level / Eigene Qualifikation</code> (Pflichtfeld): Qualifikationsprofil pro Person.</li>
+            <li><code>Unterwiesene: ID</code>: Optionale eindeutige Identifikationsnummer.</li>
+            <li><code>Unterschrift erfassen</code> (Pflichtfeld): Digitale Signatur pro Aufsichtführendem und unterwiesener Person.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-11">
+          <h2><span class="section-number">11.</span> Bereich Projekte</h2>
+          <p><span class="label">Zweck:</span> Verwaltet den Projektlebenszyklus.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Neues Projekt</li>
+            <li>Projekt laden (Pro)</li>
+            <li>Projekt speichern (Pro)</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-12">
+          <h2><span class="section-number">12.</span> Bereich PDF &amp; Export</h2>
+          <p><span class="label">Zweck:</span> Erzeugt, teilt und verwaltet PDF-Dokumente.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Einsatzplanung (vollständiges Dokument)</li>
+            <li>Infoblatt (kompakte Variante)</li>
+            <li>Aktionen: Vorschau, Export, Teilen/Drucken, gespeicherte PDFs</li>
+          </ul>
+          <p><span class="label">Verhalten/Hinweise:</span></p>
+          <ul>
+            <li>PDF-Funktionen sind in der aktuellen Version ohne Pro verfügbar.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-13">
+          <h2><span class="section-number">13.</span> Bereich Stammdaten &amp; Bibliothek</h2>
+          <p><span class="label">Zweck:</span> Pflegt Unternehmensdaten und benutzerdefinierte Katalogeinträge.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Stammdaten (Firmen-/Auftraggeberverzeichnis)</li>
+            <li>Eigene Bibliothek (eigene Gefährdungen und Maßnahmen)</li>
+            <li>Bibliothek importieren/exportieren (Pro)</li>
+            <li>Bibliothek reparieren (verwaiste Einträge entfernen)</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-14">
+          <h2><span class="section-number">14.</span> Bereich App &amp; Konto</h2>
+          <p><span class="label">Zweck:</span> Steuert Sprache, Hilfen und Kaufstatus.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Sprache: System, Deutsch, Englisch, Polnisch</li>
+            <li>Backup-Erinnerung: Nie, Wöchentlich, Monatlich, Vierteljährlich</li>
+            <li>Gefahren-Hinweise anzeigen: ein/aus</li>
+            <li>Käufe wiederherstellen</li>
+          </ul>
+          <p><span class="label">Verhalten/Hinweise:</span></p>
+          <ul>
+            <li>Im Backup-Erinnerungsdialog wird das zuletzt erstellte Backup dezent angezeigt (oder ein Hinweis, falls keines existiert).</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-15">
+          <h2><span class="section-number">15.</span> Bereich Daten &amp; Wartung</h2>
+          <p><span class="label">Zweck:</span> Fasst Datensicherung, Restore und lokale Wartung zusammen.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Backup exportieren</li>
+            <li>Backup wiederherstellen</li>
+            <li>PLZ-Länder verwalten</li>
+            <li>PLZ-Index neu aufbauen</li>
+            <li>Cache gespeicherter Projekte leeren</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-16">
+          <h2><span class="section-number">16.</span> Bereich Hilfe &amp; Rechtliches</h2>
+          <p><span class="label">Zweck:</span> Bietet Support- und Rechtstexte innerhalb der App.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Kontaktformular</li>
+            <li>Impressum</li>
+            <li>Datenschutz</li>
+            <li>AGB</li>
+            <li>Haftungsausschluss</li>
+            <li>Lizenzen</li>
+            <li>Zustimmung widerrufen</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-17">
+          <h2><span class="section-number">17.</span> Backup- und Restore-Details</h2>
+          <p><span class="label">Zweck:</span> Beschreibt den sicheren Ablauf für Backup und Wiederherstellung.</p>
+          <p><span class="label">Wichtige Inhalte:</span></p>
+          <ul>
+            <li>Backup kann optional mit Passwort verschlüsselt werden.</li>
+            <li>Mindestlänge für Backup-Passwörter: 8 Zeichen.</li>
+            <li>Passwortstärke wird während der Eingabe angezeigt.</li>
+            <li>Export ohne Passwort erfordert eine zusätzliche Bestätigung.</li>
+            <li>Beim Restore werden aktuelle lokale Daten ersetzt.</li>
+            <li>Store-Käufe werden nicht aus Backups wiederhergestellt und müssen separat wiederhergestellt werden.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-18">
+          <h2><span class="section-number">18.</span> Funktionsumfang Free vs. Pro</h2>
+          <p><span class="label">Pro-gebunden:</span></p>
+          <ul>
+            <li>Projekte speichern und laden</li>
+            <li>Stammdaten-Verzeichnis (Firma/Auftraggeber) speichern</li>
+            <li>Bibliothek importieren und exportieren</li>
+            <li>Eigenes Logo als Wasserzeichen</li>
+            <li>Eigene Gefährdungen erstellen/bearbeiten/löschen</li>
+            <li>Eigene Maßnahmen erstellen/bearbeiten/löschen</li>
+            <li>Gefährdungs-Favoriten</li>
+            <li>Kartenauswahl für GPS-Koordinaten</li>
+            <li>Kontaktanfragen als PDF exportieren</li>
+            <li>Log-Export</li>
+          </ul>
+          <p><span class="label">Ohne Pro verfügbar:</span></p>
+          <ul>
+            <li>PDF-Vorschau, PDF-Export und Druck (Einsatzplanung/Infoblatt)</li>
+            <li>Gespeicherte PDFs anzeigen und verwalten</li>
+            <li>Backup exportieren und wiederherstellen</li>
+            <li>Bibliothek reparieren</li>
+            <li>PLZ-Länder verwalten</li>
+            <li>PLZ-Index neu aufbauen</li>
+            <li>Cache gespeicherter Projekte leeren</li>
+            <li>Backup-Erinnerung konfigurieren</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-19">
+          <h2><span class="section-number">19.</span> Datenexport und Datenschutz</h2>
+          <p><span class="label">Relevante Exportarten in der App:</span></p>
+          <ul>
+            <li>PDF-Export (Dokumentausgabe)</li>
+            <li>Bibliotheksexport (benutzerdefinierte Bibliotheksdaten)</li>
+            <li>Backup-Export als ZIP (lokaler App-Datenbestand)</li>
+            <li>Log-Export (Support-Diagnose, Pro)</li>
+          </ul>
+          <p><span class="label">Hinweise:</span></p>
+          <ul>
+            <li>Die App speichert Planungsdaten lokal auf dem Gerät.</li>
+            <li>Backup-Dateien können optional verschlüsselt werden.</li>
+            <li>Für verschlüsselte Backups ist zur Wiederherstellung dieselbe Passphrase erforderlich.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="section-20">
+          <h2><span class="section-number">20.</span> Empfohlener Abschluss-Check</h2>
+          <p><span class="label">Vor dem finalen Export prüfen:</span></p>
+          <ol>
+            <li>Stammdaten beider Parteien vollständig</li>
+            <li>Einsatzortdaten plausibel und konsistent</li>
+            <li>Gefährdungen und Risikobewertung gepflegt</li>
+            <li>Maßnahmen inkl. Restrisiko dokumentiert</li>
+            <li>Notfall- und Rettungskonzept ausgefüllt</li>
+            <li>Unterwiesene Personen inkl. Signaturen vorhanden</li>
+          </ol>
+        </section>
+
+        <p class="footer-note">
+          HeightPlanPro – Bedienungsanleitung
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
