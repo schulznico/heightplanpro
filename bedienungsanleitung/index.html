@@ -144,6 +144,10 @@
         position: sticky;
         top: 1rem;
         padding: 1.1rem;
+        max-height: calc(100vh - 2rem);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
 
       .toc-card h2,
@@ -156,6 +160,9 @@
       .toc {
         display: grid;
         gap: 0.3rem;
+        overflow-y: auto;
+        padding-right: 0.2rem;
+        min-height: 0;
       }
 
       .toc a {
@@ -170,6 +177,25 @@
       .toc a:hover {
         background: #eff6ff;
         color: #2f78ea;
+      }
+
+      .toc::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .toc::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 999px;
+      }
+
+      .toc::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 999px;
+        border: 2px solid #f1f5f9;
+      }
+
+      .toc::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
       }
 
       .content {
@@ -252,6 +278,13 @@
 
         .toc-card {
           position: static;
+          max-height: none;
+          overflow: visible;
+        }
+
+        .toc {
+          overflow: visible;
+          max-height: none;
         }
       }
 
