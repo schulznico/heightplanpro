@@ -428,6 +428,22 @@
         sections: []
       },
       {
+  version: "1.6.7+64",
+  date: "2026-03-19",
+  channel: "Beta",
+  sections: [
+    { title: "Changed", notes: [
+      "Build-Aktualisierung für den iOS-TestFlight-Upload.",
+      "Freitextfelder in weiteren Bereichen wurden für Diktat und laufende Texteingabe vereinheitlicht (u. a. Stammdaten-Verzeichnis und Unterwiesene Personen), damit Zwischenstände während der Spracheingabe stabiler übernommen werden.",
+      "Die Texteingabe ist in den relevanten Einzelschritt-Formularen konsistenter konfiguriert (Autokorrektur, Vorschläge, Kapitalisierung), um weniger unerwartete Eingabekorrekturen zu erzeugen."
+    ]},
+    { title: "Fixed", notes: [
+      "Diktatnahe Zwischenzustände mit Leerzeichen am Wortende bleiben in betroffenen Freitextfeldern zuverlässiger erhalten, statt während der Eingabe vorzeitig „wegkorrigiert“ zu werden.",
+      "Strukturierte Felder für Telefonnummern und Postleitzahlen bleiben unverändert streng validiert und formatiert; das bestehende Verhalten in diesen Feldern wurde nicht gelockert."
+    ]}
+  ]
+},
+      {
         version: "1.6.7+63",
         date: "2026-03-17",
         channel: "Beta",
