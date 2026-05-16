@@ -428,9 +428,27 @@
         sections: []
       },
       {
+  version: "1.7.0+66",
+  date: "2026-05-17",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neuer Projektauswahl-Screen beim App-Start: Nach dem Splash-Screen kann jetzt gewählt werden, ob am letzten Projekt weitergearbeitet, ein gespeichertes Projekt geöffnet oder eine neue Einsatzplanung gestartet werden soll. Das zuletzt bearbeitete Projekt wird dabei als Karte mit aktuellem Fortschrittsbalken angezeigt.",
+      "Neuer Einzelprojekt-Export (Pro): Das aktuell geöffnete Projekt kann jetzt als `.hppproj`-Datei exportiert und mit anderen Geräten oder Personen geteilt werden – optional mit Passwortschutz (`AES-256`). Zu finden unter `Menü → Projekte → Projekt exportieren`.",
+      "Neuer Einzelprojekt-Import: Empfangene `.hppproj`-Dateien können direkt in die App importiert werden, ohne bestehende Projekte zu verändern. Das Import-Feature ist kostenlos; der Export erfordert ein Pro-Upgrade. Zu finden unter `Menü → Projekte → Projekt importieren`."
+    ]},
+    { title: "Changed", notes: [
+      "Der Fortschritts-Dialog erscheint jetzt nicht nur beim App-Start, sondern zusätzlich direkt nach dem Laden eines gespeicherten Projekts aus dem Menü."
+    ]},
+    { title: "Fixed", notes: [
+      "Im Dialog `Backup-Erinnerung` wurde die Schaltfläche `Spaeter` zu `Später` korrigiert."
+    ]}
+  ]
+},
+      {
   version: "1.6.7+65",
   date: "2026-03-19",
-  channel: "Beta",
+  channel: "stable",
   sections: [
     { title: "Changed", notes: [
       "Beim Wechsel über `Neues Projekt` und `Projekt laden` erscheint die Speicherabfrage jetzt nur noch dann, wenn in der aktuellen Planung tatsächlich ungespeicherte Änderungen vorliegen.",
