@@ -428,6 +428,19 @@
         sections: []
       },
       {
+  version: "1.7.0+67",
+  date: "2026-05-17",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neue In-App-Bedienungsanleitung: Unter `Menü → Hilfe & Rechtliches → Bedienungsanleitung` ist jetzt die vollständige Anleitung direkt in der App erreichbar – gegliedert nach Kapiteln, aufklappbar und in Deutsch, Englisch sowie Polnisch lokalisiert."
+    ]},
+    { title: "Fixed", notes: [
+      "`.hppproj`-Dateien erschienen im Document Picker ausgegraut und konnten nicht ausgewählt werden. Ursache war ein fehlender iOS-Dateityp-Eintrag (UTI). Der Dateityp `de.heightplanpro.hppproj` ist jetzt in der App registriert; zusätzlich zeigt der Import-Dialog alle Dateien an, damit auch ältere Exporte ohne registrierten UTI importiert werden können."
+    ]}
+  ]
+},
+      {
   version: "1.7.0+66",
   date: "2026-05-17",
   channel: "Beta",
