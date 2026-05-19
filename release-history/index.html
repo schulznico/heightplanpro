@@ -428,6 +428,36 @@
         sections: []
       },
       {
+  version: "1.8.0+71",
+  date: "2026-05-19",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neue Einstellung `App-Design` unter `Menü → App & Konto → App-Design`: Umschaltung zwischen Systemstandard, Hell und Dunkel – sofort wirksam ohne App-Neustart.",
+      "Die PDF-Exportvorschau zeigt jetzt die tatsächliche Seitenzahl des PDFs an statt einer groben Schätzung. Die Berechnung erfolgt im Hintergrund, während das Exportsheet bereits geöffnet ist.",
+      "Neue Suchfunktion in der Bedienungsanleitung: Bereits während der Eingabe erscheinen passende Vorschläge; gefundene Begriffe werden gelb hervorgehoben."
+    ]},
+    { title: "Changed", notes: [
+      "PDF Einsatzplanung – kompaktere Gefährdungsdarstellung: Gefährdungen werden je Kategorie jetzt als kompakte Tabelle dargestellt (Gefährdung, Risiko vorher, Risiko nachher) statt als einzelne Karten. Maßnahmen erscheinen zweispaltig direkt unter der jeweiligen Gefährdungszeile, wodurch die Dokumentlänge um bis zu 50 % reduziert werden kann.",
+      "PDF Einsatzplanung – moderneres Layout mit farbigen Linksbalken bei Abschnittstiteln, Markenstreifen im Seitenkopf, abgerundeten Karten mit Schatten sowie blauer Akzentlinie unter Blocktiteln.",
+      "PDF Einsatzplanung – Notfall & Rettung jetzt zweispaltig aufgebaut: Notrufnummern und QR-Code links, Rettungsvarianten als Chips und Rettungspläne rechts.",
+      "PDF Einsatzplanung – erweiterte Risikozusammenfassung: Zusätzlich zum Durchschnittswert werden jetzt Verteilungschips mit der Anzahl der Gefährdungen je Risikostufe (vor/nach Maßnahmen) sowie ein farbkodiertes Δ-Feld angezeigt (grün = Verbesserung, rot = Verschlechterung).",
+      "PDF Infoblatt verwendet jetzt das gleiche moderne Design wie das Einsatzplanung-PDF, inklusive Markenstreifen, Linksbalken-Abschnittstiteln und Karten mit Schatten.",
+      "Das PDF-Exportsheet zeigt vor dem Export jetzt Projektname, aktuelles Datum und die echte Seitenzahl an. Vorschau, Exportieren und Drucken sind gleichwertig nebeneinander angeordnet.",
+      "Eigene Bibliothek – Sticky Filter: Suchfeld und Dropdown-Filter bleiben beim Scrollen dauerhaft sichtbar.",
+      "Eigene Bibliothek – Floating Action Button: Der Hinzufügen-Button ist jetzt dauerhaft am unteren Bildschirmrand sichtbar; der aktive Tab bestimmt, ob eine Gefährdung oder Maßnahme angelegt wird.",
+      "Eigene Bibliothek – einheitliches Aktionsmenü: Bearbeiten, Übernehmen und Löschen sind jetzt konsistent über ein 3-Punkte-Menü erreichbar – in beiden Tabs sowie in aufgeklappten Gefährdungskarten.",
+      "Eigene Bibliothek – kompaktere Kartenansicht: Maßnahmen-Karten zeigen Titel und Kategorie-Pill mit Gefährdungsname in einer Zeile; verknüpfte Maßnahmen werden in aufgeklappten Gefährdungskarten mit farbiger Akzentlinie eingerückt dargestellt.",
+      "Stammdaten-Bibliothek: Suchfelder und Karten wurden auf konsistenten Radius 12 sowie einheitliche Icon-Größen angepasst."
+    ]},
+    { title: "Fixed", notes: [
+      "Platzhalter-Kästchen (□) für die Zeichen `→`, `≤` und `≥` im PDF behoben; Sonderzeichen aus dem Maßnahmenkatalog werden jetzt korrekt dargestellt.",
+      "Die Hoch-/Querformat-Umschaltung in der PDF-Vorschau funktioniert jetzt korrekt für die Einsatzplanung; zuvor war dies nur beim Infoblatt wirksam.",
+      "Wasserzeichen im PDF sind wieder sichtbar; Kartenhintergründe werden jetzt transparent dargestellt."
+    ]}
+  ]
+},
+      {
   version: "1.7.1+70",
   date: "2026-05-19",
   channel: "Beta",
