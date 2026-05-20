@@ -428,6 +428,29 @@
         sections: []
       },
       {
+  version: "1.9.0+73",
+  date: "2026-05-20",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neue Fernunterschriften (Pro): Unterschriften von unterwiesenen Personen und Vorgesetzten können jetzt vollständig offline auf fremden Geräten eingeholt werden – ohne Server und ohne gemeinsames WLAN.",
+      "Im Bereich `Unterwiesene Personen` steht pro Person jetzt die Aktion `Remote-Signatur anfordern` zur Verfügung.",
+      "Signieranfragen erzeugen einen QR-Code mit wählbarer Gültigkeit (`24 h`, `72 h`, `7 Tage`).",
+      "Beim nächsten PDF-Export wird für jede offene Signaturanfrage automatisch eine eigene Seite mit QR-Code, Anleitung und Ablaufzeit eingebettet.",
+      "QR-Codes können alternativ direkt als Bild geteilt werden (z. B. per AirDrop oder Messenger).",
+      "Signieren per App (kostenlos): Der Unterzeichner scannt den QR-Code, bestätigt den Datenschutzhinweis, unterschreibt auf dem Gerät und exportiert eine verschlüsselte Signaturdatei (`.hppsig`). Für das Signieren ist kein Pro-Upgrade erforderlich; die App muss jedoch auf dem Gerät installiert sein.",
+      "Neuer Signatur-Import (Pro): `.hppsig`-Dateien können per AirDrop, E-Mail oder Messenger zurückgesendet und direkt importiert werden. Die App validiert Projektzuordnung, Ablaufzeit und Einmalschutz kryptografisch und übernimmt die Signatur automatisch.",
+      "Aktive Signaturanfragen können jederzeit widerrufen werden; bereits erzeugte `.hppsig`-Dateien werden danach beim Import abgelehnt.",
+      "Das Löschen gespeicherter Unterschriften erfordert jetzt eine zusätzliche Bestätigung mit Hinweis auf die rechtliche Nachweispflicht.",
+      "Die Datenschutzerklärung wurde um einen Abschnitt zu Fernunterschriften erweitert (Datenarten, Verschlüsselung, Rechtsgrundlage `Art. 6 Abs. 1 c DSGVO`, Stand Mai 2026)."
+    ]},
+    { title: "Changed", notes: [
+      "Abgelaufene Signaturanfragen werden beim Laden eines Projekts jetzt automatisch nach 30 Tagen bereinigt.",
+      "Beim Duplizieren eines Projekts werden Unterschriften, Signierzeitstempel und Signaturanfragen bewusst nicht übernommen; Namen, Qualifikationen und IDs der Personen bleiben erhalten."
+    ]}
+  ]
+},
+      {
   version: "1.8.0+72",
   date: "2026-05-19",
   channel: "Beta",
