@@ -428,6 +428,18 @@
         sections: []
       },
       {
+  version: "1.9.3+83",
+  date: "2026-05-22",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Fernunterschriften – Signaturstatus nach App-Wegwischen: Statuswerte wie `Signaturanfrage läuft`, `completed` oder `revoked` gingen nach sofortigem App-Kill trotz manuellem Speichern verloren. Der Signing-Zustand wird jetzt zusätzlich über ein synchrones Write-ahead-Log (`hpp_signing_journal.json`) abgesichert. Die Speicherung erfolgt vor dem ersten `await` im Lifecycle-Handler und bleibt dadurch auch bei einem sofortigen App-Kill erhalten. Beim nächsten Start wird der Zustand automatisch aus dem Journal wiederhergestellt.",
+      "Fernunterschriften – Cross-Projekt-Routing nach App-Kill: `.hppsig`-Dateien für andere Projekte wurden unter bestimmten Bedingungen nicht korrekt weitergeleitet, wenn ein Signing-Index-Update durch einen App-Kill unterbrochen wurde. Der Routing-Mechanismus verwendet jetzt zusätzlich das Signing-Journal als Fallback.",
+      "Projektdatei-Schreibvorgänge: `writeAsString(..., flush: true)` stellt jetzt sicher, dass Betriebssystem-Puffer auch bei einem sofortigen App-Kill zuverlässig auf den Datenträger geschrieben werden."
+    ]}
+  ]
+},
+      {
   version: "1.9.3+82",
   date: "2026-05-21",
   channel: "Beta",
