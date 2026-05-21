@@ -428,6 +428,17 @@
         sections: []
       },
       {
+  version: "1.9.3+82",
+  date: "2026-05-21",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "iOS – `.hppsig` öffnen (Kaltstart): Signaturdateien wurden beim Öffnen über AirDrop oder Dateien-App im Kaltstart verworfen, da der Splash-Screen den Event während seiner Laufzeit blockierte. SplashScreen und WelcomeScreen stoßen den Import jetzt nach der Navigation erneut an.",
+      "Fernunterschriften – Signaturstatus nach App-Neustart: Der Status `Signaturanfrage läuft` ging nach einem App-Neustart verloren. Ursache war ein ausstehender Draft-Save, der durch `cancelPendingSave()` innerhalb von `saveProject()` verworfen wurde. Der Draft wird jetzt direkt nach `saveProject()` explizit aktualisiert."
+    ]}
+  ]
+},
+      {
   version: "1.9.3+81",
   date: "2026-05-21",
   channel: "Beta",
