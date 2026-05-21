@@ -428,6 +428,21 @@
         sections: []
       },
       {
+  version: "1.9.3+78",
+  date: "2026-05-21",
+  channel: "Beta",
+  sections: [
+    { title: "Changed", notes: [
+      "Menü – Struktur: Das Hauptmenü ist jetzt in 7 klar getrennte Gruppen gegliedert: `Projekte`, `PDF & Export`, `Stammdaten & Bibliothek`, `Einstellungen`, `Daten & Wartung`, `Hilfe & Kontakt` sowie `Rechtliches`.",
+      "Handbuch, Kontaktformular und Pro-Upgrade wurden aus den bisherigen Gruppen herausgelöst und zentral unter `Hilfe & Kontakt` zusammengeführt."
+    ]},
+    { title: "Fixed", notes: [
+      "iOS – QR teilen: Das Share-Sheet öffnete sich auf echten Geräten unter bestimmten Bedingungen nicht (`PlatformException: sharePositionOrigin` mit Null-Rect). Die Anker-Position wird jetzt vor dem ersten asynchronen Aufruf zuverlässig erfasst.",
+      "iOS – QR-Bild: Der geteilte QR-Code enthält jetzt einen weißen Rand (Quiet Zone), wodurch die Erkennungsrate insbesondere in der iOS-Fotos-App verbessert wird."
+    ]}
+  ]
+},
+      {
   version: "1.9.3+77",
   date: "2026-05-21",
   channel: "Beta",
