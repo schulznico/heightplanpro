@@ -428,6 +428,24 @@
         sections: []
       },
       {
+  version: "1.9.2+75",
+  date: "2026-05-21",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Fernunterschriften – Abgeschlossen-Nachweis: Nach erfolgreichem Import einer Fernunterschrift wird in der Personenkarte jetzt ein Badge `Fernunterzeichnet am TT.MM.JJJJ` angezeigt – inklusive Zeitstempel aus der Signaturdatei. Der Nachweis bleibt auch nach dem Schließen und erneuten Öffnen des Projekts sichtbar."
+    ]},
+    { title: "Fixed", notes: [
+      "Fernunterschriften – Rücknavigation: Nach dem Schließen oder Ablehnen des Signier-Dialogs auf dem Unterzeichner-Gerät landete die App bisher immer auf dem Startbildschirm. Die Navigation führt jetzt wieder korrekt zur vorherigen Ansicht zurück.",
+      "Fernunterschriften – `.hppsig`-Import: Eingehende Signaturdateien wurden bisher nur verarbeitet, wenn der Bereich `Unterwiesene Personen` bereits geöffnet war. Die App navigiert jetzt automatisch dorthin, sobald eine passende Signatur erkannt wird.",
+      "Fernunterschriften – Projektzustand nach Wechsel: Beim Öffnen eines neuen Projekts konnte kurzzeitig der Signaturstatus des vorherigen Projekts sichtbar bleiben. Der Signing-State wird jetzt zuverlässig mit dem restlichen Projektzustand zurückgesetzt.",
+      "Fernunterschriften – Signaturvorschau: Importierte Remote-Signaturen wurden kleiner dargestellt als lokal gezeichnete Unterschriften. Die Vorschau nutzt jetzt die verfügbare Kartenbreite vollständig aus.",
+      "Fernunterschriften – Importbutton: Der Import-Button ist jetzt direkt im Signaturfeld der jeweiligen Person sichtbar, sobald eine Signaturanfrage läuft. Der globale AppBar-Button wurde entfernt.",
+      "Dark Mode – Titelleiste: Überschriften in der AppBar erschienen im Dark Mode zu dunkel. Die Farbe wird jetzt korrekt aus dem AppBar-Theme übernommen."
+    ]}
+  ]
+},
+      {
   version: "1.9.1+74",
   date: "2026-05-20",
   channel: "Beta",
