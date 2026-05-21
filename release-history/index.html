@@ -428,6 +428,21 @@
         sections: []
       },
       {
+  version: "1.9.3+76",
+  date: "2026-05-21",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Fernunterschriften – Projekt-Routing: Trifft eine `.hppsig`-Signatur ein, während ein anderes Projekt geöffnet ist, lädt die App jetzt automatisch das passende Projekt und öffnet direkt den Import-Screen.",
+      "Nicht zuordenbare Signaturdateien zeigen jetzt eine klare Fehlermeldung inklusive Projektname an: `Diese Signatur gehört zu Projekt ‹XY›. Bitte öffne dieses Projekt und importiere erneut.`"
+    ]},
+    { title: "Fixed", notes: [
+      "Fernunterschriften – Splash nach Signieren: Nach dem Abschließen und Schließen des Signier-Dialogs landete die App bisher auf einem statischen Startbildschirm ohne automatische Weiterleitung. Betraf Kaltstart- und Warmstart-Szenarien.",
+      "Fernunterschriften – Signaturanfrage-Status nach App-Neustart: Der Status `Anfrage läuft` blieb nach einem vollständigen App-Neustart nicht erhalten. Die Speicherung des Signing-Status in der Projektdatei wird jetzt beim Laden eines Projekts wieder zuverlässig ausgelöst."
+    ]}
+  ]
+},
+      {
   version: "1.9.2+75",
   date: "2026-05-21",
   channel: "Beta",
