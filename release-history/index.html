@@ -428,6 +428,27 @@
         sections: []
       },
       {
+  version: "1.9.3+81",
+  date: "2026-05-21",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "iOS – `.hppsig` teilen (Text): Betreff und Begleittext beim Teilen der Signaturdatei wurden korrigiert – `Unterschrift von …` statt `Signaturanfrage für …` sowie ein Hinweis zum Importieren statt einer QR-Scan-Anweisung (DE/EN/PL)."
+    ]}
+  ]
+},
+      {
+  version: "1.9.3+80",
+  date: "2026-05-21",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "iOS – `.hppsig` öffnen (`GoException`): Fehler beim direkten Öffnen von Signaturdateien behoben. `FlutterDeepLinkingEnabled = NO` verhindert konkurrierende Flutter-URL-Handler; zusätzlich ignoriert GoRouter `file://`- und `hppproj://`-URLs gezielt über `onException` und `overridePlatformDefaultLocation`.",
+      "iOS – `.hppsig` teilen: Betreff und Begleittext beim Teilen von Signaturdateien wurden korrigiert. Statt `Signaturanfrage für …` und QR-Scan-Hinweisen wird jetzt `Unterschrift von …` mit passendem Hinweis zum Import in HeightPlanPro verwendet (DE/EN/PL)."
+    ]}
+  ]
+},
+      {
   version: "1.9.3+79",
   date: "2026-05-21",
   channel: "Beta",
