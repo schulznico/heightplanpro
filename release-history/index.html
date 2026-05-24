@@ -428,6 +428,25 @@
         sections: []
       },
       {
+  version: "2.0.0+85",
+  date: "2026-05-24",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neues Tätigkeitsprofil-System: Beim Öffnen von Kapitel 4 (`Gefährdungen`) erscheint jetzt ein Profil-Screen zur aktivitätsbasierten Vorauswahl. Tätigkeitstypen (z. B. Baumpflege, Reinigung, Industrie, Montage, Heißarbeiten) und Arbeitsumgebungen (z. B. Gebäude, Wald, Offshore) können ausgewählt werden; passende Gefährdungen werden anschließend automatisch hervorgehoben.",
+      "Eigene Tätigkeiten und Arbeitsumgebungen können jetzt als Freitext ergänzt und mit ⭐ markiert werden. Langdruck entfernt eigene Einträge; benutzerdefinierte Profile werden in der Benutzerbibliothek gespeichert.",
+      "Neues `[Profil]`-Badge in Kapitel 6 (`Maßnahmen`): Gefährdungen mit direktem Bezug zum gewählten Tätigkeitsprofil werden sichtbar gekennzeichnet.",
+      "Neue `Überspringen`-Option: Die Profilauswahl bleibt vollständig optional und kann jederzeit übersprungen werden."
+    ]},
+    { title: "Changed", notes: [
+      "Die profilbasierte Gefährdungsvorauswahl wurde deutlich präzisiert. Kritische Muss-Treffer werden über `core` priorisiert, häufige Standardgefahren über `daily` gewichtet; dynamische Limits reduzieren unnötige automatische Treffer.",
+      "Die Kategorien 1–7 wurden fachlich weiter geschärft, insbesondere für Absturz, Anschlagpunkte, Pendelsturz, Rettung, Drop-Zone, Witterung und PSAgA, um typische Alltagssituationen präziser abzubilden.",
+      "Der Maßnahmenkatalog wurde erweitert und fachlich verfeinert, u. a. für Baum/Bio, Bahn, Confined Space, Marine, Rigging und Elektrik. Neu ergänzt wurde außerdem die Gefährdung `Eichenprozessionsspinner / allergene Raupenhaare`.",
+      "Katalog-Gesamtstand: `261 Gefährdungen`, `917 Maßnahmen`, davon `40` mit Operationstags für eine präzisere Profilzuordnung."
+    ]}
+  ]
+},
+      {
   version: "1.9.4+84",
   date: "2026-05-22",
   channel: "Beta",
