@@ -429,7 +429,7 @@
       },
       {
   version: "1.9.5+87",
-  date: "unreleased",
+  date: "2026-05-25",
   channel: "Beta",
   sections: [
     { title: "Added", notes: [
@@ -437,25 +437,25 @@
       "Eigene Tätigkeiten und Arbeitsumgebungen können jetzt per Freitext ergänzt und in der Benutzerbibliothek gespeichert werden. Eigene Einträge sind mit ⭐ markiert und per Langdruck entfernbar.",
       "Neues `[Profil]`-Badge in Kapitel 6 (`Maßnahmen`): Gefährdungen mit direktem Bezug zum gewählten Tätigkeitsprofil werden sichtbar gekennzeichnet.",
       "Neue `Überspringen`-Option: Die Profilauswahl bleibt vollständig optional.",
-      "Fernunterschriften – QR-Scan-Anleitung: Beim Teilen des QR-Codes wird jetzt eine Anleitung mitgerendert, inklusive Rückweg über gespeicherte Fotos bei späterer Unterzeichnung.",
-      "Fernunterschriften – Projektname im Consent-Screen: Der Unterzeichner sieht jetzt direkt, zu welchem Projekt die Signaturanfrage gehört.",
-      "Neues Pro-Tier-System (`Basic` / `Full Access`): `Basic` schaltet Kernfunktionen frei; `Full Access` erweitert u. a. um Firmenstammdaten-Verzeichnis, eigenes Logo als Wasserzeichen und Fernunterschriften. Bestehende Pro-Käufer erhalten automatisch `Full Access`.",
+      "Fernunterschriften – QR-Scan-Anleitung: Geteilte QR-Codes enthalten jetzt eine zusätzliche Anleitung inklusive Rückweg über gespeicherte Fotos.",
+      "Fernunterschriften – Projektname im Consent-Screen: Unterzeichner sehen jetzt direkt, zu welchem Projekt die Signaturanfrage gehört.",
+      "Neues Tier-System (`Basic` / `Full Access`): `Basic` schaltet Kernfunktionen frei; `Full Access` erweitert u. a. um Firmenverzeichnis, eigenes Logo und Fernunterschriften. Bestehende Pro-Käufer erhalten automatisch `Full Access`.",
       "Neuer Backup-Hinweis nach Wiederherstellung: Inhalte oberhalb des aktuellen Tiers werden erkannt und mit direktem Link zum Upgrade-Screen angezeigt."
     ]},
     { title: "Changed", notes: [
-      "Eigene Tätigkeiten und Umgebungen sind jetzt ein `Basic`-Feature. Bestehende Einträge bleiben erhalten; nur das Erstellen neuer Einträge erfordert ein Upgrade.",
-      "Upgrade-Dialoge sind jetzt kontextabhängig und zeigen direkt die benötigte Stufe (`Basic` oder `Full Access`) sowie die enthaltenen Funktionen.",
-      "Menü-Badges zeigen statt `PRO` jetzt `BASIC` oder `FULL`.",
-      "Die Einstellungen zeigen jetzt den aktuellen Tier-Status (`Free`, `Basic`, `Full Access`) mit direktem Einstieg zum Upgrade-Screen.",
+      "Eigene Tätigkeiten und Umgebungen sind jetzt ein `Basic`-Feature; vorhandene Einträge bleiben erhalten.",
+      "Upgrade-Dialoge wurden kontextabhängig überarbeitet und zeigen direkt die benötigte Stufe (`Basic` oder `Full Access`) an.",
+      "Menü-Badges zeigen jetzt `BASIC` oder `FULL` statt eines generischen `PRO`-Hinweises.",
+      "Die Einstellungen zeigen jetzt den aktuellen Tier-Status (`Free`, `Basic`, `Full Access`) inklusive direktem Einstieg zum Upgrade-Screen.",
       "Der Upgrade-Screen wurde mit Vergleichstabelle (`Free / Basic / Full Access`) und Upgrade-Pfad für bestehende `Basic`-Käufer überarbeitet.",
-      "Die profilbasierte Gefährdungsvorauswahl arbeitet restriktiver und präziser (`core`, `daily`, dynamische Limits).",
-      "Die Kategorien 1–7 wurden fachlich weiter geschärft (u. a. Absturz, Anschlagpunkte, Pendelsturz, Rettung, Witterung, PSAgA).",
-      "Die Vorauswahl wurde zusätzlich für Elektrik, Biologie, Physik, LOTO und Lastentechnik/Rigging präzisiert.",
+      "Die profilbasierte Gefährdungsvorauswahl arbeitet präziser (`core`, `daily`, dynamische Limits) und wurde fachlich für mehrere Spezialbereiche geschärft.",
+      "Die Kategorien 1–7 wurden praxisnäher verfeinert (u. a. Absturz, Pendelsturz, Rettung, Witterung, PSAgA).",
       "Der Maßnahmenkatalog wurde erweitert und fachlich geschärft. Neuer Gesamtstand: `287 Gefährdungen`, `995 Maßnahmen`, davon `40` mit Operationstags für die Profilzuordnung."
     ]},
     { title: "Fixed", notes: [
-      "Backup-Archive (`.zip`) schließen beim Erstellen neuer Backups vorhandene Backup-Dateien nicht mehr versehentlich mit ein.",
-      "Tier-Erkennung nach Restore oder Apple-Rückerstattung korrigiert: Der Tier-Status basiert jetzt ausschließlich auf aktiven Käufen; Rückerstattungen führen korrekt auf den verbleibenden Tier zurück."
+      "Backup-Dateien werden beim Erstellen neuer Backup-Archive (`.zip`) konsequent ausgeschlossen.",
+      "Backup-Archive werden von Cloud- und Sicherheitsdiensten zuverlässiger akzeptiert: Log-Dateien und interne Suchindizes werden ausgeschlossen; die Kompressionsstufe wurde angepasst.",
+      "Tier-Erkennung nach Restore oder Apple-Rückerstattung korrigiert: Der Status basiert jetzt ausschließlich auf aktiven Käufen; Rückerstattungen führen korrekt auf den verbleibenden Tier zurück."
     ]}
   ]
 },
