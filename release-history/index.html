@@ -428,6 +428,38 @@
         sections: []
       },
       {
+  version: "1.9.5+86",
+  date: "unreleased",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Neues Tätigkeitsprofil-System: Beim Öffnen von Kapitel 4 (`Gefährdungen`) erscheint ein Profil-Screen zur aktivitätsbasierten Vorauswahl. Tätigkeitstypen und Arbeitsumgebungen können ausgewählt werden; passende Gefährdungen werden automatisch hervorgehoben, ohne die manuelle Auswahl zu erzwingen.",
+      "Eigene Tätigkeiten und Arbeitsumgebungen können jetzt per Freitext ergänzt und in der Benutzerbibliothek gespeichert werden. Eigene Einträge sind mit ⭐ markiert und per Langdruck entfernbar.",
+      "Neues `[Profil]`-Badge in Kapitel 6 (`Maßnahmen`): Gefährdungen mit direktem Bezug zum gewählten Tätigkeitsprofil werden sichtbar gekennzeichnet.",
+      "Neue `Überspringen`-Option: Die Profilauswahl bleibt vollständig optional.",
+      "Fernunterschriften – QR-Scan-Anleitung: Beim Teilen des QR-Codes wird jetzt eine Anleitung mitgerendert, inklusive Rückweg über gespeicherte Fotos bei späterer Unterzeichnung.",
+      "Fernunterschriften – Projektname im Consent-Screen: Der Unterzeichner sieht jetzt direkt, zu welchem Projekt die Signaturanfrage gehört.",
+      "Neues Pro-Tier-System (`Basic` / `Full Access`): `Basic` schaltet Kernfunktionen frei; `Full Access` erweitert u. a. um Firmenstammdaten-Verzeichnis, eigenes Logo als Wasserzeichen und Fernunterschriften. Bestehende Pro-Käufer erhalten automatisch `Full Access`.",
+      "Neuer Backup-Hinweis nach Wiederherstellung: Inhalte oberhalb des aktuellen Tiers werden erkannt und mit direktem Link zum Upgrade-Screen angezeigt."
+    ]},
+    { title: "Changed", notes: [
+      "Eigene Tätigkeiten und Umgebungen sind jetzt ein `Basic`-Feature. Bestehende Einträge bleiben erhalten; nur das Erstellen neuer Einträge erfordert ein Upgrade.",
+      "Upgrade-Dialoge sind jetzt kontextabhängig und zeigen direkt die benötigte Stufe (`Basic` oder `Full Access`) sowie die enthaltenen Funktionen.",
+      "Menü-Badges zeigen statt `PRO` jetzt `BASIC` oder `FULL`.",
+      "Die Einstellungen zeigen jetzt den aktuellen Tier-Status (`Free`, `Basic`, `Full Access`) mit direktem Einstieg zum Upgrade-Screen.",
+      "Der Upgrade-Screen wurde mit Vergleichstabelle (`Free / Basic / Full Access`) und Upgrade-Pfad für bestehende `Basic`-Käufer überarbeitet.",
+      "Die profilbasierte Gefährdungsvorauswahl arbeitet restriktiver und präziser (`core`, `daily`, dynamische Limits).",
+      "Die Kategorien 1–7 wurden fachlich weiter geschärft (u. a. Absturz, Anschlagpunkte, Pendelsturz, Rettung, Witterung, PSAgA).",
+      "Die Vorauswahl wurde zusätzlich für Elektrik, Biologie, Physik, LOTO und Lastentechnik/Rigging präzisiert.",
+      "Der Maßnahmenkatalog wurde erweitert und fachlich geschärft. Neuer Gesamtstand: `287 Gefährdungen`, `995 Maßnahmen`, davon `40` mit Operationstags für die Profilzuordnung."
+    ]},
+    { title: "Fixed", notes: [
+      "Backup-Archive (`.zip`) schließen beim Erstellen neuer Backups vorhandene Backup-Dateien nicht mehr versehentlich mit ein.",
+      "Tier-Erkennung nach Restore oder Apple-Rückerstattung korrigiert: Der Tier-Status basiert jetzt ausschließlich auf aktiven Käufen; Rückerstattungen führen korrekt auf den verbleibenden Tier zurück."
+    ]}
+  ]
+},
+      {
   version: "2.0.0+85",
   date: "2026-05-24",
   channel: "Beta",
