@@ -428,6 +428,18 @@
         sections: []
       },
       {
+  version: "1.9.5+90",
+  date: "2026-05-27",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Android – Deep Links und Datei-Importe für Fernunterschriften: `hppproj://`-Links (QR-Scan), Signaturdateien (`application/x-hppsig`) und Projektdateien (`application/x-hppproj`) werden jetzt systemweit korrekt an HeightPlanPro übergeben und verarbeitet.",
+      "Fernunterschriften – Erstellername im QR-Flow bleibt konsistent sichtbar: Der Erstellername wird jetzt in QR-Dialogen, PDF-QR-Seiten und dem Signatur-Consent-Screen zuverlässig angezeigt. Falls kein Ersteller gepflegt ist, wird automatisch der Firmenname verwendet.",
+      "Fernunterschriften – Fehlerhinweis für nicht zuordenbare Signaturdateien korrigiert: Wurde eine `.hppsig`-Datei importiert, deren Anfrage bereits widerrufen oder nach 30 Tagen bereinigt wurde, erscheint jetzt eine passende Meldung statt des bisherigen irreführenden Hinweises auf ein falsches Projekt."
+    ]}
+  ]
+},
+      {
   version: "1.9.5+88",
   date: "2026-05-26",
   channel: "Beta",
