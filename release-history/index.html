@@ -441,7 +441,7 @@
       {
   version: "1.9.6+95",
   date: "2026-05-28",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "Gefährdungen / Maßnahmen bearbeiten – Upgrade-Dialog: Nach dem Freischalten eines Tiers konnte das Bearbeiten eigener Gefährdungen und Maßnahmen weiterhin fehlschlagen, da mehrere Controller den IAP-Status direkt statt über den zentralen `proCanUseFeatureProvider` abgefragt haben.",
@@ -455,7 +455,7 @@
       {
   version: "1.9.6+94",
   date: "2026-05-28",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Improved", notes: [
       "IAP-Texte – Tier-korrekte Bezeichnungen: Buttons, Dialoge und Status-Anzeigen rund um In-App-Käufe verwenden jetzt die konkreten Tier-Namen statt des generischen Begriffs `Pro`.",
@@ -466,7 +466,7 @@
       {
   version: "1.9.5+93",
   date: "2026-05-28",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "Android – In-App-Käufe: Die `BILLING`-Berechtigung wird jetzt explizit im App-Manifest deklariert. Behebt mögliche Konfigurationsfälle, in denen Google Play Billing auf bestimmten Geräten oder Gradle-Varianten nicht korrekt initialisiert wurde."
@@ -476,7 +476,7 @@
       {
   version: "1.9.5+92",
   date: "2026-05-28",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Improved", notes: [
       "Unterschriften – Flüssigeres Zeichnen auf iOS: Signaturen werden jetzt mit Bezier-Kurven statt mit geraden Linien zwischen den Touch-Punkten gerendert. Dadurch wirken Unterschriften auf iOS deutlich runder und natürlicher – sowohl auf dem Canvas als auch im exportierten PDF.",
@@ -504,7 +504,7 @@
       {
   version: "1.9.5+90",
   date: "2026-05-27",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "Android – Deep Links und Datei-Importe für Fernunterschriften: `hppproj://`-Links (QR-Scan), Signaturdateien (`application/x-hppsig`) und Projektdateien (`application/x-hppproj`) werden jetzt systemweit korrekt an HeightPlanPro übergeben und verarbeitet.",
@@ -535,7 +535,7 @@
       {
   version: "1.9.5+87",
   date: "2026-05-25",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Added", notes: [
       "Neues Tätigkeitsprofil-System: Beim Öffnen von Kapitel 4 (`Gefährdungen`) erscheint ein Profil-Screen zur aktivitätsbasierten Vorauswahl. Tätigkeitstypen und Arbeitsumgebungen können ausgewählt werden; passende Gefährdungen werden automatisch hervorgehoben, ohne die manuelle Auswahl zu erzwingen.",
@@ -580,7 +580,7 @@
       {
   version: "1.9.3+83",
   date: "2026-05-22",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "Fernunterschriften – Signaturstatus nach App-Wegwischen: Statuswerte wie `Signaturanfrage läuft`, `completed` oder `revoked` gingen nach sofortigem App-Kill trotz manuellem Speichern verloren. Der Signing-Zustand wird jetzt zusätzlich über ein synchrones Write-ahead-Log (`hpp_signing_journal.json`) abgesichert. Die Speicherung erfolgt vor dem ersten `await` im Lifecycle-Handler und bleibt dadurch auch bei einem sofortigen App-Kill erhalten. Beim nächsten Start wird der Zustand automatisch aus dem Journal wiederhergestellt.",
@@ -592,7 +592,7 @@
       {
   version: "1.9.3+82",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "iOS – `.hppsig` öffnen (Kaltstart): Signaturdateien wurden beim Öffnen über AirDrop oder Dateien-App im Kaltstart verworfen, da der Splash-Screen den Event während seiner Laufzeit blockierte. SplashScreen und WelcomeScreen stoßen den Import jetzt nach der Navigation erneut an.",
@@ -603,7 +603,7 @@
       {
   version: "1.9.3+81",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "iOS – `.hppsig` teilen (Text): Betreff und Begleittext beim Teilen der Signaturdatei wurden korrigiert – `Unterschrift von …` statt `Signaturanfrage für …` sowie ein Hinweis zum Importieren statt einer QR-Scan-Anweisung (DE/EN/PL)."
@@ -613,7 +613,7 @@
       {
   version: "1.9.3+80",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "iOS – `.hppsig` öffnen (`GoException`): Fehler beim direkten Öffnen von Signaturdateien behoben. `FlutterDeepLinkingEnabled = NO` verhindert konkurrierende Flutter-URL-Handler; zusätzlich ignoriert GoRouter `file://`- und `hppproj://`-URLs gezielt über `onException` und `overridePlatformDefaultLocation`.",
@@ -624,7 +624,7 @@
       {
   version: "1.9.3+79",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "iOS – QR teilen (Absicherung): Ein Fallback-Rect wurde ergänzt. Falls der Anker-Button kein gültiges Rect liefert, wird automatisch die Bildschirmmitte verwendet. Verhindert `sharePositionOrigin`-Fehler auch bei ungünstigen Render-Zuständen."
@@ -634,7 +634,7 @@
       {
   version: "1.9.3+78",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Changed", notes: [
       "Menü – Struktur: Das Hauptmenü ist jetzt in 7 klar getrennte Gruppen gegliedert: `Projekte`, `PDF & Export`, `Stammdaten & Bibliothek`, `Einstellungen`, `Daten & Wartung`, `Hilfe & Kontakt` sowie `Rechtliches`.",
@@ -649,7 +649,7 @@
       {
   version: "1.9.3+77",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "iOS – Kamera-Berechtigungstext: `NSCameraUsageDescription` ergänzt (QR-Code-Scan für Fernunterschriften). Behebt die Apple-Prüfungsablehnung `ITMS-90683`."
@@ -659,7 +659,7 @@
       {
   version: "1.9.3+76",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Added", notes: [
       "Fernunterschriften – Projekt-Routing: Trifft eine `.hppsig`-Signatur ein, während ein anderes Projekt geöffnet ist, lädt die App jetzt automatisch das passende Projekt und öffnet direkt den Import-Screen.",
@@ -674,7 +674,7 @@
       {
   version: "1.9.2+75",
   date: "2026-05-21",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Added", notes: [
       "Fernunterschriften – Abgeschlossen-Nachweis: Nach erfolgreichem Import einer Fernunterschrift wird in der Personenkarte jetzt ein Badge `Fernunterzeichnet am TT.MM.JJJJ` angezeigt – inklusive Zeitstempel aus der Signaturdatei. Der Nachweis bleibt auch nach dem Schließen und erneuten Öffnen des Projekts sichtbar."
@@ -692,7 +692,7 @@
       {
   version: "1.9.1+74",
   date: "2026-05-20",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Fixed", notes: [
       "Fernunterschriften – `QR teilen`: Die Schaltfläche zeigte bei Fehlern bislang keine Rückmeldung. Fehler werden jetzt als Hinweis direkt eingeblendet.",
@@ -703,7 +703,7 @@
       {
   version: "1.9.0+73",
   date: "2026-05-20",
-  channel: "Beta",
+  channel: "unreleased",
   sections: [
     { title: "Added", notes: [
       "NEUES FEATURE: Remote-Signatures! This is huge!",
@@ -727,7 +727,7 @@
       {
   version: "1.8.0+72",
   date: "2026-05-19",
-  channel: "Beta",
+  channel: "stable",
   sections: [
     { title: "Added", notes: [
       "Neue Einstellung `App-Design` unter `Menü → App & Konto → App-Design`: Umschaltung zwischen Systemstandard, Hell und Dunkel – sofort wirksam ohne App-Neustart.",
