@@ -428,6 +428,20 @@
         sections: []
       },
       {
+  version: "1.9.6+95",
+  date: "2026-05-28",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Gefährdungen / Maßnahmen bearbeiten – Upgrade-Dialog: Nach dem Freischalten eines Tiers konnte das Bearbeiten eigener Gefährdungen und Maßnahmen weiterhin fehlschlagen, da mehrere Controller den IAP-Status direkt statt über den zentralen `proCanUseFeatureProvider` abgefragt haben.",
+      "Der zentrale Provider berücksichtigt jetzt alle Zugangsmechanismen korrekt, wodurch Freischaltungen sofort konsistent greifen."
+    ]},
+    { title: "Improved", notes: [
+      "Menü – Tier-Badges für `Stammdaten` und `Eigene Bibliothek`: Die Menüpunkte zeigen jetzt – wie andere gesperrte Bereiche – das passende Badge (`Full Access` bzw. `Basic`), solange das jeweilige Tier noch nicht freigeschaltet ist."
+    ]}
+  ]
+},
+      {
   version: "1.9.6+94",
   date: "2026-05-28",
   channel: "Beta",
