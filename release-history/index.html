@@ -428,6 +428,20 @@
         sections: []
       },
       {
+  version: "1.9.6+97",
+  date: "2026-06-02",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Android – In-App-Käufe funktionieren jetzt zuverlässig: Die Google-Play-Billing-Plattform wurde beim App-Start nicht korrekt registriert, wodurch ein `LateInitializationError` beim ersten `isAvailable()`-Aufruf auftreten konnte. Der Store wurde dadurch auf Android-Geräten fälschlicherweise als nicht verfügbar angezeigt. Die Registrierung erfolgt jetzt explizit beim Aufbau des IAP-Services.",
+      "Log-Export – Share-Sheet wird jetzt geöffnet: Exportierte Log-Dateien wurden bisher nur im internen App-Speicher abgelegt. Nach dem Export öffnet sich jetzt automatisch das System-Share-Sheet, sodass die Datei direkt per E-Mail, AirDrop oder andere Freigabeoptionen versendet werden kann."
+    ]},
+    { title: "Improved", notes: [
+      "Gefährdungen – Hinweis beim Abwählen der letzten Gefährdung einer Kategorie: Wird die letzte aktive Gefährdung einer Kategorie entfernt, wird die Kategorie automatisch abgewählt. Ein Snackbar-Hinweis informiert jetzt über diesen Zustandswechsel und macht darauf aufmerksam, dass die Kategorie bei Bedarf erneut aktiviert werden muss."
+    ]}
+  ]
+},
+      {
   version: "1.9.6+96",
   date: "2026-05-28",
   channel: "Beta",
