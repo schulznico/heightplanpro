@@ -428,6 +428,28 @@
         sections: []
       },
       {
+  version: "1.10.0+99",
+  date: "2026-06-11",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Planungs-Readiness: Neues Ampelsystem prüft die fachliche Vollständigkeit der Einsatzplanung. Fehlende Pflichtangaben werden als orange oder rote Badges hervorgehoben; kritische Punkte erscheinen zusätzlich als Hinweis im PDF. Die Prüfung bewertet ausschließlich die Dokumentation und ersetzt keinen Vor-Ort-Startcheck.",
+      "Baustellenbuch (Full Access): Tageseinträge mit Status, Arbeitszeiten und Pausen, Alarmkontakten, vier Sicherheitschecks, Ereignislog sowie Abschlussnotiz. Inhalte erscheinen im Infoblatt-PDF und zusätzlich als eigenständiges Baustellenbuch-PDF. Ein konfigurierbares Korrekturfenster (`nie`, `1`, `2`, `5` oder `7 Tage`) begrenzt die Nachbearbeitung.",
+      "Rettungsplanung – erweiterter Screen: Ergänzende Rettungsinformationen mit fünf Checklisten-Punkten und fünf Freitextfeldern (u. a. Rettungsrichtung, Zugang, Zeitvorgabe und Übergabe an den Rettungsdienst). Ausgefüllte Angaben erscheinen als eigener Abschnitt im PDF.",
+      "Wetter & Absperrung: Erfassung von maximaler Windstärke (Beaufort), Ausschlusskriterien (Regen, Gewitter, Frost, Nebel), Absperrungstyp und Notizen. Überschreitungen erzeugen Readiness-Hinweise. Für Indoor-Einsätze kann der Bereich als `nicht zutreffend` markiert werden.",
+      "SZP-Methodenbegründung: Bei Auswahl eines SZP-Zugangsverfahrens kann jetzt dokumentiert werden, warum Seilzugangstechnik statt Gerüst oder Arbeitsbühne eingesetzt wird. Die Begründung erscheint im Infoblatt-PDF. Zusätzlich wurde die Option `Fortbewegung unter horizontaler Struktur (SZP)` ergänzt.",
+      "Anschlagpunkte im Arbeitsauftrag: Neuer Abschnitt zur Dokumentation geplanter Anschlagpunkte, Besonderheiten und Bestätigung durch den Aufsichtführenden. Die Angaben erscheinen im PDF, sind jedoch nicht verpflichtend.",
+      "Qualifikationsverwaltung erweitert: Für Aufsichtführende und unterwiesene Personen können jetzt Organisation (`FISAT`, `IRATA`, `FSBS`, `SPRAT`, `PSAgA`, `Sonstiges`), Ablaufdatum und Status `Nachweis eingesehen` hinterlegt werden. Qualifikationen mit weniger als 60 Tagen Restlaufzeit erzeugen Warnungen; abgelaufene Nachweise werden als kritischer Readiness-Punkt markiert.",
+      "Rettungsvarianten erweitert: Neun vordefinierte Varianten (u. a. Eigenrettung, Fremdrettung, Leitersystem) sowie eigene, frei definierbare Varianten als löschbare Chips.",
+      "Hazard-Katalog erweitert: Neue Gefährdung `Ergonomie – Sitzunterlage/Sitzbrett bei stationären Hängearbeiten` inklusive passender T/O/P-Maßnahmen."
+    ]},
+    { title: "Changed", notes: [
+      "PDF-Export – Regelwerk-Hinweis: Alle PDF-Exporte enthalten jetzt einen Hinweis auf die Orientierung an `TRBS 2121-3`, `DGUV Information 212-001` und `FSR-SZP`. Zusätzlich wird klargestellt, dass die App die Dokumentation unterstützt, jedoch keine fachkundige Einzelfallbeurteilung, statische Anschlagpunktprüfung oder Unternehmerentscheidung ersetzt.",
+      "PDF-Export – Personen-Tabellen zeigen jetzt zusätzlich Organisation, Gültig-bis-Datum und den Status `Nachweis eingesehen` an."
+    ]}
+  ]
+},
+      {
   version: "1.9.7+98",
   date: "2026-06-07",
   channel: "Beta",
