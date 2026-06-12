@@ -428,6 +428,27 @@
         sections: []
       },
       {
+  version: "1.10.2+101",
+  date: "2026-06-12",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Stammdaten – Duplikat-Erkennung beim Speichern: Beim Anlegen oder Bearbeiten von Firmen und Auftraggebern erkennt die App jetzt gleichnamige Einträge. Nutzer können wählen zwischen `Aktualisieren`, `Neu anlegen` oder `Abbrechen`.",
+      "Baustellenbuch – Vollständiges PDF-Aktionsblatt: Der bisherige Teilen-Button wurde durch ein vollständiges Aktionsblatt (`Vorschau`, `Export`, `Drucken`) ersetzt. Die PDF-Vorschau unterstützt jetzt auch das Baustellenbuch direkt.",
+      "Backup-Wiederherstellung (iOS) – Schutz gegen Unterbrechungen: Während der Wiederherstellung wird der automatische Display-Schlaf deaktiviert. Zusätzlich prüft die App vor dem Start, ob das Gerät entsperrt ist (`iOS Data Protection`) und zeigt bei gesperrten Geräten eine verständliche Fehlermeldung an."
+    ]},
+    { title: "Changed", notes: [
+      "Pro-Upgrade-Screen – Feature-Liste nach Stufen gruppiert: `Basic`- und `Full Access`-Funktionen werden jetzt übersichtlich unter separaten Tier-Überschriften dargestellt. Das Baustellenbuch ist als `Full Access`-Feature ausgewiesen."
+    ]},
+    { title: "Fixed", notes: [
+      "Backup-Wiederherstellung – Fehlerursachen bleiben erhalten: Interne Fehler beim Verzeichnisersatz (`EPERM`, `EACCES`) werden jetzt korrekt protokolliert und nicht mehr fälschlich als temporäre Fehler behandelt.",
+      "Backup-Wiederherstellung – Alle Daten-Stores werden vor dem Ersetzen des Dateiverzeichnisses ordnungsgemäß geschlossen, um Dateisperrkonflikte zu vermeiden.",
+      "Log-Export (iPad) – Das System-Share-Sheet wird jetzt korrekt am Export-Button verankert statt in der Bildschirmmitte geöffnet.",
+      "Pro-Screen – Wiederherstellungs-Button und Ablaufdatum werden für Nutzer mit aktivem `Full Access` jetzt korrekt angezeigt."
+    ]}
+  ]
+},
+      {
   version: "1.10.1+100",
   date: "2026-06-11",
   channel: "Beta",
