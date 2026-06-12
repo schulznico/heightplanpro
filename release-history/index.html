@@ -428,6 +428,22 @@
         sections: []
       },
       {
+  version: "1.10.3+102",
+  date: "2026-06-12",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Backup-Wiederherstellung – Archivgröße im Bestätigungsdialog: Vor dem Start einer Wiederherstellung werden jetzt sowohl die komprimierte Archivgröße (`Archiv`) als auch die Größe des unkomprimierten Inhalts (`Inhalt`) angezeigt. So lässt sich der benötigte Speicherplatz besser abschätzen.",
+      "Backup-Export – Größe in der Erfolgsmeldung: Nach dem Erstellen eines Backups wird die Größe der erzeugten Archivdatei direkt in der Bestätigungsmeldung angezeigt."
+    ]},
+    { title: "Fixed", notes: [
+      "Backup-Wiederherstellung (iOS) – Restore auf bestimmten Geräten behoben: Auf neueren iPadOS-Versionen konnten systemgeschützte Verzeichnisse dauerhafte Zugriffsfehler (`EPERM`) verursachen. Diese Fehler werden jetzt sofort als dauerhaft erkannt und nicht mehr unnötig wiederholt.",
+      "Backup-Wiederherstellung – Textsuche funktioniert sofort nach Restore: Der Suchindex (`tokens.json`) wurde bisher nicht gesichert, wodurch die Textsuche erst nach einem Neustart oder einer Projektänderung wieder funktionierte. Der Index wird jetzt direkt nach der Wiederherstellung automatisch neu aufgebaut.",
+      "Backup-Erstellung – Kleinere Archivdateien: PLZ-Indexdaten werden nicht mehr im Backup gespeichert, da sie beim App-Start automatisch neu generiert werden. Dadurch reduziert sich die typische Backup-Größe spürbar."
+    ]}
+  ]
+},
+      {
   version: "1.10.2+101",
   date: "2026-06-12",
   channel: "Beta",
