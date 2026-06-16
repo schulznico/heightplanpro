@@ -428,6 +428,30 @@
         sections: []
       },
       {
+  version: "1.11.0+104",
+  date: "2026-06-16",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Bereitschaftsprüfung vor dem PDF-Export – direkt zum fehlenden Feld: Die Übersicht fehlender Angaben springt jetzt nicht nur zum betroffenen Kapitel, sondern direkt zum jeweiligen Abschnitt und hebt diesen kurz hervor.",
+      "Neu: `Zuletzt genutzt` für Gefährdungen und Maßnahmen. Häufig verwendete Einträge werden bei Wiederholungseinsätzen automatisch priorisiert und am Listenanfang angezeigt.",
+      "Katalogsuche mit Treffer-Hervorhebung: Gefährdungen und Maßnahmen lassen sich jetzt per Volltextsuche durchsuchen. Schnellfilter wie `Nur offene Maßnahmen` und `Nur Favoriten` erleichtern die Navigation; Treffer werden direkt im Text hervorgehoben.",
+      "Speicherstatus im Blick: Eine Statusanzeige informiert darüber, ob gerade gespeichert wird oder wann zuletzt gespeichert wurde.",
+      "GPS-Koordinaten ohne Karte: Fehlt die Kartenverbindung im Feld, können Koordinaten jetzt weiterhin manuell eingegeben werden."
+    ]},
+    { title: "Changed", notes: [
+      "Pflichtfeld-Navigation in Formularen: Nach `Weiter` springt die App automatisch zum ersten fehlenden Pflichtfeld. Ein Hinweis wie `X Angaben fehlen` führt per Tippen direkt zur betroffenen Stelle.",
+      "Seillänge/Höhe ist jetzt ein Hinweis statt eines Pflichtfelds: Die Eingabe blockiert den Workflow nicht mehr, bleibt aber als Warnung in der Bereitschaftsprüfung sichtbar.",
+      "Schutz vor Datenverlust beim Zurücknavigieren: Ist eine automatische Speicherung noch nicht abgeschlossen oder fehlgeschlagen, fragt die App vor dem Verlassen nach, statt Änderungen stillschweigend zu verwerfen."
+    ]},
+    { title: "Fixed", notes: [
+      "Hinweismeldungen (`Snackbars`) stapeln sich nicht mehr: Neue Meldungen ersetzen jetzt bestehende Hinweise statt mehrere gleichzeitig anzuzeigen.",
+      "Wind- und Wetter-Hinweise der Bereitschaftsprüfung öffnen jetzt korrekt die Karte `Wetter & Absperrung` statt des Arbeitsauftrags.",
+      "Eigene Rettungsvarianten werden jetzt zuverlässig als gültige Pflichtangabe erkannt; fälschliche Warnhinweise erscheinen nicht mehr."
+    ]}
+  ]
+},
+      {
   version: "1.10.4+103",
   date: "2026-06-14",
   channel: "Beta",
