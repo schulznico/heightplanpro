@@ -129,6 +129,36 @@
         color: var(--text);
       }
 
+      /* App-Store Call-to-Action */
+      .app-cta {
+        margin: 0 0 1.5rem;
+        padding: 1.25rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: #f8faff;
+      }
+
+      .app-cta__label {
+        margin: 0 0 0.6rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .app-cta__badge {
+        display: inline-block;
+      }
+
+      .app-cta__badge img {
+        display: block;
+        width: 246px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
       .links {
         display: flex;
         flex-wrap: wrap;
@@ -203,6 +233,20 @@
             zu dokumentieren. Diese Seite dient als zentraler Einstiegspunkt
             rund um das Projekt.
           </p>
+
+          <div class="app-cta">
+            <p class="app-cta__label">Jetzt herunterladen</p>
+            <a
+              class="app-cta__badge"
+              href="https://apps.apple.com/de/app/heightplanpro/id6754181263?itscg=30200&itsct=apps_box_badge&mttnsubad=6754181263"
+            >
+              <img
+                src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/de-de?releaseDate=1774742400"
+                alt="Im App Store laden"
+              />
+            </a>
+          </div>
+
           <div class="links">
             <a class="btn btn-secondary" href="./release-history/">Release History</a>
             <a class="btn btn-secondary" href="./bedienungsanleitung/">Bedienungsanleitung</a>
