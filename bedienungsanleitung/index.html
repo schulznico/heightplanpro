@@ -302,11 +302,11 @@
         <h1>Bedienungsanleitung</h1>
         <p class="lead">
           Strukturierte Übersicht über Navigation, Kapitel, Exportfunktionen,
-          Pro-Umfang sowie Backup- und Datenschutzfunktionen in HeightPlanPro.
+          Lizenzstufen sowie Backup- und Datenschutzfunktionen in HeightPlanPro.
         </p>
         <div class="meta">
-          <span>Stand: <time datetime="2026-03-17">17. März 2026</time></span>
-          <span>Version: 1.6.7+63</span>
+          <span>Stand: <time datetime="2026-06-17">17. Juni 2026</time></span>
+          <span>Version: 1.12.0+105</span>
         </div>
       </div>
     </header>
@@ -326,16 +326,19 @@
             <a href="#section-8">8. Kapitel 6 - Maßnahmen nach T-O-P</a>
             <a href="#section-9">9. Kapitel 7 - Notfall- und Rettungskonzepte</a>
             <a href="#section-10">10. Kapitel 8 - Unterwiesene Personen</a>
-            <a href="#section-11">11. Bereich Projekte</a>
-            <a href="#section-12">12. Bereich PDF &amp; Export</a>
-            <a href="#section-13">13. Bereich Stammdaten &amp; Bibliothek</a>
-            <a href="#section-14">14. Bereich App &amp; Konto</a>
-            <a href="#section-15">15. Bereich Daten &amp; Wartung</a>
-            <a href="#section-16">16. Bereich Hilfe &amp; Rechtliches</a>
-            <a href="#section-17">17. Backup- und Restore-Details</a>
-            <a href="#section-18">18. Funktionsumfang Free vs. Pro</a>
-            <a href="#section-19">19. Datenexport und Datenschutz</a>
-            <a href="#section-20">20. Empfohlener Abschluss-Check</a>
+            <a href="#section-11">11. Planungs-Readiness</a>
+            <a href="#section-12">12. Wetter &amp; Absperrung</a>
+            <a href="#section-13">13. Baustellenbuch (Full Access)</a>
+            <a href="#section-14">14. Menü - Projekte</a>
+            <a href="#section-15">15. Menü - PDF &amp; Export</a>
+            <a href="#section-16">16. Menü - Stammdaten &amp; Bibliothek</a>
+            <a href="#section-17">17. Menü - Einstellungen</a>
+            <a href="#section-18">18. Menü - Daten &amp; Wartung</a>
+            <a href="#section-19">19. Menü - Hilfe &amp; Kontakt</a>
+            <a href="#section-20">20. Backup- und Restore-Details</a>
+            <a href="#section-21">21. Lizenzstufen: Free · Basic · Full Access</a>
+            <a href="#section-22">22. Datenexport</a>
+            <a href="#section-23">23. Abschluss-Check</a>
           </nav>
         </aside>
 
@@ -356,7 +359,7 @@
           <section class="card" id="section-2">
             <span class="section-tag">2. Start und Navigation</span>
             <h2>Start und Navigation</h2>
-            <p><span class="label">Zweck:</span> Nach dem Datenschutzhinweis startet die Übersicht Einsatzplanung mit acht Kapiteln.</p>
+            <p><span class="label">Zweck:</span> Nach dem Datenschutzhinweis öffnet sich der Projektauswahl-Screen. Die Planung ist in acht aufeinander aufbauende Kapitel gegliedert:</p>
             <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
               <li>Stammdaten</li>
@@ -368,34 +371,36 @@
               <li>Notfall- und Rettungskonzepte</li>
               <li>Unterwiesene Personen</li>
             </ul>
-            <p><span class="label">Verhalten/Hinweise:</span></p>
+            <p><span class="label">Hinweise:</span></p>
             <ul>
-              <li>Die Menüs sind in sechs Bereiche gegliedert: Projekte, PDF &amp; Export, Stammdaten &amp; Bibliothek, App &amp; Konto, Daten &amp; Wartung, Hilfe &amp; Rechtliches.</li>
-              <li>Diese Anleitung und die PDF werden bewusst ohne Screenshots erzeugt.</li>
+              <li>Beim App-Start erscheint ein Projektauswahl-Screen: Letztes Projekt fortsetzen (mit Fortschrittsanzeige), Gespeichertes Projekt öffnen (Basic/Full Access) oder Neues Projekt starten. Der Button „Neues Projekt starten“ ist als Outline-Schaltfläche mit voller Breite deutlich hervorgehoben.</li>
+              <li>Aus Vorlage starten: Unter den Schaltflächen liegt eine standardmäßig eingeklappte Vorlagen-Liste. Daraus lässt sich für typische Einsätze ein vorgefülltes Projekt starten (z. B. Fassadenreinigung, Dacharbeiten, WEA-Inspektion). Vorlagen übernehmen nie Signaturen oder Revisionshistorie.</li>
+              <li>Schnellstart über die Tätigkeitsauswahl: Auf einem frischen Projekt lädt der Hinweis „Was planst du heute?“ zur Tätigkeits- und Umgebungsauswahl ein und wählt passende Gefährdungen vor. Der gewählte Kontext erscheint danach als dezenter Hinweis im Kopfbereich des Dashboards.</li>
+              <li>Das Menü ist in sieben Bereiche gegliedert: Projekte, PDF &amp; Export, Stammdaten &amp; Bibliothek, Einstellungen, Daten &amp; Wartung, Hilfe &amp; Kontakt, Rechtliches.</li>
             </ul>
           </section>
 
           <section class="card" id="section-3">
             <span class="section-tag">3. Kapitel 1</span>
             <h2>Kapitel 1 - Stammdaten</h2>
-            <p><span class="label">Zweck:</span> Erfasst die Daten für ausführende Firma und Auftraggeber inklusive Kontaktstrukturen.</p>
+            <p><span class="label">Zweck:</span> Erfasst Daten für ausführende Firma und Auftraggeber inkl. Kontaktstrukturen.</p>
             <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
-              <li>Firma und Auftraggeber können als Verzeichnis-Einträge gespeichert werden (Pro).</li>
+              <li>Firma und Auftraggeber können als Verzeichnis-Einträge gespeichert werden (Full Access).</li>
               <li>Weitere Ansprechpartner können pro Auftraggeber gepflegt werden.</li>
               <li>Telefonnummern werden mit Länderkontext validiert.</li>
             </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Firmenname</code> (Pflichtfeld): Eindeutige Bezeichnung der ausführenden Firma bzw. des Auftraggebers.</li>
+              <li><code>Firmenname</code> (Pflichtfeld): Eindeutige Bezeichnung der ausführenden Firma.</li>
               <li><code>Straße und Hausnummer</code> (Pflichtfeld): Postanschrift des Unternehmens.</li>
-              <li><code>Postleitzahl</code> (Pflichtfeld): PLZ mit länderspezifischer Validierung und PLZ-Logik.</li>
+              <li><code>Postleitzahl</code> (Pflichtfeld): PLZ mit länderspezifischer Validierung.</li>
               <li><code>Ort</code> (Pflichtfeld): Ort passend zur Anschrift.</li>
-              <li><code>Land</code> (Pflichtfeld): Steuert PLZ- und Telefonlogik (inkl. Ländervorwahl).</li>
-              <li><code>Telefonnummer (mit Ländercode)</code> (Pflichtfeld): Primäre Kontakttelefonnummer, format- und plausibilitätsgeprüft.</li>
-              <li><code>Ansprechpartner</code> (Pflichtfeld): Hauptkontakt für Rückfragen zum Projekt.</li>
-              <li><code>Abteilung / Position</code>: Rolle des Kontakts im Unternehmen.</li>
-              <li><code>Firmenlogo / Wasserzeichen</code>: Eigenes Logo als PDF-Wasserzeichen (Pro), sonst App-Icon.</li>
+              <li><code>Land</code> (Pflichtfeld): Steuert PLZ- und Telefonlogik.</li>
+              <li><code>Telefonnummer</code> (Pflichtfeld): Primäre Kontakttelefonnummer.</li>
+              <li><code>Ansprechpartner</code> (Pflichtfeld): Hauptkontakt für Rückfragen.</li>
+              <li><code>Abteilung / Position</code>: Rolle des Kontakts.</li>
+              <li><code>Firmenlogo / Wasserzeichen</code>: Eigenes Logo als PDF-Wasserzeichen (Full Access).</li>
             </ul>
           </section>
 
@@ -403,50 +408,71 @@
             <span class="section-tag">4. Kapitel 2</span>
             <h2>Kapitel 2 - Einsatzort</h2>
             <p><span class="label">Zweck:</span> Beschreibt Bau-/Montagestelle und den konkreten Arbeitsort.</p>
-            <p><span class="label">Verhalten/Hinweise:</span></p>
+            <p><span class="label">Hinweise:</span></p>
             <ul>
               <li>PLZ-Vorschläge können den Ort automatisch auflösen.</li>
-              <li>Unplausible Koordinaten werden bei relevanten Adressänderungen verworfen.</li>
-              <li>Kartenauswahl für GPS ist Pro-gebunden.</li>
+              <li>Kartenauswahl für GPS ist ab Basic verfügbar.</li>
             </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Land</code> (Pflichtfeld): Länderkontext für PLZ-Prüfung und Ortsvorschläge.</li>
+              <li><code>Land</code> (Pflichtfeld): Länderkontext für PLZ-Prüfung.</li>
               <li><code>Bezeichnung</code> (Pflichtfeld): Name der Bau-/Montagestelle.</li>
-              <li><code>Adresse</code> (Pflichtfeld): Straße und Hausnummer des Einsatzortes.</li>
+              <li><code>Adresse</code> (Pflichtfeld): Straße und Hausnummer.</li>
               <li><code>Postleitzahl</code> (Pflichtfeld): PLZ der Bau-/Montagestelle.</li>
               <li><code>Ort</code> (Pflichtfeld): Ort der Bau-/Montagestelle.</li>
-              <li><code>Gebäude</code>: Objekt-/Gebäudebezeichnung des Arbeitsortes.</li>
+              <li><code>Gebäude</code>: Objekt-/Gebäudebezeichnung.</li>
               <li><code>Ebene</code>: Stockwerk/Bereich innerhalb des Objekts.</li>
-              <li><code>GPS-Koordinaten</code>: Optionale Koordinaten, per Karte wählen (Pro) oder manuell eingeben.</li>
-              <li><code>Arbeitshöhe (m)</code>: Geplante Arbeitshöhe in Metern.</li>
+              <li><code>GPS-Koordinaten</code>: Optional, per Karte (Basic/Full Access) oder manuell.</li>
+              <li><code>Arbeitshöhe</code>: Geplante Arbeitshöhe mit Einheit m oder ft.</li>
             </ul>
           </section>
 
           <section class="card" id="section-5">
             <span class="section-tag">5. Kapitel 3</span>
             <h2>Kapitel 3 - Arbeitsauftrag</h2>
-            <p><span class="label">Zweck:</span> Definiert Tätigkeit, Verfahren und Leistungsumfang.</p>
+            <p><span class="label">Zweck:</span> Definiert Tätigkeit, Verfahren, Leistungsumfang und Anschlagpunkte.</p>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Das Feld „Begründung des Zugangsverfahrens (SZP)“ erscheint automatisch, sobald mindestens ein SZP-Verfahren (vertikal, horizontal, Schrägseilbahn oder Fortbewegung unter horizontaler Struktur) gewählt ist.</li>
+              <li>Die Begründung wird im exportierten Infoblatt-PDF als eigener Abschnitt dargestellt.</li>
+              <li>Der Anschlagpunkte-Abschnitt ist kein Pflichtfeld und erfordert keine Nummerierung.</li>
+            </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Tätigkeit</code> (Pflichtfeld): Kernaktivität aus Liste oder als freie eigene Eingabe.</li>
+              <li><code>Tätigkeit</code> (Pflichtfeld): Kernaktivität aus Liste oder freie Eingabe.</li>
               <li><code>Auftragsnummer</code>: Interne oder externe Zuordnungsnummer.</li>
               <li><code>Arbeitsverfahren (Kurzbezeichnung)</code>: Kurze Methodik-Benennung.</li>
-              <li><code>Beschreibung des Arbeitsauftrags / Arbeitsverfahrens</code>: Detaillierte textliche Beschreibung der auszuführenden Arbeiten.</li>
-              <li><code>Seillänge (m)</code>: Planwert für verwendete Seillänge.</li>
-              <li><code>Zugangsverfahren</code>: Mehrfachauswahl der eingesetzten Zugangs-/Sicherungsmethoden.</li>
+              <li><code>Beschreibung</code>: Detaillierte Beschreibung der auszuführenden Arbeiten.</li>
+              <li><code>Seillänge</code>: Planwert mit Einheit m oder ft; kann aus der Arbeitshöhe übernommen werden.</li>
+              <li><code>Zugangsverfahren</code>: Mehrfachauswahl: vertikal (SZP), horizontal (SZP), PSAgA, Schrägseilbahn (SZP), Fortbewegung unter horizontaler Struktur (SZP).</li>
+              <li><code>Begründung des Zugangsverfahrens (SZP)</code>: Erscheint nur bei aktivem SZP-Verfahren. Begründung, warum SZP statt Gerüst oder Arbeitsbühne eingesetzt wird.</li>
+              <li><code>Anschlagpunkte: Beschreibung</code>: Freitext z. B. „Attika Nordseite, Aufzugsmaschinenraum-Dach“.</li>
+              <li><code>Anschlagpunkte: Bewertung durch Aufsichtführenden</code>: Checkbox: Anschlagpunkte wurden auf Tragfähigkeit und Zustand bewertet.</li>
+              <li><code>Anschlagpunkte: Bewertet durch</code>: Name der bewertenden Person (Standard: primäre Aufsicht).</li>
+              <li><code>Anschlagpunkte: Einschränkungen / Besonderheiten</code>: Optionale Notizen z. B. „Nur einbetonierte Anker, keine Auflagerebenen“.</li>
             </ul>
           </section>
 
           <section class="card" id="section-6">
             <span class="section-tag">6. Kapitel 4</span>
             <h2>Kapitel 4 - Gefährdungen</h2>
-            <p><span class="label">Zweck:</span> Wählt die für den Einsatz relevanten Gefährdungen aus dem Katalog.</p>
+            <p><span class="label">Zweck:</span> Definiert optional ein Tätigkeitsprofil und wählt relevante Gefährdungen aus dem Katalog.</p>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Beim Öffnen von Kapitel 4 erscheint zunächst der Tätigkeitsprofil-Screen: Tätigkeitstypen (z. B. Baumpflege, Industrie, Reinigung) und Arbeitsumgebungen (z. B. Gebäude, Wald, Offshore) als Chips auswählen — passende Gefährdungen werden mit dem Badge [Profil] hervorgehoben.</li>
+              <li>„Überspringen“-Button: Öffnet die Gefährdungsauswahl ohne Profil. Alle Kategorien sind aufgeklappt, kein [Profil]-Badge sichtbar.</li>
+              <li>Eigene Tätigkeiten/Umgebungen: Das +-Symbol in der Abschnittsüberschrift öffnet einen Dialog. Dort: Bezeichnung eingeben, optional ein Emoji wählen (großes Textfeld, zentriert), dann mindestens eine Standard-Tätigkeit bzw. Standard-Umgebung als Basis auswählen – der Dialog zeigt jeweils nur die passenden Chips (Tätigkeiten oder Umgebungen, nicht gemischt). Eigene Einträge erscheinen als erste Chips in der Reihe und sind mit ⭐ markiert; Langdruck löscht sie.</li>
+              <li>Kachel gedrückt halten: Die Kategorie wird automatisch aktiviert (falls noch nicht geschehen) und die App springt direkt zur zugehörigen Kategorie im Risikobewertungs-Screen. So kann die Risikobewertung sofort starten, ohne manuell zu scrollen.</li>
+              <li>Ein Hinweis-Banner (sichtbar solange Hinweise aktiviert sind) erklärt den Long-Press-Shortcut.</li>
+            </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Oberkategorie aktiv</code>: Aktiviert/deaktiviert ganze Gefährdungsblöcke.</li>
-              <li><code>Gefährdung ausgewählt</code>: Einzelne Gefährdungen je Oberkategorie für den Einsatz markieren.</li>
-              <li><code>Eigene Bibliothekseinträge</code>: Benutzerdefinierte Gefährdungen in die Auswahl übernehmen (Pro für Bearbeitung).</li>
+              <li><code>Tätigkeitstyp</code>: Auswahl aus vordefinierten Tätigkeitsgruppen (z. B. Baumpflege, Dachdeckerarbeiten, Montage).</li>
+              <li><code>Arbeitsumgebung</code>: Auswahl aus vordefinierten Umgebungstypen (z. B. Gebäude, Wald, Offshore).</li>
+              <li><code>Eigene Tätigkeit/Umgebung</code>: +-Symbol in der Abschnittsüberschrift antippen — Dialog mit Bezeichnungsfeld, optionalem Emoji-Feld (groß, zentriert, mit Löschen-Button) und Basis-Auswahl (nur passende Chip-Typen).</li>
+              <li><code>Oberkategorie aktiv</code>: Aktiviert/deaktiviert ganze Gefährdungsblöcke. Tipp/Long-Press.</li>
+              <li><code>Gefährdung ausgewählt</code>: Einzelne Gefährdungen je Oberkategorie markieren.</li>
+              <li><code>Eigene Bibliothekseinträge</code>: Benutzerdefinierte Gefährdungen (Bearbeitung ab Basic).</li>
             </ul>
           </section>
 
@@ -456,9 +482,9 @@
             <p><span class="label">Zweck:</span> Bewertet das Ausgangsrisiko je ausgewählter Gefährdung.</p>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Risiko-Stufe (1-5)</code>: Bewertung vor Maßnahmen je Gefährdung.</li>
+              <li><code>Risiko-Stufe (1–5)</code>: Bewertung vor Maßnahmen je Gefährdung.</li>
               <li><code>Suche</code>: Filtert Gefährdungen im Bewertungsbildschirm.</li>
-              <li><code>Favoritenfilter</code>: Optionaler Filter auf Favoritengefährdungen (Pro-Feature).</li>
+              <li><code>Favoritenfilter</code>: Optionaler Filter auf Favoritengefährdungen (ab Basic).</li>
             </ul>
           </section>
 
@@ -466,11 +492,20 @@
             <span class="section-tag">8. Kapitel 6</span>
             <h2>Kapitel 6 - Maßnahmen nach T-O-P</h2>
             <p><span class="label">Zweck:</span> Legt technische, organisatorische und persönliche Maßnahmen fest.</p>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Gefährdungen, die zum gewählten Tätigkeitsprofil passen, sind mit einem [Profil]-Badge gekennzeichnet — vorausgefüllte Gefährdungen sind so auf einen Blick erkennbar.</li>
+              <li>Titel gedrückt halten (5 s) öffnet das Massenauswahl-Menü: Alles auswählen, Alles abwählen oder Favoriten-Profil anwenden.</li>
+              <li>Favoriten-Profil anwenden: Aktiviert alle als Favorit markierten Gefährdungen und schaltet automatisch in die Favoritenfilter-Ansicht. Danach muss nur noch das Restrisiko je Maßnahme bewertet werden. Ein Prüf-Banner erinnert daran, die Auswahl zu verifizieren.</li>
+              <li>Der ★-Button in der Titelleiste filtert die Ansicht auf Gefährdungen und Maßnahmen, für die Favoriten gesetzt sind.</li>
+              <li>Das Uhr-Symbol (sichtbar solange Hinweise aktiv) öffnet den Versionsverlauf des Maßnahmenkatalogs. Das Sheet lässt sich mit dem ×-Button oben rechts schließen.</li>
+            </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Maßnahme ausgewählt</code>: Zuordnung konkreter Maßnahmen zu jeder Gefährdung.</li>
-              <li><code>Restrisiko/Nach-Risiko (1-5)</code>: Bewertung nach geplanter Umsetzung der gewählten Maßnahmen.</li>
-              <li><code>Eigene Maßnahmen</code>: Benutzerdefinierte Maßnahmen in die Planung aufnehmen (Pro für Bearbeitung).</li>
+              <li><code>Restrisiko / Nach-Risiko (1–5)</code>: Risikobewertung nach geplanter Umsetzung der Maßnahme.</li>
+              <li><code>Maßnahmen-Favorit (★)</code>: Markiert eine Maßnahme als Favorit für diese Gefährdung (ab Basic). Favoriten ermöglichen Schnellauswahl per Profil.</li>
+              <li><code>Favoritenfilter (★-Button AppBar)</code>: Blendet alle nicht-favorisierten Gefährdungen und Maßnahmen aus (ab Basic).</li>
+              <li><code>Eigene Maßnahmen</code>: Benutzerdefinierte Maßnahmen (Bearbeitung ab Basic).</li>
             </ul>
           </section>
 
@@ -478,13 +513,20 @@
             <span class="section-tag">9. Kapitel 7</span>
             <h2>Kapitel 7 - Notfall- und Rettungskonzepte</h2>
             <p><span class="label">Zweck:</span> Dokumentiert Alarmierung und Rettungsablauf.</p>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Sobald mindestens eine Rettungsvariante gewählt ist, erscheint der Button „Erweiterte Rettungsplanung“. Ausgefüllte Felder werden im PDF als eigener Abschnitt ausgewiesen.</li>
+            </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li><code>Betriebsinterne Notrufnummer</code>: Optionale interne Notfallnummer, nummernlogisch validiert.</li>
-              <li><code>Rettungsvarianten (Checkboxen)</code>: Auswahl vordefinierter Rettungstypen (z. B. nach unten/nach oben).</li>
-              <li><code>Seillänge / Höhe</code>: Numerischer Orientierungswert für die Rettung.</li>
+              <li><code>Betriebsinterne Notrufnummer</code>: Optionale interne Notfallnummer.</li>
+              <li><code>Rettungsvarianten</code>: 9 vordefinierte Presets: Rettung nach unten, nach oben, ins Objekt, zur nächsten Ebene, auf Absatz/Podest, Eigenrettung, Fremdrettung durch Kollegen, Rettung mit Schrägseilbahn, Rettung mit Leitersystem.</li>
+              <li><code>Eigene Rettungsvarianten</code>: Freitexteingabe; erscheinen als löschbare Chips.</li>
+              <li><code>Seillänge / Höhe</code>: Orientierungswert mit Einheit m oder ft; kann aus Seillänge oder Arbeitshöhe übernommen werden.</li>
               <li><code>Rettungsvariante 1 (Freitext)</code>: Detaillierter Ablauf für Variante 1.</li>
               <li><code>Rettungsvariante 2 (Freitext)</code>: Detaillierter Ablauf für Variante 2.</li>
+              <li><code>Erweiterte Rettungsplanung: Checkliste</code>: Fünf Checks: Ausrüstung vorhanden, Anschlagpunkte geprüft, Redundanz vorhanden, Vorgehen bei Bewusstlosigkeit, Einweisung aller Beteiligten erfolgt.</li>
+              <li><code>Erweiterte Rettungsplanung: Notizfelder</code>: Rettungsrichtung, Zugang zur verunfallten Person, Zeitvorgabe, Übergabe an Rettungsdienst, Besonderheiten.</li>
             </ul>
           </section>
 
@@ -492,181 +534,293 @@
             <span class="section-tag">10. Kapitel 8</span>
             <h2>Kapitel 8 - Unterwiesene Personen</h2>
             <p><span class="label">Zweck:</span> Schließt Unterweisung mit Rollen, Qualifikationen und Signaturen ab.</p>
+            <p><span class="label">Wichtige Inhalte:</span></p>
+            <ul>
+              <li>Unterschrift direkt erfassen: Per Touch auf dem Gerät des Unterzeichners.</li>
+              <li>Fernunterschrift anfordern (Full Access): QR-Code erzeugen, den der Unterzeichner mit einem anderen Gerät scannt. Gültigkeitsdauer: 24 h / 72 h / 7 Tage.</li>
+              <li>Signieren per App (kostenlos): Unterzeichner scannt QR, bestätigt Datenschutzhinweis, unterschreibt, exportiert verschlüsselte .hppsig-Datei.</li>
+              <li>Signatur importieren (Full Access): .hppsig-Datei per AirDrop, E-Mail oder Messenger empfangen und importieren. App prüft Echtheit, Projektzuordnung und Einmaligkeit kryptografisch.</li>
+              <li>QR-Code in PDF eingebettet: Bei offenem Signaturauftrag wird beim PDF-Export automatisch eine eigene Seite mit QR-Code, Anleitung und Ablaufzeit eingefügt.</li>
+              <li>Abgeschlossen-Nachweis: Nach erfolgreichem Import erscheint in der Personenkarte ein Badge mit dem Datum der Unterzeichnung — auch nach App-Neustart sichtbar.</li>
+              <li>QR-Code-Anleitung: Beim Teilen des QR-Codes wird eine 3-Schritt-Anleitung mitgerendert, die erklärt, wie der Unterzeichner den Code scannt — und wie er über ein gespeichertes Foto zurückfindet, falls er nicht sofort unterschreibt.</li>
+              <li>Projektname im Zustimmungsbildschirm: Der Unterzeichner sieht, zu welchem Projekt die Anfrage gehört — vermeidet Verwechslungen bei mehreren laufenden Anfragen.</li>
+            </ul>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Signaturanfragen sind an das Gerät des Erstellers gebunden. Der Schlüssel verlässt das Gerät nie — die .hppsig-Datei ist vollständig verschlüsselt (AES-256-GCM).</li>
+              <li>Pro Aufsichtführendem und pro unterwiesener Person kann jeweils genau eine aktive Anfrage bestehen. Wird eine neue erstellt, wird die vorherige automatisch widerrufen.</li>
+              <li>Trifft eine .hppsig-Datei ein, während ein anderer Screen aktiv ist, navigiert die App automatisch zum Bereich „Unterwiesene Personen“.</li>
+              <li>Das Löschen einer bereits gespeicherten Unterschrift erfordert eine explizite Bestätigung.</li>
+              <li>Beim Duplizieren eines Projekts werden Unterschriften und Signaturanfragen bewusst nicht übertragen — Namen und Qualifikationen bleiben erhalten.</li>
+              <li>Abgelaufene Signaturanfragen werden nach 30 Tagen automatisch bereinigt.</li>
+            </ul>
             <p><span class="label">Eingabefelder:</span></p>
             <ul>
               <li><code>Erstellt durch</code> (Pflichtfeld): Name der dokumentierenden Person.</li>
               <li><code>Datum</code> (Pflichtfeld): Unterweisungs-/Dokumentationsdatum.</li>
-              <li><code>Aufsichtführende: Vorname, Nachname</code> (Pflichtfeld): Stammdaten pro Aufsichtführendem.</li>
-              <li><code>Aufsichtführende: Qualifikation / Eigene Qualifikation</code> (Pflichtfeld): Auswahl oder freie Qualifikationsangabe.</li>
-              <li><code>Aufsichtführende: Qualifikations-ID</code> (Pflichtfeld): ID wie z. B. FISAT-ID / IRATA-ID.</li>
-              <li><code>Unterwiesene: Vorname, Nachname</code> (Pflichtfeld): Personendaten der unterwiesenen Person.</li>
-              <li><code>Unterwiesene: Qualifikation / Level / Eigene Qualifikation</code> (Pflichtfeld): Qualifikationsprofil pro Person.</li>
+              <li><code>Aufsichtführende: Name</code> (Pflichtfeld): Stammdaten pro Aufsichtführendem.</li>
+              <li><code>Aufsichtführende: Qualifikation</code> (Pflichtfeld): Auswahl oder freie Qualifikationsangabe.</li>
+              <li><code>Aufsichtführende: Qualifikations-ID</code> (Pflichtfeld): Z. B. FISAT-ID / IRATA-ID.</li>
+              <li><code>Aufsichtführende: Qualifikationsorganisation</code>: FISAT, IRATA, FSBS, IVBV, SPRAT, PSAgA oder Sonstiges.</li>
+              <li><code>Aufsichtführende: Qualifikation gültig bis</code>: Ablaufdatum des Ausweises. Ablauf ≤ 60 Tage: orange Warnung; abgelaufen: roter Readiness-Punkt.</li>
+              <li><code>Aufsichtführende: Nachweis eingesehen</code>: Checkbox: Ausweis wurde geprüft.</li>
+              <li><code>Unterwiesene: Name</code> (Pflichtfeld): Personendaten der unterwiesenen Person.</li>
+              <li><code>Unterwiesene: Qualifikation</code> (Pflichtfeld): Qualifikationsprofil pro Person.</li>
               <li><code>Unterwiesene: ID</code>: Optionale eindeutige Identifikationsnummer.</li>
-              <li><code>Unterschrift erfassen</code> (Pflichtfeld): Digitale Signatur pro Aufsichtführendem und unterwiesener Person.</li>
+              <li><code>Unterwiesene: Qualifikationsorganisation</code>: FISAT, IRATA, FSBS, IVBV, SPRAT, PSAgA oder Sonstiges.</li>
+              <li><code>Unterwiesene: Qualifikation gültig bis</code>: Ablaufdatum des Ausweises.</li>
+              <li><code>Unterwiesene: Nachweis eingesehen</code>: Checkbox: Ausweis wurde geprüft.</li>
+              <li><code>Unterschrift erfassen</code> (Pflichtfeld): Direktes Unterschreiben auf dem Gerät.</li>
+              <li><code>Remote-Signatur anfordern (Full Access)</code>: QR-Code erstellen für Fernunterschrift.</li>
+              <li><code>Signatur importieren (Full Access)</code>: .hppsig-Datei empfangen und kryptografisch validieren.</li>
             </ul>
           </section>
 
           <section class="card" id="section-11">
-            <span class="section-tag">11. Bereich</span>
-            <h2>Bereich Projekte</h2>
-            <p><span class="label">Zweck:</span> Verwaltet den Projektlebenszyklus.</p>
+            <span class="section-tag">11. Planungs-Readiness</span>
+            <h2>Planungs-Readiness</h2>
+            <p><span class="label">Zweck:</span> Zeigt auf einen Blick, ob die Einsatzplanung fachlich vollständig ist.</p>
             <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
-              <li>Neues Projekt</li>
-              <li>Projekt laden (Pro)</li>
-              <li>Projekt speichern (Pro)</li>
+              <li>Ampel je Kapitel: grün (vollständig), orange (Hinweis), rot (kritisch offen).</li>
+              <li>Kritisch offene Punkte erscheinen als roter Banner auf dem Dashboard und als Hinweisbox im exportierten PDF.</li>
+              <li>Der Check prüft die Dokumentation — kein physischer Startcheck vor Ort.</li>
+              <li>Blanko-Projekte ohne Aufsichtführenden werden nicht geprüft.</li>
+            </ul>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Aufsichtführende mit abgelaufenem Qualifikationsnachweis: rot, kritisch.</li>
+              <li>Aufsichtführende mit Nachweis, der in ≤ 60 Tagen abläuft: orange, Hinweis.</li>
+              <li>Keine Rettungsvariante gewählt: kritisch.</li>
+              <li>Keine Gefährdungen ausgewählt: orange, Hinweis.</li>
+              <li>Tätigkeit nicht eingetragen: kritisch.</li>
+              <li>Anschlagpunkte nicht beschrieben: orange, Hinweis.</li>
+              <li>Bei Außeneinsatz ohne Windgrenzwert: orange, Hinweis.</li>
             </ul>
           </section>
 
           <section class="card" id="section-12">
-            <span class="section-tag">12. Bereich</span>
-            <h2>Bereich PDF &amp; Export</h2>
-            <p><span class="label">Zweck:</span> Erzeugt, teilt und verwaltet PDF-Dokumente.</p>
-            <p><span class="label">Wichtige Inhalte:</span></p>
+            <span class="section-tag">12. Wetter &amp; Absperrung</span>
+            <h2>Wetter &amp; Absperrung</h2>
+            <p><span class="label">Zweck:</span> Dokumentiert Wetterbedingungen, Abbruchkriterien und Absperrsituation.</p>
+            <p><span class="label">Hinweise:</span></p>
             <ul>
-              <li>Einsatzplanung (vollständiges Dokument)</li>
-              <li>Infoblatt (kompakte Variante)</li>
-              <li>Aktionen: Vorschau, Export, Teilen/Drucken, gespeicherte PDFs</li>
+              <li>Bei Wahl „Indoor“ werden Wind- und Ausschlussfelder ausgeblendet; Wetter-Readiness entfällt automatisch.</li>
+              <li>Überschreitung des eingetragenen Windgrenzwerts erzeugt einen Hinweis in der Planungs-Readiness.</li>
             </ul>
-            <p><span class="label">Verhalten/Hinweise:</span></p>
+            <p><span class="label">Eingabefelder:</span></p>
             <ul>
-              <li>PDF-Funktionen sind in der aktuellen Version ohne Pro verfügbar.</li>
+              <li><code>Einsatzumgebung</code>: Outdoor, teilweise outdoor oder indoor — steuert Relevanz der Wetterfelder.</li>
+              <li><code>Maximale Windstärke (Beaufort)</code>: Projektspezifischer Grenzwert für den Arbeitsbeginn.</li>
+              <li><code>Ausschlusskriterien</code>: Mehrfachauswahl: Regen, Gewitter, Frost, Nebel.</li>
+              <li><code>Absperrungstyp</code>: Bauzaun, Flatterband, Absperrschranke oder Sonstiges.</li>
+              <li><code>Notizen</code>: Freitextfeld für ergänzende Absperr- und Wetterhinweise.</li>
             </ul>
           </section>
 
           <section class="card" id="section-13">
-            <span class="section-tag">13. Bereich</span>
-            <h2>Bereich Stammdaten &amp; Bibliothek</h2>
+            <span class="section-tag">13. Baustellenbuch (Full Access)</span>
+            <h2>Baustellenbuch (Full Access)</h2>
+            <p><span class="label">Zweck:</span> Tagesaktuelle Dokumentation von Freigaben, Abweichungen und Stop-Work-Ereignissen.</p>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Pro Arbeitstag wird ein Eintrag mit Status, Timing, Alarmkontakten, Sicherheitschecks und Ereignislog angelegt.</li>
+              <li>Das Baustellenbuch erscheint als kompakte Tabelle im exportierten Infoblatt-PDF.</li>
+              <li>Über den Share-Button im Baustellenbuch-Screen kann ein eigenständiges Baustellenbuch-PDF exportiert werden — alle Tageseinträge als strukturierte Karten.</li>
+              <li>Ein konfigurierbares Korrekturfenster legt fest, wie lange vergangene Einträge nachbearbeitet werden können.</li>
+            </ul>
+            <p><span class="label">Eingabefelder:</span></p>
+            <ul>
+              <li><code>Status</code>: Offen, Freigegeben, Stop-Work, Abgeschlossen.</li>
+              <li><code>Datum</code>: Datum des Tageseintrags.</li>
+              <li><code>Arbeitsbeginn / -ende</code>: Zeitangaben für den Arbeitstag.</li>
+              <li><code>Pausen</code>: Erfasste Pausenzeiten (gesamt in Minuten).</li>
+              <li><code>Alarmkontakte</code>: Notrufnummer, Treffpunkt und Ersthelfer für den Tag.</li>
+              <li><code>Sicherheitschecks</code>: Vier Pflicht-Checks: Wetter/Wind OK, Team eingewiesen, PSA/Rettungsgeräte geprüft, Anschlagpunkte/Absperrung OK.</li>
+              <li><code>Ereignislog</code>: Zeitgestempelte Ereignisse: Planänderung, Personalwechsel, Stop-Work, Wiederaufnahme, Vorfall, Notiz.</li>
+              <li><code>Abschlussnotiz</code>: Freitextnotiz zum Tagesabschluss.</li>
+              <li><code>Korrekturfenster</code>: Einstellung: nie / 1 / 2 / 5 / 7 Tage — begrenzt Nachbearbeitungszeit vergangener Einträge.</li>
+            </ul>
+          </section>
+
+          <section class="card" id="section-14">
+            <span class="section-tag">14. Menü</span>
+            <h2>Menü - Projekte</h2>
+            <p><span class="label">Zweck:</span> Verwaltet den Projektlebenszyklus.</p>
+            <p><span class="label">Wichtige Inhalte:</span></p>
+            <ul>
+              <li>Neues Projekt</li>
+              <li>Projekt laden (Basic/Full Access)</li>
+              <li>Projekt speichern (Basic/Full Access)</li>
+              <li>Projekt exportieren (Basic/Full Access): Aktuelle Planung als .hppproj-Datei teilen – optional mit Passwortschutz.</li>
+              <li>Projekt importieren: Empfangene .hppproj-Datei ohne Datenverlust hinzufügen.</li>
+              <li>Revision erhöhen: Zählt den Revisionsstand des aktuellen Projekts hoch – mit optionalem Änderungsgrund.</li>
+            </ul>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Revisionsstand: Wird ein Plan nach der Unterzeichnung geändert, sollte die Revision erhöht werden. Der Stand erscheint im Dashboard-Kopf und in der PDF-Kopfzeile (Nummer, Datum, Grund). Bestehende Unterschriften bleiben erhalten; je Person ist sichtbar, ob die Unterschrift für die aktuelle Revision gilt oder „veraltet“ ist.</li>
+              <li>Im Projektauswahl-Dialog: Über das Pin-Symbol auf der Projektkarte lassen sich Projekte anheften (gepinnte oben). Weitere Aktionen — Archivieren, Duplizieren und Löschen — liegen im Überlauf-Menü (⋮) der Karte; alternativ löscht ein Wischen nach links. Archivierte Projekte bleiben voll nutzbar und über „Archiv anzeigen“ wieder einblendbar.</li>
+              <li>Projekt duplizieren (selektiv): Beim Duplizieren wird vor dem Anlegen abgefragt, welche Abschnitte übernommen werden (Stammdaten, Einsatzort, Tätigkeitskontext, Gefährdungen, Maßnahmen, Rettungsvarianten). Signaturen, Revision und Remote-Signaturdaten werden nie kopiert; die Kopie startet als Revision 0.</li>
+            </ul>
+          </section>
+
+          <section class="card" id="section-15">
+            <span class="section-tag">15. Menü</span>
+            <h2>Menü - PDF &amp; Export</h2>
+            <p><span class="label">Zweck:</span> Erzeugt, teilt und verwaltet PDF-Dokumente.</p>
+            <p><span class="label">Wichtige Inhalte:</span></p>
+            <ul>
+              <li>Einsatzplanung – vollständiges Dokument mit Gefährdungstabelle, Maßnahmen und Risikozusammenfassung.</li>
+              <li>Infoblatt – Kurzfassung mit Notfallinfos und Unterschriften.</li>
+              <li>Baustellenbuch – eigenständiges PDF aller Tageseinträge (Export direkt im Baustellenbuch-Screen, Full Access).</li>
+              <li>Aktionen: Vorschau · Exportieren · Drucken</li>
+            </ul>
+            <p><span class="label">Hinweise:</span></p>
+            <ul>
+              <li>Vor dem Export zeigt ein Zusammenfassungs-Sheet Projektname, Datum und die tatsächliche Seitenzahl des PDFs. Die Seitenzahl wird im Hintergrund berechnet, während das Sheet bereits offen ist.</li>
+              <li>PDF-Vorschau, Export und Druck sind im Free-Tier verfügbar.</li>
+            </ul>
+          </section>
+
+          <section class="card" id="section-16">
+            <span class="section-tag">16. Menü</span>
+            <h2>Menü - Stammdaten &amp; Bibliothek</h2>
             <p><span class="label">Zweck:</span> Pflegt Unternehmensdaten und benutzerdefinierte Katalogeinträge.</p>
             <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
               <li>Stammdaten (Firmen-/Auftraggeberverzeichnis)</li>
               <li>Eigene Bibliothek (eigene Gefährdungen und Maßnahmen)</li>
-              <li>Bibliothek importieren/exportieren (Pro)</li>
+              <li>Bibliothek importieren/exportieren (Basic/Full Access)</li>
               <li>Bibliothek reparieren (verwaiste Einträge entfernen)</li>
             </ul>
           </section>
 
-          <section class="card" id="section-14">
-            <span class="section-tag">14. Bereich</span>
-            <h2>Bereich App &amp; Konto</h2>
-            <p><span class="label">Zweck:</span> Steuert Sprache, Hilfen und Kaufstatus.</p>
+          <section class="card" id="section-17">
+            <span class="section-tag">17. Menü</span>
+            <h2>Menü - Einstellungen</h2>
+            <p><span class="label">Zweck:</span> Steuert Design, Sprache und App-Verhalten.</p>
             <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
+              <li>App-Design: System, Hell, Dunkel – wechselt sofort ohne App-Neustart.</li>
               <li>Sprache: System, Deutsch, Englisch, Polnisch</li>
               <li>Backup-Erinnerung: Nie, Wöchentlich, Monatlich, Vierteljährlich</li>
-              <li>Gefahren-Hinweise anzeigen: ein/aus</li>
-              <li>Käufe wiederherstellen</li>
-            </ul>
-            <p><span class="label">Verhalten/Hinweise:</span></p>
-            <ul>
-              <li>Im Backup-Erinnerungsdialog wird das zuletzt erstellte Backup dezent angezeigt (oder ein Hinweis, falls keines existiert).</li>
-            </ul>
-          </section>
-
-          <section class="card" id="section-15">
-            <span class="section-tag">15. Bereich</span>
-            <h2>Bereich Daten &amp; Wartung</h2>
-            <p><span class="label">Zweck:</span> Fasst Datensicherung, Restore und lokale Wartung zusammen.</p>
-            <p><span class="label">Wichtige Inhalte:</span></p>
-            <ul>
-              <li>Backup exportieren</li>
-              <li>Backup wiederherstellen</li>
-              <li>PLZ-Länder verwalten</li>
-              <li>PLZ-Index neu aufbauen</li>
-              <li>Cache gespeicherter Projekte leeren</li>
-            </ul>
-          </section>
-
-          <section class="card" id="section-16">
-            <span class="section-tag">16. Bereich</span>
-            <h2>Bereich Hilfe &amp; Rechtliches</h2>
-            <p><span class="label">Zweck:</span> Bietet Support- und Rechtstexte innerhalb der App.</p>
-            <p><span class="label">Wichtige Inhalte:</span></p>
-            <ul>
-              <li>Kontaktformular</li>
-              <li>Impressum</li>
-              <li>Datenschutz</li>
-              <li>AGB</li>
-              <li>Haftungsausschluss</li>
-              <li>Lizenzen</li>
-              <li>Zustimmung widerrufen</li>
-            </ul>
-          </section>
-
-          <section class="card" id="section-17">
-            <span class="section-tag">17. Details</span>
-            <h2>Backup- und Restore-Details</h2>
-            <p><span class="label">Zweck:</span> Beschreibt den sicheren Ablauf für Backup und Wiederherstellung.</p>
-            <p><span class="label">Wichtige Inhalte:</span></p>
-            <ul>
-              <li>Backup kann optional mit Passwort verschlüsselt werden.</li>
-              <li>Mindestlänge für Backup-Passwörter: 8 Zeichen.</li>
-              <li>Passwortstärke wird während der Eingabe angezeigt.</li>
-              <li>Export ohne Passwort erfordert eine zusätzliche Bestätigung.</li>
-              <li>Beim Restore werden aktuelle lokale Daten ersetzt.</li>
-              <li>Store-Käufe werden nicht aus Backups wiederhergestellt und müssen separat wiederhergestellt werden.</li>
+              <li>Hinweise anzeigen: ein/aus – steuert alle Kontexthilfen (Willkommensbanner, Gefahren-Tooltips, Info-Icons, Long-Press-Hinweise, Changelog-Schaltfläche in Maßnahmen)</li>
+              <li>Haptisches Feedback: ein/aus</li>
+              <li>Aktuelle Lizenz (Free / Basic / Full Access) mit direktem Link zum Lizenz-Upgrade.</li>
             </ul>
           </section>
 
           <section class="card" id="section-18">
-            <span class="section-tag">18. Free vs. Pro</span>
-            <h2>Funktionsumfang Free vs. Pro</h2>
-            <p><span class="label">Pro-gebunden:</span></p>
+            <span class="section-tag">18. Menü</span>
+            <h2>Menü - Daten &amp; Wartung</h2>
+            <p><span class="label">Zweck:</span> Fasst Datensicherung, Restore und lokale Wartung zusammen.</p>
+            <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
-              <li>Projekte speichern und laden</li>
-              <li>Stammdaten-Verzeichnis (Firma/Auftraggeber) speichern</li>
-              <li>Bibliothek importieren und exportieren</li>
-              <li>Eigenes Logo als Wasserzeichen</li>
-              <li>Eigene Gefährdungen erstellen/bearbeiten/löschen</li>
-              <li>Eigene Maßnahmen erstellen/bearbeiten/löschen</li>
-              <li>Gefährdungs-Favoriten</li>
-              <li>Kartenauswahl für GPS-Koordinaten</li>
-              <li>Kontaktanfragen als PDF exportieren</li>
-              <li>Log-Export</li>
-            </ul>
-            <p><span class="label">Ohne Pro verfügbar:</span></p>
-            <ul>
-              <li>PDF-Vorschau, PDF-Export und Druck (Einsatzplanung/Infoblatt)</li>
-              <li>Gespeicherte PDFs anzeigen und verwalten</li>
-              <li>Backup exportieren und wiederherstellen</li>
-              <li>Bibliothek reparieren</li>
+              <li>Backup exportieren (Basic/Full Access)</li>
+              <li>Backup wiederherstellen (Free)</li>
               <li>PLZ-Länder verwalten</li>
               <li>PLZ-Index neu aufbauen</li>
               <li>Cache gespeicherter Projekte leeren</li>
-              <li>Backup-Erinnerung konfigurieren</li>
             </ul>
           </section>
 
           <section class="card" id="section-19">
-            <span class="section-tag">19. Datenschutz</span>
-            <h2>Datenexport und Datenschutz</h2>
-            <p><span class="label">Relevante Exportarten in der App:</span></p>
+            <span class="section-tag">19. Menü</span>
+            <h2>Menü - Hilfe &amp; Kontakt</h2>
+            <p><span class="label">Zweck:</span> Zugang zu Handbuch, Support und Lizenz-Upgrade.</p>
+            <p><span class="label">Wichtige Inhalte:</span></p>
             <ul>
-              <li>PDF-Export (Dokumentausgabe)</li>
-              <li>Bibliotheksexport (benutzerdefinierte Bibliotheksdaten)</li>
-              <li>Backup-Export als ZIP (lokaler App-Datenbestand)</li>
-              <li>Log-Export (Support-Diagnose, Pro)</li>
-            </ul>
-            <p><span class="label">Hinweise:</span></p>
-            <ul>
-              <li>Die App speichert Planungsdaten lokal auf dem Gerät.</li>
-              <li>Backup-Dateien können optional verschlüsselt werden.</li>
-              <li>Für verschlüsselte Backups ist zur Wiederherstellung dieselbe Passphrase erforderlich.</li>
+              <li>Bedienungsanleitung – alle Funktionen im Überblick.</li>
+              <li>Kontaktformular – Feedback und Fragen offline verfassen.</li>
+              <li>Lizenz-Upgrade (Basic/Full Access) – Freischalten oder Käufe wiederherstellen.</li>
             </ul>
           </section>
 
           <section class="card" id="section-20">
-            <span class="section-tag">20. Abschluss-Check</span>
-            <h2>Empfohlener Abschluss-Check</h2>
+            <span class="section-tag">20. Details</span>
+            <h2>Backup- und Restore-Details</h2>
+            <p><span class="label">Zweck:</span> Beschreibt den sicheren Ablauf für Backup und Wiederherstellung.</p>
+            <p><span class="label">Wichtige Inhalte:</span></p>
+            <ul>
+              <li>Backup kann optional mit Passwort verschlüsselt werden (mind. 8 Zeichen).</li>
+              <li>Passwortstärke wird während der Eingabe angezeigt.</li>
+              <li>Export ohne Passwort erfordert eine zusätzliche Bestätigung.</li>
+              <li>Beim Restore werden aktuelle lokale Daten ersetzt.</li>
+              <li>Store-Käufe müssen separat wiederhergestellt werden.</li>
+              <li>Einzelprojekt-Export (.hppproj, Basic/Full Access): Enthält Projektdaten und Anhänge, optional verschlüsselt. Import fügt das Projekt dem Bestand hinzu (Free).</li>
+              <li>Hinweis nach Restore: Enthält das Backup Inhalte, die den aktuellen Lizenzumfang übersteigen (z. B. gespeicherte Projekte ohne Basic), erscheint ein Hinweis mit Link zum Lizenz-Upgrade.</li>
+            </ul>
+          </section>
+
+          <section class="card" id="section-21">
+            <span class="section-tag">21. Lizenzstufen</span>
+            <h2>Lizenzstufen: Free · Basic · Full Access</h2>
+            <p><span class="label">Free:</span></p>
+            <ul>
+              <li>Tätigkeitsprofil: aktivitätsbasierte Vorauswahl von Gefährdungen und Maßnahmen</li>
+              <li>PDF-Vorschau, PDF-Export und Druck</li>
+              <li>Gespeicherte PDFs anzeigen und verwalten</li>
+              <li>Kontaktanfragen als PDF exportieren</li>
+              <li>Log-Export</li>
+              <li>Backup wiederherstellen</li>
+              <li>PLZ-Länder verwalten</li>
+              <li>PLZ-Index neu aufbauen</li>
+              <li>Cache gespeicherter Projekte leeren</li>
+              <li>Backup-Erinnerung konfigurieren</li>
+              <li>Einzelprojekt importieren (.hppproj)</li>
+              <li>Fernunterschriften: Signaturanfrage empfangen und unterschreiben (.hppsig)</li>
+            </ul>
+            <p><span class="label">Basic:</span></p>
+            <ul>
+              <li>Projekte speichern und laden</li>
+              <li>Einzelprojekt exportieren (.hppproj)</li>
+              <li>Bibliothek importieren und exportieren</li>
+              <li>Bibliothek reparieren</li>
+              <li>Backup exportieren</li>
+              <li>Kartenauswahl für GPS-Koordinaten</li>
+              <li>Eigene Tätigkeiten und Umgebungen erstellen/bearbeiten/löschen</li>
+              <li>Eigene Gefährdungen erstellen/bearbeiten/löschen</li>
+              <li>Eigene Maßnahmen erstellen/bearbeiten/löschen</li>
+              <li>Gefährdungs-Favoriten (Schnellfilter und Direktauswahl)</li>
+              <li>Maßnahmen-Favoriten (★-Markierung, Favoritenfilter, Profil anwenden)</li>
+            </ul>
+            <p><span class="label">Full Access:</span></p>
+            <ul>
+              <li>Stammdaten-Verzeichnis speichern</li>
+              <li>Eigenes Logo als Wasserzeichen</li>
+              <li>Fernunterschriften: Signaturanfrage erstellen (QR-Code) und .hppsig-Datei importieren</li>
+            </ul>
+          </section>
+
+          <section class="card" id="section-22">
+            <span class="section-tag">22. Datenexport</span>
+            <h2>Datenexport</h2>
+            <p><span class="label">Relevante Exportarten in der App:</span></p>
+            <ul>
+              <li>PDF-Export (Dokumentausgabe, Free)</li>
+              <li>Bibliotheksexport (benutzerdefinierte Bibliotheksdaten, Basic/Full Access)</li>
+              <li>Backup-Export als ZIP (lokaler App-Datenbestand, Basic/Full Access)</li>
+              <li>Einzelprojekt-Export als .hppproj (inkl. Anhänge, optional verschlüsselt, Basic/Full Access)</li>
+              <li>Log-Export (Support-Diagnose, Free)</li>
+              <li>Fernunterschrift-Export als .hppsig (verschlüsselte Signatur-Antwortdatei, Free)</li>
+            </ul>
+          </section>
+
+          <section class="card" id="section-23">
+            <span class="section-tag">23. Abschluss-Check</span>
+            <h2>Abschluss-Check</h2>
             <p><span class="label">Vor dem finalen Export prüfen:</span></p>
             <ol>
               <li>Stammdaten beider Parteien vollständig</li>
               <li>Einsatzortdaten plausibel und konsistent</li>
+              <li>Zugangsverfahren gewählt; SZP-Begründung ausgefüllt (wenn SZP-Verfahren aktiv)</li>
+              <li>Anschlagpunkte beschrieben und Bewertung bestätigt</li>
               <li>Gefährdungen und Risikobewertung gepflegt</li>
               <li>Maßnahmen inkl. Restrisiko dokumentiert</li>
-              <li>Notfall- und Rettungskonzept ausgefüllt</li>
-              <li>Unterwiesene Personen inkl. Signaturen vorhanden</li>
+              <li>Notfall- und Rettungskonzept ausgefüllt (mind. 1 Rettungsvariante)</li>
+              <li>Wetter &amp; Absperrung dokumentiert</li>
+              <li>Unterwiesene Personen inkl. Qualifikation, Gültigkeit und Signaturen vorhanden</li>
+              <li>Planungs-Readiness grün oder offene Punkte bewusst akzeptiert</li>
             </ol>
           </section>
         </div>
