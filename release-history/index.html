@@ -428,6 +428,47 @@
         sections: []
       },
       {
+  version: "1.12.4+110",
+  date: "2026-08-03",
+  channel: "Beta",
+  sections: [
+    { title: "Changed", notes: [
+      "Einheitliche Typografie: Titel, Fließtext, Sekundärtexte und Schaltflächen folgen jetzt einer konsistenten Schriftgrößen-Hierarchie. Sekundärtexte werden nicht mehr kursiv dargestellt und sind besser lesbar.",
+      "Gefährdungen – Kacheln bleiben auch bei großer Systemschrift kompakt: Es wächst nur noch der Textbereich, nicht mehr die gesamte Kachel."
+    ]},
+    { title: "Fixed", notes: [
+      "Verbesserte Lesbarkeit bei kleiner und großer Systemschrift: Kein Text wird kleiner als `11 pt`; gleichzeitig passen sich Kopfzeile, Navigation, Menü, Logo-Schaltflächen und weitere UI-Elemente jetzt sauber an größere Schriftgrößen an, ohne sich zu überlagern oder abgeschnitten zu werden.",
+      "Freischalten – Vergleichsansicht optimiert: Bei großer Systemschrift wechselt die Vergleichstabelle (`Free / Basic / Full Access`) automatisch auf ein Kartenlayout, sodass alle Merkmale vollständig lesbar bleiben.",
+      "Risikobewertung – Favoritenstern: Der Trefferbereich entspricht jetzt exakt der sichtbaren Position des Sternsymbols und verbessert die Bedienbarkeit."
+    ]}
+  ]
+},
+{
+  version: "1.12.3+109",
+  date: "2026-08-02",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Freischalten – Käufe werden sofort übernommen: Nach einem erfolgreichen Kauf wird die Freischaltung jetzt unmittelbar aktiviert und der Freischalten-Screen schließt sich automatisch.",
+      "Freischalten – Sichtbare Rückmeldung beim Kauf: Während eines laufenden Kaufs zeigt die gewählte Schaltfläche einen Ladeindikator sowie den Status `Kauf läuft …`. Nach einem Abbruch werden alle Schaltflächen sofort wieder freigegeben.",
+      "Freischalten – Fehlende Kaufoptionen werden erklärt: Ist eine einzelne Kaufoption im Store nicht verfügbar, wird dies direkt unter der betreffenden Option angezeigt. Zusätzlich steht `Kaufoptionen neu laden` zur Verfügung.",
+      "iOS – Gesperrte In-App-Käufe werden erkannt: Sind Käufe über Bildschirmzeit oder Geräteeinstellungen deaktiviert, informiert die App darüber und sperrt Kaufaktionen entsprechend."
+    ]}
+  ]
+},
+{
+  version: "1.12.2+108",
+  date: "2026-07-30",
+  channel: "Beta",
+  sections: [
+    { title: "Fixed", notes: [
+      "Freischalten – Kaufoptionen zeigen jetzt direkt den aktuellen Store-Preis (z. B. `Basic freischalten · 4,99 €`). Kaufoptionen werden bereits beim Öffnen geladen; Kaufversuche melden jetzt Erfolg, Fehler oder `Kauf wartet auf Freigabe`.",
+      "Freischalten – Keine Buttons mehr ohne Funktion: Nicht verfügbare Kaufoptionen werden deaktiviert. Fehlen alle Kaufoptionen, informiert die App und bietet `Kaufoptionen neu laden` an; nach der Rückkehr in die App wird automatisch erneut geladen.",
+      "iOS – Kaufdialog erscheint zuverlässig: Auf iOS 18.2 und neuer wird der Store-Dialog jetzt explizit im aktiven App-Fenster geöffnet, wodurch ausbleibende Kaufdialoge behoben wurden."
+    ]}
+  ]
+},
+      {
   version: "1.12.1+107",
   date: "2026-07-27",
   channel: "Beta",
