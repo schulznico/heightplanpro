@@ -436,6 +436,48 @@
         ]
       },
       {
+  version: "1.13.0+111",
+  date: "2026-08-18",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Gefährdungsvorschläge statt automatischer Vorauswahl: Die Tätigkeits- und Umgebungsauswahl erzeugt jetzt eine fachlich sortierte Vorschlagsliste, statt Gefährdungen automatisch auszuwählen. Vorgeschlagene Katalogrisiken bleiben Hinweise, bis eine Risikobewertung manuell bestätigt wurde.",
+      "Risikobewertung – Altwerte mit unklarer Herkunft erkennbar: Bereits gespeicherte Risikowerte bleiben erhalten und können bestätigt werden, ohne die Risikostufe erneut auswählen zu müssen.",
+      "Risikobewertung – ausgewählte Gefährdungen besser im Blick: Der Gesamtstand der ausgewählten Gefährdungen wird jetzt direkt oben im Bewertungs-Screen angezeigt.",
+      "Maßnahmen – Bearbeitungsstand je Gefährdung: Neue Statuszähler `Ohne Maßnahme`, `Prüfen` und `Bearbeitet` zeigen den aktuellen Bearbeitungsstand und dienen gleichzeitig als Filter.",
+      "Risikobewertung startet jetzt ungefiltert und zeigt beim Öffnen zunächst alle ausgewählten Gefährdungen. Der Filter `Altwert prüfen` kennzeichnet vorhandene Risikowerte mit bislang unklarer Herkunft.",
+      "Maßnahmen – Gefährdungs- und Maßnahmenfilter sind jetzt klar voneinander getrennt. Innerhalb einer Gefährdung kann zwischen `Alle Maßnahmen`, `Unbeurteilte` und `Beurteilte` gewechselt werden.",
+      "Windgrenzwert und Absperrradius mit Einheit: Wind kann in `m/s`, `km/h` oder `Beaufort`, der Absperrradius in `Meter` oder `Fuß` dokumentiert werden. Die gewählte Einheit wird gespeichert und im PDF ausgegeben.",
+      "Wetter & Absperrung im vollständigen Einsatzplan: Arbeitsumgebung, Windgrenzwert, Ausschlusskriterien, Absperrart, Absperrradius, verantwortliche Person und Notizen erscheinen jetzt auch im vollständigen Einsatzplan.",
+      "Baustellenbuch – Einträge gezielt löschen: Einzelne Ereignisse können aus bearbeitbaren Tageseinträgen entfernt werden. Ganze abgeschlossene Tageseinträge lassen sich im Korrekturmodus löschen."
+    ]},
+    { title: "Changed", notes: [
+      "Gefährdungsvorschläge berücksichtigen jetzt neben Tätigkeit und Umgebung auch den Einsatzort. Bei Innenarbeiten werden witterungsabhängige Grundprüfpunkte aus der Hauptvorschlagsliste ausgeblendet.",
+      "Tätigkeiten und Umgebungen sind für eine übersichtlichere Auswahl jetzt nach Kategorien gruppiert und sortiert.",
+      "Gefährdungen und Maßnahmen werden zusätzlich über stabile Kennungen gespeichert, sodass Katalogumbenennungen bestehende Auswahl-, Risiko- und Maßnahmenzuordnungen nicht mehr beeinträchtigen.",
+      "Einsatzort fachlich neu gegliedert: `Ort & Zugang`, `Arbeitsbereich & Umgebung`, `Absperrung & Umfeldsicherung` und `Einsatzbedingungen` sind jetzt direkt im Einsatzort-Screen zusammengeführt. Die separate Seite `Wetter & Absperrung` entfällt.",
+      "Der Startcheck berücksichtigt Angaben zum Einsatzort früher und führt Hinweise zu fehlenden Windgrenzwerten direkt an die richtige Stelle.",
+      "Handbuch und Bedienungsanleitung wurden in DE/EN/PL an den neuen Ablauf mit Gefährdungsvorschlägen, Altwert-Bestätigung, Statusanzeigen, Einsatzort-Gliederung und Vorlagen angepasst.",
+      "Maßnahmen – `Zuletzt genutzt` ist jetzt standardmäßig eingeklappt und unterhalb der Filter angeordnet.",
+      "Der Gefährdungen-Screen zeigt jetzt verständlicher, welchen Einfluss das Tätigkeitsprofil hat: Tätigkeit, Umgebung und Anzahl betroffener Kategorien werden angezeigt; `Vorschläge ansehen` führt direkt zur Vorschlagsliste.",
+      "Das Tätigkeitsprofil kann jetzt vollständig zurückgesetzt werden, ohne bereits ausgewählte Gefährdungen oder gesetzte Risikobewertungen zu verändern.",
+      "Gefährdungsvorschläge zeigen jetzt direkt, auf welcher Tätigkeit und Umgebung sie basieren.",
+      "Bedienfehler am Abseil-/Sicherungsgerät werden bei passendem Tätigkeits- oder Umgebungskontext deutlicher in der Hauptvorschlagsliste berücksichtigt.",
+      "Baustellenbuch – neue Ereignisart `Wetter`: Wetterverlauf, Windmessungen und Gewitterwarnungen können mit Zeitstempel dokumentiert werden.",
+      "Kantengefahren werden bei weiteren Gebäudearten und Instandsetzungsarbeiten vorgeschlagen, darunter Wohn- und Industriegebäude, Industriehallen, Betonsanierung, Fugenabdichtung und Ankerprüfung."
+    ]},
+    { title: "Fixed", notes: [
+      "Startcheck – Fehlende Gefährdungen werden wieder zuverlässig erkannt: Nur ausgewählte Kategorien erfüllen die Prüfung nicht; der Hinweis bleibt bestehen, bis tatsächlich mindestens eine Gefährdung ausgewählt wurde.",
+      "Wizard-Navigation – `Zurück` verursacht bei direktem Einstieg in ein Kapitel keinen Router-Fehler mehr.",
+      "Selektives Duplizieren entfernt abgewählte Gefährdungen, Maßnahmen und Risikowerte jetzt vollständig, einschließlich interner Kennungsfelder.",
+      "Katalogrisiken werden nicht mehr als echte Risikobewertung übernommen. Erst eine manuelle Auswahl bestätigt die Risikostufe.",
+      "Gespeicherte Risikobewertungen und deren Herkunft bleiben beim Speichern, Laden und nach Katalogumbenennungen konsistent erhalten.",
+      "Ältere Projekte werden beim bloßen Öffnen nicht mehr fälschlicherweise als geändert erkannt.",
+      "Windstärke – Bei Beaufort sind nur noch gültige Werte bis `12` möglich, sodass Anzeige, gespeicherter Wert und PDF nicht mehr voneinander abweichen können."
+    ]}
+  ]
+},
+      {
   version: "1.12.4+110",
   date: "2026-08-03",
   channel: "stable",
