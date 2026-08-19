@@ -436,6 +436,28 @@
         ]
       },
       {
+  version: "1.13.1+112",
+  date: "2026-08-19",
+  channel: "Beta",
+  sections: [
+    { title: "Added", notes: [
+      "Startcheck – Arbeitsstand der Beurteilung: Der Startcheck zeigt jetzt zusätzlich, wie viele ausgewählte Gefährdungen noch ohne Risikobewertung bzw. ohne Maßnahme sind. Ein Tipp führt direkt zur ersten offenen Gefährdung und stellt die Liste auf den passenden Status ein.",
+      "PDF-Export – Hinweis auf offene Bewertungen und Maßnahmen: Vor dem Export werden offene Risikobewertungen und Gefährdungen ohne Maßnahme angezeigt. Die Hinweise führen direkt zur jeweiligen Bearbeitung; der PDF-Export bleibt weiterhin jederzeit möglich.",
+      "Risikobewertung – Rückfrage bei offenen Bewertungen: Beim Weitergehen weist die App einmalig auf noch nicht bewertete Gefährdungen hin. `Jetzt bewerten` führt direkt zum ersten offenen Punkt, `Trotzdem weiter` setzt den Workflow ohne Sperre fort.",
+      "Risikobewertung – Offene Risiken direkt erkennbar: Noch nicht bewertete Gefährdungen sind jetzt mit `Risiko offen` gekennzeichnet. Katalogrisiken bleiben als Orientierung sichtbar, sind aber klar von einer tatsächlich vorgenommenen Bewertung getrennt."
+    ]},
+    { title: "Changed", notes: [
+      "Maßnahmen – Hinweis statt Sperre: Fehlende Maßnahmen blockieren den weiteren Workflow nicht mehr. `Jetzt Maßnahmen wählen` führt direkt zur ersten betroffenen Gefährdung; mit `Trotzdem weiter` kann die Planung fortgesetzt werden.",
+      "Gefährdungssuche – Verbesserte Suche ohne Umlaute: Suchbegriffe wie `gefahrdung` finden jetzt auch `Gefährdung`; Bindestriche und Klammern beeinflussen die Suche nicht mehr.",
+      "Gefährdungs- und Maßnahmensuche reagieren jetzt flüssiger, da die Trefferliste erst kurz nach der Eingabe aktualisiert wird statt nach jedem einzelnen Zeichen.",
+      "Maßnahmen – `Zuletzt genutzt` wird während einer aktiven Suche ausgeblendet, damit die Trefferliste übersichtlich und zusammenhängend bleibt."
+    ]},
+    { title: "Fixed", notes: [
+      "Schmale Geräte – Überlaufende Beschriftungen korrigiert: Kataloghinweise und die Zeile `Rest-Risiko nach Maßnahme` werden auf Geräten mit 320 bis 360 Punkt Breite jetzt sauber mit Auslassungspunkten gekürzt, ohne Warnzeichen oder Risikostufen abzuschneiden."
+    ]}
+  ]
+},
+      {
   version: "1.13.0+111",
   date: "2026-08-18",
   channel: "Beta",
